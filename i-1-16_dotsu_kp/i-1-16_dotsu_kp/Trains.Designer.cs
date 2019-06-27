@@ -91,7 +91,7 @@
             this.pn_cancel.Controls.Add(this.btn_close);
             this.pn_cancel.Controls.Add(this.btn_errors);
             this.pn_cancel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pn_cancel.Location = new System.Drawing.Point(0, 355);
+            this.pn_cancel.Location = new System.Drawing.Point(0, 262);
             this.pn_cancel.Name = "pn_cancel";
             this.pn_cancel.Size = new System.Drawing.Size(801, 35);
             this.pn_cancel.TabIndex = 4;
@@ -113,7 +113,7 @@
             this.gp_manipulation.Dock = System.Windows.Forms.DockStyle.Left;
             this.gp_manipulation.Location = new System.Drawing.Point(0, 43);
             this.gp_manipulation.Name = "gp_manipulation";
-            this.gp_manipulation.Size = new System.Drawing.Size(200, 312);
+            this.gp_manipulation.Size = new System.Drawing.Size(200, 219);
             this.gp_manipulation.TabIndex = 5;
             this.gp_manipulation.TabStop = false;
             this.gp_manipulation.Text = "Манипулирование данными";
@@ -248,14 +248,14 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(200, 43);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(601, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(601, 219);
             this.dataGridView1.TabIndex = 6;
             // 
             // Trains
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 390);
+            this.ClientSize = new System.Drawing.Size(801, 297);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gp_manipulation);
             this.Controls.Add(this.pn_cancel);
