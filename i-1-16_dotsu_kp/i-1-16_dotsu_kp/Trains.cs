@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace i_1_16_dotsu_kp
 {
-    public partial class Form1 : Form
+    public partial class Trains : Form
     {
-        public Form1()
+        public Trains()
         {
             InitializeComponent();
         }
