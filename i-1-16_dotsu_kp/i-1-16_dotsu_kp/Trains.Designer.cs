@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gb_search_filtration = new System.Windows.Forms.GroupBox();
-            this.chb_filtration = new System.Windows.Forms.CheckBox();
-            this.tb_search_flitration = new System.Windows.Forms.TextBox();
             this.pn_cancel = new System.Windows.Forms.Panel();
+            this.btn_close = new System.Windows.Forms.Button();
+            this.btn_errors = new System.Windows.Forms.Button();
             this.gp_manipulation = new System.Windows.Forms.GroupBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
@@ -44,47 +43,15 @@
             this.lbl_kol_vo_wagon = new System.Windows.Forms.Label();
             this.tb_nomer_train = new System.Windows.Forms.TextBox();
             this.lbl_nomer_train = new System.Windows.Forms.Label();
-            this.btn_errors = new System.Windows.Forms.Button();
-            this.btn_close = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gb_search_filtration.SuspendLayout();
+            this.dgv_trains = new System.Windows.Forms.DataGridView();
+            this.gb_search_filtration = new System.Windows.Forms.GroupBox();
+            this.chb_filtration = new System.Windows.Forms.CheckBox();
+            this.tb_search_flitration = new System.Windows.Forms.TextBox();
             this.pn_cancel.SuspendLayout();
             this.gp_manipulation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_trains)).BeginInit();
+            this.gb_search_filtration.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // gb_search_filtration
-            // 
-            this.gb_search_filtration.Controls.Add(this.chb_filtration);
-            this.gb_search_filtration.Controls.Add(this.tb_search_flitration);
-            this.gb_search_filtration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gb_search_filtration.Location = new System.Drawing.Point(0, 0);
-            this.gb_search_filtration.Name = "gb_search_filtration";
-            this.gb_search_filtration.Size = new System.Drawing.Size(801, 43);
-            this.gb_search_filtration.TabIndex = 0;
-            this.gb_search_filtration.TabStop = false;
-            this.gb_search_filtration.Text = "Поиск и фильтрация";
-            // 
-            // chb_filtration
-            // 
-            this.chb_filtration.AutoSize = true;
-            this.chb_filtration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chb_filtration.Location = new System.Drawing.Point(689, 16);
-            this.chb_filtration.Name = "chb_filtration";
-            this.chb_filtration.Size = new System.Drawing.Size(109, 17);
-            this.chb_filtration.TabIndex = 1;
-            this.chb_filtration.Text = "Отфильтровать";
-            this.chb_filtration.UseVisualStyleBackColor = true;
-            // 
-            // tb_search_flitration
-            // 
-            this.tb_search_flitration.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tb_search_flitration.Location = new System.Drawing.Point(3, 16);
-            this.tb_search_flitration.Name = "tb_search_flitration";
-            this.tb_search_flitration.Size = new System.Drawing.Size(686, 20);
-            this.tb_search_flitration.TabIndex = 0;
-            this.tb_search_flitration.Text = "Введите данные поезда...";
-            this.tb_search_flitration.WordWrap = false;
             // 
             // pn_cancel
             // 
@@ -95,6 +62,26 @@
             this.pn_cancel.Name = "pn_cancel";
             this.pn_cancel.Size = new System.Drawing.Size(801, 35);
             this.pn_cancel.TabIndex = 4;
+            // 
+            // btn_close
+            // 
+            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_close.Location = new System.Drawing.Point(729, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(72, 35);
+            this.btn_close.TabIndex = 13;
+            this.btn_close.Text = "Закрыть";
+            this.btn_close.UseVisualStyleBackColor = true;
+            // 
+            // btn_errors
+            // 
+            this.btn_errors.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_errors.Location = new System.Drawing.Point(0, 0);
+            this.btn_errors.Name = "btn_errors";
+            this.btn_errors.Size = new System.Drawing.Size(72, 35);
+            this.btn_errors.TabIndex = 12;
+            this.btn_errors.Text = "Ошибки";
+            this.btn_errors.UseVisualStyleBackColor = true;
             // 
             // gp_manipulation
             // 
@@ -111,9 +98,9 @@
             this.gp_manipulation.Controls.Add(this.tb_nomer_train);
             this.gp_manipulation.Controls.Add(this.lbl_nomer_train);
             this.gp_manipulation.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gp_manipulation.Location = new System.Drawing.Point(0, 43);
+            this.gp_manipulation.Location = new System.Drawing.Point(0, 0);
             this.gp_manipulation.Name = "gp_manipulation";
-            this.gp_manipulation.Size = new System.Drawing.Size(200, 219);
+            this.gp_manipulation.Size = new System.Drawing.Size(200, 262);
             this.gp_manipulation.TabIndex = 5;
             this.gp_manipulation.TabStop = false;
             this.gp_manipulation.Text = "Манипулирование данными";
@@ -222,61 +209,70 @@
             this.lbl_nomer_train.TabIndex = 1;
             this.lbl_nomer_train.Text = "Номер поезда";
             // 
-            // btn_errors
+            // dgv_trains
             // 
-            this.btn_errors.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_errors.Location = new System.Drawing.Point(0, 0);
-            this.btn_errors.Name = "btn_errors";
-            this.btn_errors.Size = new System.Drawing.Size(72, 35);
-            this.btn_errors.TabIndex = 12;
-            this.btn_errors.Text = "Ошибки";
-            this.btn_errors.UseVisualStyleBackColor = true;
+            this.dgv_trains.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_trains.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_trains.Location = new System.Drawing.Point(200, 0);
+            this.dgv_trains.Name = "dgv_trains";
+            this.dgv_trains.Size = new System.Drawing.Size(601, 262);
+            this.dgv_trains.TabIndex = 6;
             // 
-            // btn_close
+            // gb_search_filtration
             // 
-            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_close.Location = new System.Drawing.Point(729, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(72, 35);
-            this.btn_close.TabIndex = 13;
-            this.btn_close.Text = "Закрыть";
-            this.btn_close.UseVisualStyleBackColor = true;
+            this.gb_search_filtration.Controls.Add(this.chb_filtration);
+            this.gb_search_filtration.Controls.Add(this.tb_search_flitration);
+            this.gb_search_filtration.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gb_search_filtration.Location = new System.Drawing.Point(200, 0);
+            this.gb_search_filtration.Name = "gb_search_filtration";
+            this.gb_search_filtration.Size = new System.Drawing.Size(601, 43);
+            this.gb_search_filtration.TabIndex = 7;
+            this.gb_search_filtration.TabStop = false;
+            this.gb_search_filtration.Text = "Поиск и фильтрация";
             // 
-            // dataGridView1
+            // chb_filtration
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(200, 43);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(601, 219);
-            this.dataGridView1.TabIndex = 6;
+            this.chb_filtration.AutoSize = true;
+            this.chb_filtration.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chb_filtration.Location = new System.Drawing.Point(491, 16);
+            this.chb_filtration.Name = "chb_filtration";
+            this.chb_filtration.Size = new System.Drawing.Size(107, 17);
+            this.chb_filtration.TabIndex = 1;
+            this.chb_filtration.Text = "Отфильтровать";
+            this.chb_filtration.UseVisualStyleBackColor = true;
+            // 
+            // tb_search_flitration
+            // 
+            this.tb_search_flitration.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tb_search_flitration.Location = new System.Drawing.Point(3, 16);
+            this.tb_search_flitration.Name = "tb_search_flitration";
+            this.tb_search_flitration.Size = new System.Drawing.Size(488, 20);
+            this.tb_search_flitration.TabIndex = 0;
+            this.tb_search_flitration.Text = "Введите данные поезда...";
+            this.tb_search_flitration.WordWrap = false;
             // 
             // Trains
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 297);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gb_search_filtration);
+            this.Controls.Add(this.dgv_trains);
             this.Controls.Add(this.gp_manipulation);
             this.Controls.Add(this.pn_cancel);
-            this.Controls.Add(this.gb_search_filtration);
             this.Name = "Trains";
             this.Text = "Справочник Поезда";
-            this.gb_search_filtration.ResumeLayout(false);
-            this.gb_search_filtration.PerformLayout();
             this.pn_cancel.ResumeLayout(false);
             this.gp_manipulation.ResumeLayout(false);
             this.gp_manipulation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_trains)).EndInit();
+            this.gb_search_filtration.ResumeLayout(false);
+            this.gb_search_filtration.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gb_search_filtration;
-        private System.Windows.Forms.CheckBox chb_filtration;
-        private System.Windows.Forms.TextBox tb_search_flitration;
         private System.Windows.Forms.Panel pn_cancel;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Button btn_errors;
@@ -292,6 +288,9 @@
         private System.Windows.Forms.Label lbl_kol_vo_wagon;
         private System.Windows.Forms.TextBox tb_nomer_train;
         private System.Windows.Forms.Label lbl_nomer_train;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_trains;
+        private System.Windows.Forms.GroupBox gb_search_filtration;
+        private System.Windows.Forms.CheckBox chb_filtration;
+        private System.Windows.Forms.TextBox tb_search_flitration;
     }
 }
