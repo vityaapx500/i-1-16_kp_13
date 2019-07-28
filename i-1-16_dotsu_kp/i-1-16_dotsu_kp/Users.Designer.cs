@@ -28,341 +28,341 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gb_search_filtration = new System.Windows.Forms.GroupBox();
-            this.chb_filtration = new System.Windows.Forms.CheckBox();
-            this.tb_search_flitration = new System.Windows.Forms.TextBox();
-            this.btn_close = new System.Windows.Forms.Button();
-            this.btn_errors = new System.Windows.Forms.Button();
-            this.pn_cancel = new System.Windows.Forms.Panel();
-            this.dgv_tickets = new System.Windows.Forms.DataGridView();
-            this.gp_manipulation = new System.Windows.Forms.GroupBox();
-            this.cb_dolj = new System.Windows.Forms.ComboBox();
-            this.lbl_dolj = new System.Windows.Forms.Label();
-            this.tb_confirm_password = new System.Windows.Forms.TextBox();
-            this.lbl_confirm_password = new System.Windows.Forms.Label();
-            this.tb_password = new System.Windows.Forms.TextBox();
-            this.lbl_password = new System.Windows.Forms.Label();
-            this.tb_login = new System.Windows.Forms.TextBox();
-            this.lbl_login = new System.Windows.Forms.Label();
-            this.tb_otchestvo = new System.Windows.Forms.TextBox();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.lbl_otchestvo = new System.Windows.Forms.Label();
-            this.tb_first_name = new System.Windows.Forms.TextBox();
-            this.lbl_first_name = new System.Windows.Forms.Label();
-            this.tb_second_name = new System.Windows.Forms.TextBox();
-            this.lbl_second_name = new System.Windows.Forms.Label();
-            this.btn_update = new System.Windows.Forms.Button();
-            this.btn_insert = new System.Windows.Forms.Button();
-            this.gb_search_filtration.SuspendLayout();
-            this.pn_cancel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tickets)).BeginInit();
-            this.gp_manipulation.SuspendLayout();
+            this.gbSearchFiltration = new System.Windows.Forms.GroupBox();
+            this.chbFiltration = new System.Windows.Forms.CheckBox();
+            this.tbSearchFlitration = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnErrors = new System.Windows.Forms.Button();
+            this.pnCancel = new System.Windows.Forms.Panel();
+            this.dgvTickets = new System.Windows.Forms.DataGridView();
+            this.gpManipulation = new System.Windows.Forms.GroupBox();
+            this.cbDolj = new System.Windows.Forms.ComboBox();
+            this.lblDolj = new System.Windows.Forms.Label();
+            this.tbConfirmPassword = new System.Windows.Forms.TextBox();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.tbLogin = new System.Windows.Forms.TextBox();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.tbOtchestvo = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lblOtchestvo = new System.Windows.Forms.Label();
+            this.tbFirstName = new System.Windows.Forms.TextBox();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.tbSecondName = new System.Windows.Forms.TextBox();
+            this.lblSecondName = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.gbSearchFiltration.SuspendLayout();
+            this.pnCancel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTickets)).BeginInit();
+            this.gpManipulation.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gb_search_filtration
+            // gbSearchFiltration
             // 
-            this.gb_search_filtration.Controls.Add(this.chb_filtration);
-            this.gb_search_filtration.Controls.Add(this.tb_search_flitration);
-            this.gb_search_filtration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gb_search_filtration.Location = new System.Drawing.Point(200, 0);
-            this.gb_search_filtration.Name = "gb_search_filtration";
-            this.gb_search_filtration.Size = new System.Drawing.Size(600, 43);
-            this.gb_search_filtration.TabIndex = 15;
-            this.gb_search_filtration.TabStop = false;
-            this.gb_search_filtration.Text = "Поиск и фильтрация";
+            this.gbSearchFiltration.Controls.Add(this.chbFiltration);
+            this.gbSearchFiltration.Controls.Add(this.tbSearchFlitration);
+            this.gbSearchFiltration.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbSearchFiltration.Location = new System.Drawing.Point(200, 0);
+            this.gbSearchFiltration.Name = "gbSearchFiltration";
+            this.gbSearchFiltration.Size = new System.Drawing.Size(600, 43);
+            this.gbSearchFiltration.TabIndex = 15;
+            this.gbSearchFiltration.TabStop = false;
+            this.gbSearchFiltration.Text = "Поиск и фильтрация";
             // 
-            // chb_filtration
+            // chbFiltration
             // 
-            this.chb_filtration.AutoSize = true;
-            this.chb_filtration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chb_filtration.Location = new System.Drawing.Point(491, 16);
-            this.chb_filtration.Name = "chb_filtration";
-            this.chb_filtration.Size = new System.Drawing.Size(106, 17);
-            this.chb_filtration.TabIndex = 1;
-            this.chb_filtration.Text = "Отфильтровать";
-            this.chb_filtration.UseVisualStyleBackColor = true;
+            this.chbFiltration.AutoSize = true;
+            this.chbFiltration.Dock = System.Windows.Forms.DockStyle.Top;
+            this.chbFiltration.Location = new System.Drawing.Point(491, 16);
+            this.chbFiltration.Name = "chbFiltration";
+            this.chbFiltration.Size = new System.Drawing.Size(106, 17);
+            this.chbFiltration.TabIndex = 1;
+            this.chbFiltration.Text = "Отфильтровать";
+            this.chbFiltration.UseVisualStyleBackColor = true;
             // 
-            // tb_search_flitration
+            // tbSearchFlitration
             // 
-            this.tb_search_flitration.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tb_search_flitration.Location = new System.Drawing.Point(3, 16);
-            this.tb_search_flitration.Name = "tb_search_flitration";
-            this.tb_search_flitration.Size = new System.Drawing.Size(488, 20);
-            this.tb_search_flitration.TabIndex = 0;
-            this.tb_search_flitration.Text = "Введите данные поезда...";
-            this.tb_search_flitration.WordWrap = false;
+            this.tbSearchFlitration.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tbSearchFlitration.Location = new System.Drawing.Point(3, 16);
+            this.tbSearchFlitration.Name = "tbSearchFlitration";
+            this.tbSearchFlitration.Size = new System.Drawing.Size(488, 20);
+            this.tbSearchFlitration.TabIndex = 0;
+            this.tbSearchFlitration.Text = "Введите данные поезда...";
+            this.tbSearchFlitration.WordWrap = false;
             // 
-            // btn_close
+            // btnClose
             // 
-            this.btn_close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_close.Location = new System.Drawing.Point(528, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(72, 35);
-            this.btn_close.TabIndex = 13;
-            this.btn_close.Text = "Закрыть";
-            this.btn_close.UseVisualStyleBackColor = true;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.Location = new System.Drawing.Point(528, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(72, 35);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.Text = "Закрыть";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // btn_errors
+            // btnErrors
             // 
-            this.btn_errors.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_errors.Location = new System.Drawing.Point(0, 0);
-            this.btn_errors.Name = "btn_errors";
-            this.btn_errors.Size = new System.Drawing.Size(72, 35);
-            this.btn_errors.TabIndex = 12;
-            this.btn_errors.Text = "Ошибки";
-            this.btn_errors.UseVisualStyleBackColor = true;
+            this.btnErrors.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnErrors.Location = new System.Drawing.Point(0, 0);
+            this.btnErrors.Name = "btnErrors";
+            this.btnErrors.Size = new System.Drawing.Size(72, 35);
+            this.btnErrors.TabIndex = 12;
+            this.btnErrors.Text = "Ошибки";
+            this.btnErrors.UseVisualStyleBackColor = true;
             // 
-            // pn_cancel
+            // pnCancel
             // 
-            this.pn_cancel.Controls.Add(this.btn_close);
-            this.pn_cancel.Controls.Add(this.btn_errors);
-            this.pn_cancel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pn_cancel.Location = new System.Drawing.Point(200, 289);
-            this.pn_cancel.Name = "pn_cancel";
-            this.pn_cancel.Size = new System.Drawing.Size(600, 35);
-            this.pn_cancel.TabIndex = 16;
+            this.pnCancel.Controls.Add(this.btnClose);
+            this.pnCancel.Controls.Add(this.btnErrors);
+            this.pnCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnCancel.Location = new System.Drawing.Point(200, 289);
+            this.pnCancel.Name = "pnCancel";
+            this.pnCancel.Size = new System.Drawing.Size(600, 35);
+            this.pnCancel.TabIndex = 16;
             // 
-            // dgv_tickets
+            // dgvTickets
             // 
-            this.dgv_tickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tickets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_tickets.Location = new System.Drawing.Point(200, 0);
-            this.dgv_tickets.Name = "dgv_tickets";
-            this.dgv_tickets.Size = new System.Drawing.Size(600, 324);
-            this.dgv_tickets.TabIndex = 18;
+            this.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTickets.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTickets.Location = new System.Drawing.Point(200, 0);
+            this.dgvTickets.Name = "dgvTickets";
+            this.dgvTickets.Size = new System.Drawing.Size(600, 324);
+            this.dgvTickets.TabIndex = 18;
             // 
-            // gp_manipulation
+            // gpManipulation
             // 
-            this.gp_manipulation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.gp_manipulation.Controls.Add(this.btn_insert);
-            this.gp_manipulation.Controls.Add(this.btn_update);
-            this.gp_manipulation.Controls.Add(this.cb_dolj);
-            this.gp_manipulation.Controls.Add(this.lbl_dolj);
-            this.gp_manipulation.Controls.Add(this.tb_confirm_password);
-            this.gp_manipulation.Controls.Add(this.lbl_confirm_password);
-            this.gp_manipulation.Controls.Add(this.tb_password);
-            this.gp_manipulation.Controls.Add(this.lbl_password);
-            this.gp_manipulation.Controls.Add(this.tb_login);
-            this.gp_manipulation.Controls.Add(this.lbl_login);
-            this.gp_manipulation.Controls.Add(this.tb_otchestvo);
-            this.gp_manipulation.Controls.Add(this.btn_delete);
-            this.gp_manipulation.Controls.Add(this.lbl_otchestvo);
-            this.gp_manipulation.Controls.Add(this.tb_first_name);
-            this.gp_manipulation.Controls.Add(this.lbl_first_name);
-            this.gp_manipulation.Controls.Add(this.tb_second_name);
-            this.gp_manipulation.Controls.Add(this.lbl_second_name);
-            this.gp_manipulation.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gp_manipulation.Location = new System.Drawing.Point(0, 0);
-            this.gp_manipulation.Name = "gp_manipulation";
-            this.gp_manipulation.Size = new System.Drawing.Size(200, 324);
-            this.gp_manipulation.TabIndex = 17;
-            this.gp_manipulation.TabStop = false;
-            this.gp_manipulation.Text = "Манипулирование данными";
+            this.gpManipulation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.gpManipulation.Controls.Add(this.btnInsert);
+            this.gpManipulation.Controls.Add(this.btnUpdate);
+            this.gpManipulation.Controls.Add(this.cbDolj);
+            this.gpManipulation.Controls.Add(this.lblDolj);
+            this.gpManipulation.Controls.Add(this.tbConfirmPassword);
+            this.gpManipulation.Controls.Add(this.lblConfirmPassword);
+            this.gpManipulation.Controls.Add(this.tbPassword);
+            this.gpManipulation.Controls.Add(this.lblPassword);
+            this.gpManipulation.Controls.Add(this.tbLogin);
+            this.gpManipulation.Controls.Add(this.lblLogin);
+            this.gpManipulation.Controls.Add(this.tbOtchestvo);
+            this.gpManipulation.Controls.Add(this.btnDelete);
+            this.gpManipulation.Controls.Add(this.lblOtchestvo);
+            this.gpManipulation.Controls.Add(this.tbFirstName);
+            this.gpManipulation.Controls.Add(this.lblFirstName);
+            this.gpManipulation.Controls.Add(this.tbSecondName);
+            this.gpManipulation.Controls.Add(this.lblSecondName);
+            this.gpManipulation.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gpManipulation.Location = new System.Drawing.Point(0, 0);
+            this.gpManipulation.Name = "gpManipulation";
+            this.gpManipulation.Size = new System.Drawing.Size(200, 324);
+            this.gpManipulation.TabIndex = 17;
+            this.gpManipulation.TabStop = false;
+            this.gpManipulation.Text = "Манипулирование данными";
             // 
-            // cb_dolj
+            // cbDolj
             // 
-            this.cb_dolj.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cb_dolj.FormattingEnabled = true;
-            this.cb_dolj.Location = new System.Drawing.Point(3, 227);
-            this.cb_dolj.Name = "cb_dolj";
-            this.cb_dolj.Size = new System.Drawing.Size(194, 21);
-            this.cb_dolj.TabIndex = 26;
+            this.cbDolj.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbDolj.FormattingEnabled = true;
+            this.cbDolj.Location = new System.Drawing.Point(3, 227);
+            this.cbDolj.Name = "cbDolj";
+            this.cbDolj.Size = new System.Drawing.Size(194, 21);
+            this.cbDolj.TabIndex = 26;
             // 
-            // lbl_dolj
+            // lblDolj
             // 
-            this.lbl_dolj.AutoSize = true;
-            this.lbl_dolj.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_dolj.Location = new System.Drawing.Point(3, 214);
-            this.lbl_dolj.Name = "lbl_dolj";
-            this.lbl_dolj.Size = new System.Drawing.Size(65, 13);
-            this.lbl_dolj.TabIndex = 25;
-            this.lbl_dolj.Text = "Должность";
+            this.lblDolj.AutoSize = true;
+            this.lblDolj.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDolj.Location = new System.Drawing.Point(3, 214);
+            this.lblDolj.Name = "lblDolj";
+            this.lblDolj.Size = new System.Drawing.Size(65, 13);
+            this.lblDolj.TabIndex = 25;
+            this.lblDolj.Text = "Должность";
             // 
-            // tb_confirm_password
+            // tbConfirmPassword
             // 
-            this.tb_confirm_password.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tb_confirm_password.Location = new System.Drawing.Point(3, 194);
-            this.tb_confirm_password.Name = "tb_confirm_password";
-            this.tb_confirm_password.Size = new System.Drawing.Size(194, 20);
-            this.tb_confirm_password.TabIndex = 18;
+            this.tbConfirmPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbConfirmPassword.Location = new System.Drawing.Point(3, 194);
+            this.tbConfirmPassword.Name = "tbConfirmPassword";
+            this.tbConfirmPassword.Size = new System.Drawing.Size(194, 20);
+            this.tbConfirmPassword.TabIndex = 18;
             // 
-            // lbl_confirm_password
+            // lblConfirmPassword
             // 
-            this.lbl_confirm_password.AutoSize = true;
-            this.lbl_confirm_password.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_confirm_password.Location = new System.Drawing.Point(3, 181);
-            this.lbl_confirm_password.Name = "lbl_confirm_password";
-            this.lbl_confirm_password.Size = new System.Drawing.Size(94, 13);
-            this.lbl_confirm_password.TabIndex = 17;
-            this.lbl_confirm_password.Text = "Повторте пароль";
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblConfirmPassword.Location = new System.Drawing.Point(3, 181);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(94, 13);
+            this.lblConfirmPassword.TabIndex = 17;
+            this.lblConfirmPassword.Text = "Повторте пароль";
             // 
-            // tb_password
+            // tbPassword
             // 
-            this.tb_password.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tb_password.Location = new System.Drawing.Point(3, 161);
-            this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(194, 20);
-            this.tb_password.TabIndex = 16;
+            this.tbPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbPassword.Location = new System.Drawing.Point(3, 161);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(194, 20);
+            this.tbPassword.TabIndex = 16;
             // 
-            // lbl_password
+            // lblPassword
             // 
-            this.lbl_password.AutoSize = true;
-            this.lbl_password.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_password.Location = new System.Drawing.Point(3, 148);
-            this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(45, 13);
-            this.lbl_password.TabIndex = 15;
-            this.lbl_password.Text = "Пароль";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPassword.Location = new System.Drawing.Point(3, 148);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(45, 13);
+            this.lblPassword.TabIndex = 15;
+            this.lblPassword.Text = "Пароль";
             // 
-            // tb_login
+            // tbLogin
             // 
-            this.tb_login.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tb_login.Location = new System.Drawing.Point(3, 128);
-            this.tb_login.Name = "tb_login";
-            this.tb_login.Size = new System.Drawing.Size(194, 20);
-            this.tb_login.TabIndex = 14;
+            this.tbLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbLogin.Location = new System.Drawing.Point(3, 128);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(194, 20);
+            this.tbLogin.TabIndex = 14;
             // 
-            // lbl_login
+            // lblLogin
             // 
-            this.lbl_login.AutoSize = true;
-            this.lbl_login.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_login.Location = new System.Drawing.Point(3, 115);
-            this.lbl_login.Name = "lbl_login";
-            this.lbl_login.Size = new System.Drawing.Size(38, 13);
-            this.lbl_login.TabIndex = 13;
-            this.lbl_login.Text = "Логин";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblLogin.Location = new System.Drawing.Point(3, 115);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(38, 13);
+            this.lblLogin.TabIndex = 13;
+            this.lblLogin.Text = "Логин";
             // 
-            // tb_otchestvo
+            // tbOtchestvo
             // 
-            this.tb_otchestvo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tb_otchestvo.Location = new System.Drawing.Point(3, 95);
-            this.tb_otchestvo.Name = "tb_otchestvo";
-            this.tb_otchestvo.Size = new System.Drawing.Size(194, 20);
-            this.tb_otchestvo.TabIndex = 12;
+            this.tbOtchestvo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbOtchestvo.Location = new System.Drawing.Point(3, 95);
+            this.tbOtchestvo.Name = "tbOtchestvo";
+            this.tbOtchestvo.Size = new System.Drawing.Size(194, 20);
+            this.tbOtchestvo.TabIndex = 12;
             // 
-            // btn_delete
+            // btnDelete
             // 
-            this.btn_delete.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_delete.Location = new System.Drawing.Point(3, 298);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(194, 23);
-            this.btn_delete.TabIndex = 11;
-            this.btn_delete.Text = "Удалить билет";
-            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDelete.Location = new System.Drawing.Point(3, 298);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(194, 23);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.Text = "Удалить билет";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // lbl_otchestvo
+            // lblOtchestvo
             // 
-            this.lbl_otchestvo.AutoSize = true;
-            this.lbl_otchestvo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_otchestvo.Location = new System.Drawing.Point(3, 82);
-            this.lbl_otchestvo.Name = "lbl_otchestvo";
-            this.lbl_otchestvo.Size = new System.Drawing.Size(128, 13);
-            this.lbl_otchestvo.TabIndex = 5;
-            this.lbl_otchestvo.Text = "Отчество пользователя";
+            this.lblOtchestvo.AutoSize = true;
+            this.lblOtchestvo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblOtchestvo.Location = new System.Drawing.Point(3, 82);
+            this.lblOtchestvo.Name = "lblOtchestvo";
+            this.lblOtchestvo.Size = new System.Drawing.Size(128, 13);
+            this.lblOtchestvo.TabIndex = 5;
+            this.lblOtchestvo.Text = "Отчество пользователя";
             // 
-            // tb_first_name
+            // tbFirstName
             // 
-            this.tb_first_name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tb_first_name.Location = new System.Drawing.Point(3, 62);
-            this.tb_first_name.Name = "tb_first_name";
-            this.tb_first_name.Size = new System.Drawing.Size(194, 20);
-            this.tb_first_name.TabIndex = 4;
+            this.tbFirstName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbFirstName.Location = new System.Drawing.Point(3, 62);
+            this.tbFirstName.Name = "tbFirstName";
+            this.tbFirstName.Size = new System.Drawing.Size(194, 20);
+            this.tbFirstName.TabIndex = 4;
             // 
-            // lbl_first_name
+            // lblFirstName
             // 
-            this.lbl_first_name.AutoSize = true;
-            this.lbl_first_name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_first_name.Location = new System.Drawing.Point(3, 49);
-            this.lbl_first_name.Name = "lbl_first_name";
-            this.lbl_first_name.Size = new System.Drawing.Size(103, 13);
-            this.lbl_first_name.TabIndex = 3;
-            this.lbl_first_name.Text = "Имя пользователя";
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblFirstName.Location = new System.Drawing.Point(3, 49);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(103, 13);
+            this.lblFirstName.TabIndex = 3;
+            this.lblFirstName.Text = "Имя пользователя";
             // 
-            // tb_second_name
+            // tbSecondName
             // 
-            this.tb_second_name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tb_second_name.Location = new System.Drawing.Point(3, 29);
-            this.tb_second_name.Name = "tb_second_name";
-            this.tb_second_name.Size = new System.Drawing.Size(194, 20);
-            this.tb_second_name.TabIndex = 2;
+            this.tbSecondName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbSecondName.Location = new System.Drawing.Point(3, 29);
+            this.tbSecondName.Name = "tbSecondName";
+            this.tbSecondName.Size = new System.Drawing.Size(194, 20);
+            this.tbSecondName.TabIndex = 2;
             // 
-            // lbl_second_name
+            // lblSecondName
             // 
-            this.lbl_second_name.AutoSize = true;
-            this.lbl_second_name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_second_name.Location = new System.Drawing.Point(3, 16);
-            this.lbl_second_name.Name = "lbl_second_name";
-            this.lbl_second_name.Size = new System.Drawing.Size(130, 13);
-            this.lbl_second_name.TabIndex = 1;
-            this.lbl_second_name.Text = "Фамилия пользователя";
+            this.lblSecondName.AutoSize = true;
+            this.lblSecondName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSecondName.Location = new System.Drawing.Point(3, 16);
+            this.lblSecondName.Name = "lblSecondName";
+            this.lblSecondName.Size = new System.Drawing.Size(130, 13);
+            this.lblSecondName.TabIndex = 1;
+            this.lblSecondName.Text = "Фамилия пользователя";
             // 
-            // btn_update
+            // btnUpdate
             // 
-            this.btn_update.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_update.Location = new System.Drawing.Point(3, 275);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(194, 23);
-            this.btn_update.TabIndex = 28;
-            this.btn_update.Text = "Изменить данные";
-            this.btn_update.UseVisualStyleBackColor = true;
+            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnUpdate.Location = new System.Drawing.Point(3, 275);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(194, 23);
+            this.btnUpdate.TabIndex = 28;
+            this.btnUpdate.Text = "Изменить данные";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // btn_insert
+            // btnInsert
             // 
-            this.btn_insert.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_insert.Location = new System.Drawing.Point(3, 252);
-            this.btn_insert.Name = "btn_insert";
-            this.btn_insert.Size = new System.Drawing.Size(194, 23);
-            this.btn_insert.TabIndex = 29;
-            this.btn_insert.Text = "Добавить билет";
-            this.btn_insert.UseVisualStyleBackColor = true;
+            this.btnInsert.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnInsert.Location = new System.Drawing.Point(3, 252);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(194, 23);
+            this.btnInsert.TabIndex = 29;
+            this.btnInsert.Text = "Добавить билет";
+            this.btnInsert.UseVisualStyleBackColor = true;
             // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 324);
-            this.Controls.Add(this.gb_search_filtration);
-            this.Controls.Add(this.pn_cancel);
-            this.Controls.Add(this.dgv_tickets);
-            this.Controls.Add(this.gp_manipulation);
+            this.Controls.Add(this.gbSearchFiltration);
+            this.Controls.Add(this.pnCancel);
+            this.Controls.Add(this.dgvTickets);
+            this.Controls.Add(this.gpManipulation);
             this.Name = "Users";
             this.Text = "Users";
-            this.gb_search_filtration.ResumeLayout(false);
-            this.gb_search_filtration.PerformLayout();
-            this.pn_cancel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_tickets)).EndInit();
-            this.gp_manipulation.ResumeLayout(false);
-            this.gp_manipulation.PerformLayout();
+            this.gbSearchFiltration.ResumeLayout(false);
+            this.gbSearchFiltration.PerformLayout();
+            this.pnCancel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTickets)).EndInit();
+            this.gpManipulation.ResumeLayout(false);
+            this.gpManipulation.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gb_search_filtration;
-        private System.Windows.Forms.CheckBox chb_filtration;
-        private System.Windows.Forms.TextBox tb_search_flitration;
-        private System.Windows.Forms.Button btn_close;
-        private System.Windows.Forms.Button btn_errors;
-        private System.Windows.Forms.Panel pn_cancel;
-        private System.Windows.Forms.DataGridView dgv_tickets;
-        private System.Windows.Forms.GroupBox gp_manipulation;
-        private System.Windows.Forms.ComboBox cb_dolj;
-        private System.Windows.Forms.Label lbl_dolj;
-        private System.Windows.Forms.TextBox tb_confirm_password;
-        private System.Windows.Forms.Label lbl_confirm_password;
-        private System.Windows.Forms.TextBox tb_password;
-        private System.Windows.Forms.Label lbl_password;
-        private System.Windows.Forms.TextBox tb_login;
-        private System.Windows.Forms.Label lbl_login;
-        private System.Windows.Forms.TextBox tb_otchestvo;
-        private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Label lbl_otchestvo;
-        private System.Windows.Forms.TextBox tb_first_name;
-        private System.Windows.Forms.Label lbl_first_name;
-        private System.Windows.Forms.TextBox tb_second_name;
-        private System.Windows.Forms.Label lbl_second_name;
-        private System.Windows.Forms.Button btn_insert;
-        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.GroupBox gbSearchFiltration;
+        private System.Windows.Forms.CheckBox chbFiltration;
+        private System.Windows.Forms.TextBox tbSearchFlitration;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnErrors;
+        private System.Windows.Forms.Panel pnCancel;
+        private System.Windows.Forms.DataGridView dgvTickets;
+        private System.Windows.Forms.GroupBox gpManipulation;
+        private System.Windows.Forms.ComboBox cbDolj;
+        private System.Windows.Forms.Label lblDolj;
+        private System.Windows.Forms.TextBox tbConfirmPassword;
+        private System.Windows.Forms.Label lblConfirmPassword;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox tbLogin;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.TextBox tbOtchestvo;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label lblOtchestvo;
+        private System.Windows.Forms.TextBox tbFirstName;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.TextBox tbSecondName;
+        private System.Windows.Forms.Label lblSecondName;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

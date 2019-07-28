@@ -28,98 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_login = new System.Windows.Forms.Label();
-            this.lbl_title = new System.Windows.Forms.Label();
-            this.tb_login = new System.Windows.Forms.TextBox();
-            this.lbl_password = new System.Windows.Forms.Label();
-            this.tb_password = new System.Windows.Forms.TextBox();
-            this.btn_registr = new System.Windows.Forms.Button();
-            this.btn_enter = new System.Windows.Forms.Button();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.tbLogin = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.btnRegistr = new System.Windows.Forms.Button();
+            this.btnEnter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lbl_login
+            // lblLogin
             // 
-            this.lbl_login.AutoSize = true;
-            this.lbl_login.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_login.Location = new System.Drawing.Point(0, 54);
-            this.lbl_login.Name = "lbl_login";
-            this.lbl_login.Size = new System.Drawing.Size(128, 20);
-            this.lbl_login.TabIndex = 13;
-            this.lbl_login.Text = "Введите логин:";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLogin.Location = new System.Drawing.Point(0, 54);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(128, 20);
+            this.lblLogin.TabIndex = 13;
+            this.lblLogin.Text = "Введите логин:";
             // 
-            // lbl_title
+            // lblTitle
             // 
-            this.lbl_title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_title.Location = new System.Drawing.Point(0, 0);
-            this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(241, 54);
-            this.lbl_title.TabIndex = 12;
-            this.lbl_title.Text = "Авторизация";
-            this.lbl_title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(241, 54);
+            this.lblTitle.TabIndex = 12;
+            this.lblTitle.Text = "Авторизация";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // tb_login
+            // tbLogin
             // 
-            this.tb_login.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tb_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tb_login.Location = new System.Drawing.Point(0, 74);
-            this.tb_login.Name = "tb_login";
-            this.tb_login.Size = new System.Drawing.Size(241, 26);
-            this.tb_login.TabIndex = 18;
+            this.tbLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbLogin.Location = new System.Drawing.Point(0, 74);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(241, 26);
+            this.tbLogin.TabIndex = 18;
             // 
-            // lbl_password
+            // lblPassword
             // 
-            this.lbl_password.AutoSize = true;
-            this.lbl_password.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_password.Location = new System.Drawing.Point(0, 100);
-            this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(139, 20);
-            this.lbl_password.TabIndex = 22;
-            this.lbl_password.Text = "Введете пароль:";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPassword.Location = new System.Drawing.Point(0, 100);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(139, 20);
+            this.lblPassword.TabIndex = 22;
+            this.lblPassword.Text = "Введете пароль:";
             // 
-            // tb_password
+            // tbPassword
             // 
-            this.tb_password.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tb_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tb_password.Location = new System.Drawing.Point(0, 120);
-            this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(241, 26);
-            this.tb_password.TabIndex = 23;
+            this.tbPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbPassword.Location = new System.Drawing.Point(0, 120);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(241, 26);
+            this.tbPassword.TabIndex = 23;
             // 
-            // btn_registr
+            // btnRegistr
             // 
-            this.btn_registr.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_registr.Location = new System.Drawing.Point(0, 190);
-            this.btn_registr.Name = "btn_registr";
-            this.btn_registr.Size = new System.Drawing.Size(241, 23);
-            this.btn_registr.TabIndex = 26;
-            this.btn_registr.Text = "Зарегистрироваться";
-            this.btn_registr.UseVisualStyleBackColor = true;
+            this.btnRegistr.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRegistr.Location = new System.Drawing.Point(0, 190);
+            this.btnRegistr.Name = "btnRegistr";
+            this.btnRegistr.Size = new System.Drawing.Size(241, 23);
+            this.btnRegistr.TabIndex = 26;
+            this.btnRegistr.Text = "Зарегистрироваться";
+            this.btnRegistr.UseVisualStyleBackColor = true;
             // 
-            // btn_enter
+            // btnEnter
             // 
-            this.btn_enter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_enter.Location = new System.Drawing.Point(0, 167);
-            this.btn_enter.Name = "btn_enter";
-            this.btn_enter.Size = new System.Drawing.Size(241, 23);
-            this.btn_enter.TabIndex = 27;
-            this.btn_enter.Text = "Войти";
-            this.btn_enter.UseVisualStyleBackColor = true;
+            this.btnEnter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnEnter.Location = new System.Drawing.Point(0, 167);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(241, 23);
+            this.btnEnter.TabIndex = 27;
+            this.btnEnter.Text = "Войти";
+            this.btnEnter.UseVisualStyleBackColor = true;
             // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(241, 213);
-            this.Controls.Add(this.btn_enter);
-            this.Controls.Add(this.btn_registr);
-            this.Controls.Add(this.tb_password);
-            this.Controls.Add(this.lbl_password);
-            this.Controls.Add(this.tb_login);
-            this.Controls.Add(this.lbl_login);
-            this.Controls.Add(this.lbl_title);
+            this.Controls.Add(this.btnEnter);
+            this.Controls.Add(this.btnRegistr);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.tbLogin);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.lblTitle);
             this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AuthorizationForm";
@@ -129,12 +129,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lbl_login;
-        private System.Windows.Forms.Label lbl_title;
-        private System.Windows.Forms.TextBox tb_login;
-        private System.Windows.Forms.Label lbl_password;
-        private System.Windows.Forms.TextBox tb_password;
-        private System.Windows.Forms.Button btn_registr;
-        private System.Windows.Forms.Button btn_enter;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.TextBox tbLogin;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Button btnRegistr;
+        private System.Windows.Forms.Button btnEnter;
     }
 }
