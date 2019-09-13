@@ -1,20 +1,64 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+using System.Data.Sql;
+using System.Data.SqlClient;
 namespace i_1_16_dotsu_kp
 {
-    public partial class DBConnection : Form
+    class DBConnection
     {
-        public DBConnection()
+        public event Action<DataTable> DataTableServers;
+        public event Action<DataTable> DatatableDatabases;
+        public event Action<bool> ConnectionState;
+        public string ConnectionDS, ConnectionUID, ConnectionPassword;
+        public static bool LogConnection;
+        RegistryData registryData = new RegistryData();
+
+        public void GetServers()
         {
-            InitializeComponent();
+            SqlDataSourceEnumerator sqlDataSourceEnumerator = SqlDataSourceEnumerator.Instance;
+            DataTableServers(sqlDataSourceEnumerator.GetDataSources());
+        }
+        public void GetDatabases()
+        {
+            SqlConnection sqlConnection = new SqlConnection("Data Source = " + ConnectionDS + "; Initial Catalog = master; Persist Security Info = true; " +
+                "User ID " + ConnectionUID + "; Password = " + ConnectionPassword + "\"");
+            try
+            {
+                SqlCommand sqlCommand = new SqlCommand("select name from sys.databases where name not in ('master', 'tempdb', 'model', 'msdb')", sqlConnection);
+                DataTable dataTable = new DataTable();
+
+                sqlConnection.Open();
+                dataTable.Load(sqlCommand.ExecuteReader());
+                DatatableDatabases(dataTable);
+            }
+            catch(Exception ex)
+            {
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + ex.Message;
+            }
+            finally
+            {
+                sqlConnection.Close();
+            } 
+        }
+        public void CheckConnection()
+        {
+            registryData.GetRegistry();
+            try
+            {
+                RegistryData.DBConnectionString.Open();
+                ConnectionState(true);
+                LogConnection = true;
+            }
+            catch (Exception ex)
+            {
+                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + ex.Message;
+                ConnectionState(false);
+                LogConnection = false;
+            }
+            finally
+            {
+                RegistryData.DBConnectionString.Close();
+            }
         }
     }
 }

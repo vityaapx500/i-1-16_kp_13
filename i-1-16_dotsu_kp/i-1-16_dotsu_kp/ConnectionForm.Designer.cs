@@ -1,6 +1,6 @@
 ﻿namespace i_1_16_dotsu_kp
 {
-    partial class DBConnection
+    partial class ConnectionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -229,7 +229,7 @@
             this.lbsstStatus.Size = new System.Drawing.Size(11, 17);
             this.lbsstStatus.Text = "-";
             // 
-            // DBConnection
+            // ConnectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -248,7 +248,7 @@
             this.Controls.Add(this.lbNameServer);
             this.Controls.Add(this.cbAddressServer);
             this.Controls.Add(this.lbAddressServer);
-            this.Name = "DBConnection";
+            this.Name = "ConnectionForm";
             this.Text = "Подключение к базе данных";
             this.sstStatusConnection.ResumeLayout(false);
             this.sstStatusConnection.PerformLayout();
