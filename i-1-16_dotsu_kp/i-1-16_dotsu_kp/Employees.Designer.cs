@@ -405,9 +405,6 @@
         private System.Windows.Forms.DataGridView dgvEmployees;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnErrors;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Label lblOtchestvo;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label lblName;
@@ -433,5 +430,8 @@
         private System.Windows.Forms.GroupBox gbSearchFiltration;
         private System.Windows.Forms.CheckBox chbFiltration;
         private System.Windows.Forms.TextBox tbSearchFlitration;
+        public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnInsert;
     }
 }

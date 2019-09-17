@@ -1,6 +1,6 @@
 ﻿namespace i_1_16_dotsu_kp
 {
-    partial class Trains
+    partial class TrainsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -251,7 +251,7 @@
             this.tbSearchFlitration.Text = "Введите данные поезда...";
             this.tbSearchFlitration.WordWrap = false;
             // 
-            // Trains
+            // TrainsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,7 +260,7 @@
             this.Controls.Add(this.dgvTrains);
             this.Controls.Add(this.gpManipulation);
             this.Controls.Add(this.pnCancel);
-            this.Name = "Trains";
+            this.Name = "TrainsForm";
             this.Text = "Справочник Поезда";
             this.pnCancel.ResumeLayout(false);
             this.gpManipulation.ResumeLayout(false);
@@ -277,9 +277,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnErrors;
         private System.Windows.Forms.GroupBox gpManipulation;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.ComboBox cbStewardEmployee;
         private System.Windows.Forms.Label lblStewardEmployee;
         private System.Windows.Forms.ComboBox cbMachEmployee;
@@ -292,5 +289,8 @@
         private System.Windows.Forms.GroupBox gbSearchFiltration;
         private System.Windows.Forms.CheckBox chbFiltration;
         private System.Windows.Forms.TextBox tbSearchFlitration;
+        public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnInsert;
     }
 }

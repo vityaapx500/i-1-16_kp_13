@@ -66,6 +66,7 @@
     <Compile Include="Employees.Designer.cs">
       <DependentUpon>Employees.cs</DependentUpon>
     </Compile>
+    <Compile Include="EnabledComponent.cs" />
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,11 +88,11 @@
     <Compile Include="Tickets.Designer.cs">
       <DependentUpon>Tickets.cs</DependentUpon>
     </Compile>
-    <Compile Include="Trains.cs">
+    <Compile Include="TrainsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Trains.Designer.cs">
-      <DependentUpon>Trains.cs</DependentUpon>
+    <Compile Include="TrainsForm.Designer.cs">
+      <DependentUpon>TrainsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
       <SubType>Form</SubType>
@@ -126,8 +127,8 @@
     <EmbeddedResource Include="Tickets.resx">
       <DependentUpon>Tickets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Trains.resx">
-      <DependentUpon>Trains.cs</DependentUpon>
+    <EmbeddedResource Include="TrainsForm.resx">
+      <DependentUpon>TrainsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>

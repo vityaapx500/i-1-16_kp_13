@@ -7,7 +7,7 @@ namespace i_1_16_dotsu_kp
     class DBConnection
     {
         public event Action<DataTable> DataTableServers;
-        public event Action<DataTable> DatatableDatabases;
+        public event Action<DataTable> DataTableDataBases;
         public event Action<bool> ConnectionState;
         public string ConnectionDS, ConnectionUID, ConnectionPassword;
         public static bool LogConnection;
@@ -18,7 +18,7 @@ namespace i_1_16_dotsu_kp
             SqlDataSourceEnumerator sqlDataSourceEnumerator = SqlDataSourceEnumerator.Instance;
             DataTableServers(sqlDataSourceEnumerator.GetDataSources());
         }
-        public void GetDatabases()
+        public void GetDataBases()
         {
             SqlConnection sqlConnection = new SqlConnection("Data Source = " + ConnectionDS + "; Initial Catalog = master; Persist Security Info = true; " +
                 "User ID " + ConnectionUID + "; Password = " + ConnectionPassword + "\"");
@@ -29,7 +29,7 @@ namespace i_1_16_dotsu_kp
 
                 sqlConnection.Open();
                 dataTable.Load(sqlCommand.ExecuteReader());
-                DatatableDatabases(dataTable);
+                DataTableDataBases(dataTable);
             }
             catch(Exception ex)
             {
