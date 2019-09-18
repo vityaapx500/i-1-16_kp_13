@@ -23,10 +23,8 @@ namespace i_1_16_dotsu_kp
             {
                 SqlCommand commandSearchUser = new SqlCommand("", RegistryData.DBConnectionString);
                 SqlCommand commandRoleUser = new SqlCommand("", RegistryData.DBConnectionString);
-                SqlCommand commandFIODirector = new SqlCommand("", RegistryData.DBConnectionString);
-                commandSearchUser.CommandText = "select count(*) from[dbo].[User] where CONVERT([nvarchar] (16), DECRYPTBYKEY([Login_User])) = '" + tbLogin.Text + "' and CONVERT([nvarchar] (16), DECRYPTBYKEY([Password_User])) = '" + tbPassword.Text + "'";
-                commandRoleUser.CommandText = "select [Role_User_ID] from [dbo].[User] where CONVERT([nvarchar] (16), DECRYPTBYKEY([Login_User])) = '" + tbLogin.Text + "' and CONVERT([nvarchar] (16), DECRYPTBYKEY([Password_User])) = '" + tbPassword.Text + "'";
-                commandFIODirector.CommandText = "select [Surname_User] + ' ' + [Name_User] + ' ' + [Patronymic_User] from [dbo].[User] where [Role_User_ID] = 3 and [User_Logical_Delete] = 0;";
+                commandSearchUser.CommandText = "select count(*) from[dbo].[users] where [login_user] = '" + tbLogin.Text + "' and [password_user] = '" + tbPassword.Text + "'";
+                //commandRoleUser.CommandText = "select [Role_User_ID] from [dbo].[User] where CONVERT([nvarchar] (16), DECRYPTBYKEY([Login_User])) = '" + tbLogin.Text + "' and CONVERT([nvarchar] (16), DECRYPTBYKEY([Password_User])) = '" + tbPassword.Text + "'";
 
                 try     //нахождение пользователя таким логином и паролем
                 {
@@ -37,7 +35,7 @@ namespace i_1_16_dotsu_kp
                 }
                 catch
                 {
-                    MessageBox.Show("Не правильный логинили пароль", "Ошибки в результате работы", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Не правильный логин или пароль", "Ошибки в результате работы", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -45,7 +43,7 @@ namespace i_1_16_dotsu_kp
                 }
 
                 if (checkUser == 0)
-                    MessageBox.Show("Пользователя с данным логин и паролем не обнаружено! Проверьте правильность ввода данных или зарегистрируйтесь.", "Вокзал", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Пользователя с данным логином и паролем не обнаружено! Проверьте правильность ввода данных или зарегистрируйтесь.", "Вокзал", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else     //установление роли данного пользователя
                 {
 

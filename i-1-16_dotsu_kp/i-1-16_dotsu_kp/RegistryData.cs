@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Security.Cryptography;
-using System.Text;
 using Microsoft.Win32;
 
 namespace i_1_16_dotsu_kp
@@ -36,7 +34,8 @@ namespace i_1_16_dotsu_kp
             }
             finally
             {
-                DBConnectionString.ConnectionString = "Data Source = " + DataSourceIP + "\\" + DataSourceServerName + "; Initial Catalog = " + InitialCatalog +
+                DBConnectionString.ConnectionString = "Data Source = " + DataSourceIP + "\\" +
+                    DataSourceServerName + "; Initial Catalog = " + InitialCatalog +
                     "; Persist Security Info = true; " + "User ID = " + UserID + "; Password = \"" + UserPassword + "\"";
             }
 

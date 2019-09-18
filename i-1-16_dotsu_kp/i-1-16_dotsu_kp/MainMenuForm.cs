@@ -13,7 +13,7 @@ namespace i_1_16_dotsu_kp
         public MainMenuForm()
         {
             InitializeComponent();
-            //EnabledComponent.EventHandler = new EnabledComponent.MyEvent(EnableMenu);
+            EnabledComponent.EventHandler = new EnabledComponent.MyEvent(EnableMenu);
         }
 
         public void MainMenu_Load(object sender, EventArgs e)   //загрузка формы

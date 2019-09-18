@@ -101,7 +101,6 @@
             this.tbUserServer.Location = new System.Drawing.Point(0, 87);
             this.tbUserServer.Margin = new System.Windows.Forms.Padding(2);
             this.tbUserServer.Name = "tbUserServer";
-            this.tbUserServer.PasswordChar = '*';
             this.tbUserServer.Size = new System.Drawing.Size(308, 20);
             this.tbUserServer.TabIndex = 22;
             // 
@@ -178,6 +177,7 @@
             this.btnCancel.TabIndex = 30;
             this.btnCancel.Text = "Отменить";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnConnect
             // 
@@ -192,6 +192,7 @@
             this.btnConnect.TabIndex = 29;
             this.btnConnect.Text = "Подключить";
             this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // btnCheck
             // 
@@ -208,6 +209,7 @@
             this.btnCheck.TabIndex = 28;
             this.btnCheck.Text = "Проверить";
             this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // sstStatusConnection
             // 
@@ -250,6 +252,8 @@
             this.Controls.Add(this.lbAddressServer);
             this.Name = "ConnectionForm";
             this.Text = "Подключение к базе данных";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConnectionForm_FormClosing);
+            this.Load += new System.EventHandler(this.ConnectionForm_Load);
             this.sstStatusConnection.ResumeLayout(false);
             this.sstStatusConnection.PerformLayout();
             this.ResumeLayout(false);
