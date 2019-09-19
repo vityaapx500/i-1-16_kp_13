@@ -4,7 +4,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 namespace i_1_16_dotsu_kp
 {
-    class DBConnection
+    class DBConnection1
     {
         public event Action<DataTable> DataTableServers;
         public event Action<DataTable> DataTableDataBases;

@@ -34,7 +34,6 @@
             this.miAuthorization = new System.Windows.Forms.ToolStripMenuItem();
             this.miSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.miAppSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.miConnetionSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.miExitProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.завершениеРаботыToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.miExitFromSystem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,8 +91,7 @@
             // miSettings
             // 
             this.miSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miAppSettings,
-            this.miConnetionSettings});
+            this.miAppSettings});
             this.miSettings.Name = "miSettings";
             this.miSettings.Size = new System.Drawing.Size(212, 22);
             this.miSettings.Text = "Настройки";
@@ -101,15 +99,8 @@
             // miAppSettings
             // 
             this.miAppSettings.Name = "miAppSettings";
-            this.miAppSettings.Size = new System.Drawing.Size(213, 22);
+            this.miAppSettings.Size = new System.Drawing.Size(207, 22);
             this.miAppSettings.Text = "Настройки приложения";
-            // 
-            // miConnetionSettings
-            // 
-            this.miConnetionSettings.Name = "miConnetionSettings";
-            this.miConnetionSettings.Size = new System.Drawing.Size(213, 22);
-            this.miConnetionSettings.Text = "Настройки подключения";
-            this.miConnetionSettings.Click += new System.EventHandler(this.miSettingConnection_Click);
             // 
             // miExitProfile
             // 
@@ -291,7 +282,6 @@
         private System.Windows.Forms.ToolStripMenuItem miPassenger;
         private System.Windows.Forms.ToolStripMenuItem miPlaceStatus;
         private System.Windows.Forms.ToolStripMenuItem miAppSettings;
-        private System.Windows.Forms.ToolStripMenuItem miConnetionSettings;
         private System.Windows.Forms.Timer timer;
     }
 }

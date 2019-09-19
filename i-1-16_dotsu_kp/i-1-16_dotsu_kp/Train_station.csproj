@@ -51,13 +51,9 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConnectionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConnectionForm.Designer.cs">
-      <DependentUpon>ConnectionForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DBConnection.cs" />
+    <Compile Include="DB.cs" />
+    <Compile Include="DBConnection0.cs" />
+    <Compile Include="DBConnection1.cs" />
     <Compile Include="DBStoredProcedure.cs" />
     <Compile Include="DBTables.cs" />
     <Compile Include="Employees.cs">
@@ -102,9 +98,6 @@
     </Compile>
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConnectionForm.resx">
-      <DependentUpon>ConnectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>

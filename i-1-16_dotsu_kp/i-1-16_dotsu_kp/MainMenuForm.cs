@@ -6,27 +6,16 @@ namespace i_1_16_dotsu_kp
 {
     public partial class MainMenuForm : Form
     {
-        private DBConnection dbConnection = new DBConnection();
+        private DBConnection0 dbConnection = new DBConnection0();
         private RegistryData registryData = new RegistryData();
-        private Thread threadCheckConnection;
 
         public MainMenuForm()
         {
             InitializeComponent();
-            EnabledComponent.EventHandler = new EnabledComponent.MyEvent(EnableMenu);
+            EnabledComponent.EventHandler = new EnabledComponent.MyEvent(MainMenu_Load);
         }
 
-        public void MainMenu_Load(object sender, EventArgs e)   //загрузка формы
-        {
-            lbsstConnection.Visible = true;
-            lbsstConnection.Text = "Определение сервера...";
-            dbConnection.ConnectionState += InformationConnection;
-            threadCheckConnection = new Thread(dbConnection.CheckConnection);
-            threadCheckConnection.Start();
-        }
-
-
-        private void EnableMenu(int userRole)    //доступность меню
+        public void MainMenu_Load(int userRole)   //загрузка формы
         {
             switch (userRole)
             {
@@ -96,47 +85,6 @@ namespace i_1_16_dotsu_kp
                     break;
             }
         }
-
-        private void InformationConnection(bool value)  //проверка подключения к базе данных
-        {
-            try
-            {
-                Action action = () =>
-                {
-                    switch (value)
-                    {
-                        case (true):
-                            lbsstConnection.Text = RegistryData.DataSourceIP + "\\" + RegistryData.DataSourceServerName + " - " + RegistryData.InitialCatalog;
-                            AuthorizationForm authorizationForm = new AuthorizationForm();
-                            authorizationForm.Show(this);
-                            break;
-                        case (false):
-                            lbsstConnection.Text = "Подключение отсутствует!";
-
-                            foreach (Form f in Application.OpenForms)
-                            {
-                                if (f.Name == "ConnectionForm")
-                                    return;
-                            }
-
-                            ConnectionForm connectionForm = new ConnectionForm();
-                            connectionForm.Show(this);
-                            break;
-                    }
-                };
-                Invoke(action);
-            }
-            catch
-            {
-                threadCheckConnection.Abort();
-            }
-        }
-
-        private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)    //закрытие формы
-        {
-            Application.Exit();
-        }
-
         private void miEmployee_Click(object sender, EventArgs e)
         {
             Employees employees = new Employees();
@@ -334,11 +282,9 @@ namespace i_1_16_dotsu_kp
         //    SettingsApplication settingsApplication = new SettingsApplication();
         //    settingsApplication.Show(this);
         //}
-
-        private void miSettingConnection_Click(object sender, EventArgs e)  //открытие окна настройки подключения к БД
+        private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)    //закрытие формы
         {
-            ConnectionForm connectionFormOpen = new ConnectionForm();
-            connectionFormOpen.Show(this);
+            Application.Exit();
         }
     }
 }
