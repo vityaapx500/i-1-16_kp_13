@@ -20,8 +20,8 @@ namespace i_1_16_dotsu_kp
         }
         public void GetDataBases()
         {
-            SqlConnection sqlConnection = new SqlConnection("Data Source = " + ConnectionDS + "; Initial Catalog = master; Persist Security Info = true; " +
-                "User ID " + ConnectionUID + "; Password = " + ConnectionPassword + "\"");
+            SqlConnection sqlConnection = new SqlConnection("Data Source = " + ConnectionDS + "; Initial Catalog = sa; Persist Security Info = true; " +
+                "User ID = " + ConnectionUID + "; Password = \"" + ConnectionPassword + "\"");
             try
             {
                 SqlCommand sqlCommand = new SqlCommand("select name from sys.databases where name not in ('master', 'tempdb', 'model', 'msdb')", sqlConnection);

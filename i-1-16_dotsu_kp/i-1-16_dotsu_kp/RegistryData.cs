@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Security.Cryptography;
-using System.Text;
 using Microsoft.Win32;
 
 namespace i_1_16_dotsu_kp
