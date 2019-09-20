@@ -1,21 +1,23 @@
 ﻿using System;
-using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace i_1_16_dotsu_kp
 {
     public partial class MainMenuForm : Form
     {
-        private DBConnection0 dbConnection = new DBConnection0();
-        private RegistryData registryData = new RegistryData();
+        private DBConnection dbConnection = new DBConnection();
 
         public MainMenuForm()
         {
             InitializeComponent();
-            EnabledComponent.EventHandler = new EnabledComponent.MyEvent(MainMenu_Load);
+            EnabledComponent.EventHandler = new EnabledComponent.MyEvent(MainMenuConstraint);
         }
-
-        public void MainMenu_Load(int userRole)   //загрузка формы
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+            MainMenuConstraint(AuthorizationForm.userRole);
+        }
+        public void MainMenuConstraint(int userRole)   //загрузка формы с разрешениями для пользователей
         {
             switch (userRole)
             {
@@ -44,7 +46,6 @@ namespace i_1_16_dotsu_kp
                     miHandBook.Enabled = true;
                     miEmployee.Enabled = true;
                     miTrainDriver.Enabled = true;
-                    miDocs.Enabled = true;
                     miExitProfile.Enabled = true;
                     miSettings.Enabled = true;
                     miAppSettings.Enabled = true;
@@ -56,7 +57,6 @@ namespace i_1_16_dotsu_kp
                     miPassenger.Enabled = true;
                     miRoute.Enabled = true;
                     miTicket.Enabled = true;
-                    miDocs.Enabled = true;
                     miExitProfile.Enabled = true;
                     miSettings.Enabled = true;
                     miAppSettings.Enabled = true;
@@ -69,7 +69,6 @@ namespace i_1_16_dotsu_kp
                     miTrain.Enabled = true;
                     miTrainDriver.Enabled = true;
                     miEmployee.Enabled = true;
-                    miDocs.Enabled = true;
                     miSettings.Enabled = true;
                     miAppSettings.Enabled = true;
                     miAuthorization.Enabled = false;
@@ -152,26 +151,7 @@ namespace i_1_16_dotsu_kp
             tickets.Show(this);
         }
 
-        private void miDolj_Click(object sender, EventArgs e)
-        {
-            //DoljForm doljForm = new DoljForm();
-            //genreBookForm.Show(this);
-        }
-
-        private void miPassenger_Click(object sender, EventArgs e)
-        {
-            //Сделать форму
-        }
-
-        private void miRoute_Click(object sender, EventArgs e)
-        {
-            //Сделать форму
-        }
-
-        private void miPlaceStatus_Click(object sender, EventArgs e)
-        {
-            //Сделать форму
-        }
+        
         private void miExitSystem_Click(object sender, EventArgs e) //выход из ИС
         {
             Application.Exit();
@@ -258,30 +238,11 @@ namespace i_1_16_dotsu_kp
             authorizationForm.Show(this);
             AuthorizationForm.userRole = 0;
         }
-        //private void miCreateActs_Click(object sender, EventArgs e) //открытия форма для формирования документов актов
-        //{
-        //    FormationActsForm formationActsForm = new FormationActsForm();
-        //    formationActsForm.Show(this);
-        //}
-
-        //private void miCreateSummaryBook_Click(object sender, EventArgs e)  //формирования документа Книга суммарного учета
-        //{
-        //    SummaryBookExcel summaryBookExcel = new SummaryBookExcel();
-        //    Thread threadSummaryBookExcel = new Thread(summaryBookExcel.SummaryBookFill);
-        //    threadSummaryBookExcel.Start();
-        //}
-
         private void miAuthorization_Click(object sender, EventArgs e)  //открытие окна авторизации
         {
             AuthorizationForm authorizationForm = new AuthorizationForm();
             authorizationForm.Show(this);
         }
-
-        //private void miSettingApplication_Click(object sender, EventArgs e) //открытие окна настройки приложения
-        //{
-        //    SettingsApplication settingsApplication = new SettingsApplication();
-        //    settingsApplication.Show(this);
-        //}
         private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)    //закрытие формы
         {
             Application.Exit();

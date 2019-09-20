@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace i_1_16_dotsu_kp
 {
     class DBStoredProcedure
     {
-        private SqlCommand storedProcedure = new SqlCommand("", RegistryData.DBConnectionString);
+        private SqlCommand storedProcedure = new SqlCommand("", DBConnection.sqlConnection);
 
         private void ConfigurationProcedure(string nameProcedure)
         {
@@ -13,30 +14,30 @@ namespace i_1_16_dotsu_kp
             storedProcedure.CommandType = System.Data.CommandType.StoredProcedure;
         }
         //Процедуры для таблицы Пассажир
-        public void SPPassengerInsert(string secondName, string firstName, string otchestvo) //Добавление пассажира
+        public void SPPassengerInsert(string surname, string name, string pantronymic) //Добавление пассажира
         {
             ConfigurationProcedure("passenger_insert");
 
-            storedProcedure.Parameters.AddWithValue("@second_name", secondName);
-            storedProcedure.Parameters.AddWithValue("@first_name", firstName);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", otchestvo);
+            storedProcedure.Parameters.AddWithValue("@surname", surname);
+            storedProcedure.Parameters.AddWithValue("@name", name);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", pantronymic);
 
             ExecuteStoredProcedure();
         }
 
-        public void SPPassengerUpdate(Int32 idPassenger, string secondName, string firstName, string otchestvo) //Обновление данный о Пассажире
+        public void SPPassengerUpdate(Int32 idPassenger, string surname, string name, string pantronymic) //Обновление данных о Пассажире
         {
             ConfigurationProcedure("passenger_update");
 
             storedProcedure.Parameters.AddWithValue("@ID_passenger", idPassenger);
-            storedProcedure.Parameters.AddWithValue("@second_name", secondName);
-            storedProcedure.Parameters.AddWithValue("@first_name", firstName);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", otchestvo);
+            storedProcedure.Parameters.AddWithValue("@surname", surname);
+            storedProcedure.Parameters.AddWithValue("@name", name);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", pantronymic);
 
             ExecuteStoredProcedure();
         }
 
-        private void SPPassengerDelete(Int32 idPassenger) //Удаление пассажира
+        public void SPPassengerDelete(Int32 idPassenger) //Удаление пассажира
         {
             ConfigurationProcedure("passenger_delete");
 
@@ -45,7 +46,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void SPPassengerLogicalDelete(Int32 idPassenger) //Логическое удаление пассажира
+        public void SPPassengerLogicalDelete(Int32 idPassenger) //Логическое удаление пассажира
         {
             ConfigurationProcedure("passenger_logical_delete");
 
@@ -70,7 +71,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        public void SPRoleUpdate(Int32 idRole, string roleName, Int32 adminRole, Int32 guestrole, Int32 employeeKadrRole, Int32 employeeRaspRole, Int32 employee_sale_role, Int32 cashier_role) //Обновление данный о роли
+        public void SPRoleUpdate(Int32 idRole, string roleName, Int32 adminRole, Int32 guestrole, Int32 employeeKadrRole, Int32 employeeRaspRole, Int32 employee_sale_role, Int32 cashier_role) //Обновление данных о роли
         {
             ConfigurationProcedure("role_update");
 
@@ -86,7 +87,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void SPRoleDelete(Int32 idRole) //Удаление роли
+        public void SPRoleDelete(Int32 idRole) //Удаление роли
         {
             ConfigurationProcedure("role_delete");
 
@@ -95,7 +96,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void SPRoleLogicalDelete(Int32 idRole) //Логическое удаление роли
+        public void SPRoleLogicalDelete(Int32 idRole) //Логическое удаление роли
         {
             ConfigurationProcedure("role_logical_delete");
 
@@ -105,36 +106,36 @@ namespace i_1_16_dotsu_kp
         }
 
         //Процедуры для таблицы Пользоавтели
-        public void SPUsersInsert(string surname, string name, string otchestvo, string loginUser, string passwordUser, Int32 userRoleID) //Добавление пользователя
+        public void SPUsersInsert(string surname, string name, string pantronymic, string loginUser, string passwordUser, Int32 userRoleID) //Добавление пользователя
         {
             ConfigurationProcedure("users_insert");
 
-            storedProcedure.Parameters.AddWithValue("@second_name", surname);
-            storedProcedure.Parameters.AddWithValue("@first_name", name);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", otchestvo);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", loginUser);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", passwordUser);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", userRoleID);
+            storedProcedure.Parameters.AddWithValue("@surname", surname);
+            storedProcedure.Parameters.AddWithValue("@name", name);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", pantronymic);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", loginUser);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", passwordUser);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", userRoleID);
 
             ExecuteStoredProcedure();
         }
 
-        public void SPUsersUpdate(Int32 idUser, string surname, string name, string otchestvo, string loginUser, string passwordUser, Int32 userRoleID) //Обновление данный о пользователе
+        public void SPUsersUpdate(Int32 idUser, string surname, string name, string pantronymic, string loginUser, string passwordUser, Int32 userRoleID) //Обновление данных о пользователе
         {
             ConfigurationProcedure("users_update");
 
             storedProcedure.Parameters.AddWithValue("ID_user", idUser);
-            storedProcedure.Parameters.AddWithValue("@second_name", surname);
-            storedProcedure.Parameters.AddWithValue("@first_name", name);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", otchestvo);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", loginUser);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", passwordUser);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", userRoleID);
+            storedProcedure.Parameters.AddWithValue("@surname", surname);
+            storedProcedure.Parameters.AddWithValue("@name", name);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", pantronymic);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", loginUser);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", passwordUser);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", userRoleID);
 
             ExecuteStoredProcedure();
         }
 
-        private void SPUsersDelete(Int32 idUser) //Удаление пользователя
+        public void SPUsersDelete(Int32 idUser) //Удаление пользователя
         {
             ConfigurationProcedure("users_delete");
 
@@ -143,7 +144,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void SPUsersLogicalDelete(Int32 idUser) //Логическое удаление пользователя
+        public void SPUsersLogicalDelete(Int32 idUser) //Логическое удаление пользователя
         {
             ConfigurationProcedure("users_logical_delete");
 
@@ -164,7 +165,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        public void SPDoljUpdate(Int32 idDolj, string doljName, Int32 salary) //Обновление данный о должности
+        public void SPDoljUpdate(Int32 idDolj, string doljName, Int32 salary) //Обновление данных о должности
         {
             ConfigurationProcedure("dolj_update");
 
@@ -175,7 +176,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void SPDoljDelete(Int32 idDolj) //Удаление должности
+        public void SPDoljDelete(Int32 idDolj) //Удаление должности
         {
             ConfigurationProcedure("dolj_delete");
 
@@ -184,7 +185,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void SPDoljLogicalDelete(Int32 idDolj) //Логическое удаление должности
+        public void SPDoljLogicalDelete(Int32 idDolj) //Логическое удаление должности
         {
             ConfigurationProcedure("dolj_logical_delete");
 
@@ -194,44 +195,46 @@ namespace i_1_16_dotsu_kp
         }
 
         //Процедуры для таблицы Сотрудники
-        public void SPEmployeeInsert(string secondName, string firstName, string otchestvo, string dateBirth, 
-            Int32 numUdostov, string nameUchilisha, string dateOkonch, string login, string password) //Добавление сотрудника
+        public void SPEmployeeInsert(string surname, string name, string pantronymic, DateTime dateBirth, 
+            Int32 numUdostov, string nameUchilisha, DateTime dateOkonch, string login, string password, Int32 dolj_id) //Добавление сотрудника
         {
             ConfigurationProcedure("employee_insert");
 
-            storedProcedure.Parameters.AddWithValue("@second_name", secondName);
-            storedProcedure.Parameters.AddWithValue("@first_name", firstName);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", otchestvo);
+            storedProcedure.Parameters.AddWithValue("@surname", surname);
+            storedProcedure.Parameters.AddWithValue("@name", name);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", pantronymic);
             storedProcedure.Parameters.AddWithValue("@date_birth", dateBirth);
             storedProcedure.Parameters.AddWithValue("@num_udostov", numUdostov);
             storedProcedure.Parameters.AddWithValue("@name_uchilisha", nameUchilisha);
             storedProcedure.Parameters.AddWithValue("@date_okonch", dateOkonch);
             storedProcedure.Parameters.AddWithValue("@login", login);
             storedProcedure.Parameters.AddWithValue("@password", password);
+            storedProcedure.Parameters.AddWithValue("@dolj_id", dolj_id);
 
             ExecuteStoredProcedure();
         }
 
-        public void SPEmployeeUpdate(Int32 idEmployee, string secondName, string firstName, string otchestvo, string dateBirth, 
-            Int32 numUdostov, string nameUchilisha, string dateOkonch, string login, string password) //Обновление данный о сотруднике
+        public void SPEmployeeUpdate(Int32 idEmployee, string surname, string name, string pantronymic, DateTime dateBirth, 
+            Int32 numUdostov, string nameUchilisha, DateTime dateOkonch, string login, string password, Int32 dolj_id) //Обновление данныx о сотруднике
         {
             ConfigurationProcedure("employee_update");
 
             storedProcedure.Parameters.AddWithValue("@ID_employee", idEmployee);
-            storedProcedure.Parameters.AddWithValue("@second_name", secondName);
-            storedProcedure.Parameters.AddWithValue("@first_name", firstName);
-            storedProcedure.Parameters.AddWithValue("@otchestvo", otchestvo);
+            storedProcedure.Parameters.AddWithValue("@surname", surname);
+            storedProcedure.Parameters.AddWithValue("@name", name);
+            storedProcedure.Parameters.AddWithValue("@pantronymic", pantronymic);
             storedProcedure.Parameters.AddWithValue("@date_birth", dateBirth);
             storedProcedure.Parameters.AddWithValue("@num_udostov", numUdostov);
             storedProcedure.Parameters.AddWithValue("@name_uchilisha", nameUchilisha);
             storedProcedure.Parameters.AddWithValue("@date_okonch", dateOkonch);
             storedProcedure.Parameters.AddWithValue("@login", login);
             storedProcedure.Parameters.AddWithValue("@password", password);
+            storedProcedure.Parameters.AddWithValue("@dolj_id", dolj_id);
 
             ExecuteStoredProcedure();
         }
 
-        private void SPEmployeeDelete(Int32 idEmployee) //Удаление сотрудника
+        public void SPEmployeeDelete(Int32 idEmployee) //Удаление сотрудника
         {
             ConfigurationProcedure("employee_delete");
 
@@ -240,7 +243,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void SPEmployeeLogicalDelete(Int32 idEmployee) //Логическое удаление сотрудника
+        public void SPEmployeeLogicalDelete(Int32 idEmployee) //Логическое удаление сотрудника
         {
             ConfigurationProcedure("employee_logical_delete");
 
@@ -250,32 +253,30 @@ namespace i_1_16_dotsu_kp
         }
 
         //Процедуры для таблицы Поезда
-        public void SPTrainInsert(Int32 numTrain, Int32 kol_voWagon, Int32 machEmployee, Int32 stewardEmployee) //Добавление поезда
+        public void SPTrainInsert(Int32 numTrain, Int32 kol_voWagon, Int32 trainDriver) //Добавление поезда
         {
             ConfigurationProcedure("train_insert");
 
             storedProcedure.Parameters.AddWithValue("@num_train", numTrain);
             storedProcedure.Parameters.AddWithValue("@kol_vo_wagon", kol_voWagon);
-            storedProcedure.Parameters.AddWithValue("@mach_employee_id", machEmployee);
-            storedProcedure.Parameters.AddWithValue("@steward_employee_id", stewardEmployee);
+            storedProcedure.Parameters.AddWithValue("@mach_employee_id", trainDriver);
 
             ExecuteStoredProcedure();
         }
 
-        public void SPTrainUpdate(Int32 idTrain, Int32 numTrain, Int32 kol_voWagon, Int32 machEmployee, Int32 stewardEmployee) //Обновление данный о поезде
+        public void SPTrainUpdate(Int32 idTrain, Int32 numTrain, Int32 kol_voWagon, Int32 trainDriver) //Обновление данных о поезде
         {
             ConfigurationProcedure("train_update");
 
             storedProcedure.Parameters.AddWithValue("@ID_train", idTrain);
             storedProcedure.Parameters.AddWithValue("@num_train", numTrain);
             storedProcedure.Parameters.AddWithValue("@kol_vo_wagon", kol_voWagon);
-            storedProcedure.Parameters.AddWithValue("@mach_employee_id", machEmployee);
-            storedProcedure.Parameters.AddWithValue("@steward_employee_id", stewardEmployee);
+            storedProcedure.Parameters.AddWithValue("@mach_employee_id", trainDriver);
 
             ExecuteStoredProcedure();
         }
 
-        private void SPTrainDelete(Int32 idTrain) //Удаление поезда
+        public void SPTrainDelete(Int32 idTrain) //Удаление поезда
         {
             ConfigurationProcedure("train_delete");
 
@@ -284,7 +285,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void SPTrainLogicalDelete(Int32 idTrain) //Логическое удаление поезда
+        public void SPTrainLogicalDelete(Int32 idTrain) //Логическое удаление поезда
         {
             ConfigurationProcedure("train_logical_delete");
 
@@ -313,7 +314,7 @@ namespace i_1_16_dotsu_kp
         }
 
         public void SPTicketUpdate(Int32 idTicket, Int32 numTicket, string timeRegisry, string timeDeparture, string dateDeparture, 
-            Int32 price, Int32 place, Int32 passengerID, Int32 employeeID, Int32 routeID) //Обновление данный о билетt
+            Int32 price, Int32 place, Int32 passengerID, Int32 employeeID, Int32 routeID) //Обновление данных о билетt
         {
             ConfigurationProcedure("ticket_update");
 
@@ -331,7 +332,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void SPTicketDelete(Int32 idTicket) //Удаление билета
+        public void SPTicketDelete(Int32 idTicket) //Удаление билета
         {
             ConfigurationProcedure("ticket_delete");
 
@@ -340,7 +341,7 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void SPTicketLogicalDelete(Int32 idTicket) //Логическое удаление билета
+        public void SPTicketLogicalDelete(Int32 idTicket) //Логическое удаление билета
         {
             ConfigurationProcedure("ticket_logical_delete");
 
@@ -349,26 +350,28 @@ namespace i_1_16_dotsu_kp
             ExecuteStoredProcedure();
         }
 
-        private void ExecuteStoredProcedure() //Выполнение процедуры
+        public void ExecuteStoredProcedure() //Выполнение процедуры
         {
             try
             {
-                RegistryData.DBConnectionString.Open();
-                RegistryData.DBConnectionString.InfoMessage += MessageInformation;
+                DBConnection.sqlConnection.Open();
+                DBConnection.sqlConnection.InfoMessage += MessageInformation;
+                storedProcedure.ExecuteNonQuery();
+                storedProcedure.Parameters.Clear();
             }
             catch (SqlException ex)
             {
-                RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() + " " + ex.Message;
+                MessageBox.Show(ex.Message);
             }
             finally
             {
-                RegistryData.DBConnectionString.Close();
+                DBConnection.sqlConnection.Close();
             }
         }
 
-        private void MessageInformation(object sender, SqlInfoMessageEventArgs e) //Сообщение об ошибке
+        public void MessageInformation(object sender, SqlInfoMessageEventArgs e) //Сообщение об ошибке
         {
-            RegistryData.ErrorMessage += "\n" + DateTime.Now.ToLongDateString() +" " + e.Message;
+            MessageBox.Show(e.Message);
         }
     }
 }

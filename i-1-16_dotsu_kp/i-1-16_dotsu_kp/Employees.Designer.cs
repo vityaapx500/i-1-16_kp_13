@@ -34,11 +34,11 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.lblOtchestvo = new System.Windows.Forms.Label();
+            this.lblPantronymic = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.tbSecondName = new System.Windows.Forms.TextBox();
-            this.lblSecondName = new System.Windows.Forms.Label();
+            this.tbSurname = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
             this.gpManipulation = new System.Windows.Forms.GroupBox();
             this.cbDolj = new System.Windows.Forms.ComboBox();
             this.lblDolj = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.lblNameUchilisha = new System.Windows.Forms.Label();
             this.tbDateBirth = new System.Windows.Forms.TextBox();
             this.lblDateBirth = new System.Windows.Forms.Label();
-            this.tbOtchestvo = new System.Windows.Forms.TextBox();
+            this.tbPantronymic = new System.Windows.Forms.TextBox();
             this.pnCancel = new System.Windows.Forms.Panel();
             this.gbSearchFiltration = new System.Windows.Forms.GroupBox();
             this.chbFiltration = new System.Windows.Forms.CheckBox();
@@ -68,21 +68,22 @@
             // dgvEmployees
             // 
             this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEmployees.Location = new System.Drawing.Point(200, 0);
+            this.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvEmployees.Location = new System.Drawing.Point(200, 42);
             this.dgvEmployees.Name = "dgvEmployees";
-            this.dgvEmployees.Size = new System.Drawing.Size(601, 478);
+            this.dgvEmployees.Size = new System.Drawing.Size(1015, 436);
             this.dgvEmployees.TabIndex = 10;
             // 
             // btnClose
             // 
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Location = new System.Drawing.Point(729, 0);
+            this.btnClose.Location = new System.Drawing.Point(1143, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(72, 35);
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "Закрыть";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnErrors
             // 
@@ -102,6 +103,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Удалить сотрудника";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -111,6 +113,7 @@
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Изменить данные";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
@@ -120,16 +123,17 @@
             this.btnInsert.TabIndex = 9;
             this.btnInsert.Text = "Добавить сотрудника";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // lblOtchestvo
+            // lblPantronymic
             // 
-            this.lblOtchestvo.AutoSize = true;
-            this.lblOtchestvo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblOtchestvo.Location = new System.Drawing.Point(3, 82);
-            this.lblOtchestvo.Name = "lblOtchestvo";
-            this.lblOtchestvo.Size = new System.Drawing.Size(115, 13);
-            this.lblOtchestvo.TabIndex = 5;
-            this.lblOtchestvo.Text = "Отчество сотрудника";
+            this.lblPantronymic.AutoSize = true;
+            this.lblPantronymic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPantronymic.Location = new System.Drawing.Point(3, 82);
+            this.lblPantronymic.Name = "lblPantronymic";
+            this.lblPantronymic.Size = new System.Drawing.Size(115, 13);
+            this.lblPantronymic.TabIndex = 5;
+            this.lblPantronymic.Text = "Отчество сотрудника";
             // 
             // tbName
             // 
@@ -149,23 +153,23 @@
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Имя сотрудника";
             // 
-            // tbSecondName
+            // tbSurname
             // 
-            this.tbSecondName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbSecondName.Location = new System.Drawing.Point(3, 29);
-            this.tbSecondName.Name = "tbSecondName";
-            this.tbSecondName.Size = new System.Drawing.Size(194, 20);
-            this.tbSecondName.TabIndex = 2;
+            this.tbSurname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbSurname.Location = new System.Drawing.Point(3, 29);
+            this.tbSurname.Name = "tbSurname";
+            this.tbSurname.Size = new System.Drawing.Size(194, 20);
+            this.tbSurname.TabIndex = 2;
             // 
-            // lblSecondName
+            // lblSurname
             // 
-            this.lblSecondName.AutoSize = true;
-            this.lblSecondName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblSecondName.Location = new System.Drawing.Point(3, 16);
-            this.lblSecondName.Name = "lblSecondName";
-            this.lblSecondName.Size = new System.Drawing.Size(117, 13);
-            this.lblSecondName.TabIndex = 1;
-            this.lblSecondName.Text = "Фамилия сотрудника";
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSurname.Location = new System.Drawing.Point(3, 16);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(117, 13);
+            this.lblSurname.TabIndex = 1;
+            this.lblSurname.Text = "Фамилия сотрудника";
             // 
             // gpManipulation
             // 
@@ -184,15 +188,15 @@
             this.gpManipulation.Controls.Add(this.lblNameUchilisha);
             this.gpManipulation.Controls.Add(this.tbDateBirth);
             this.gpManipulation.Controls.Add(this.lblDateBirth);
-            this.gpManipulation.Controls.Add(this.tbOtchestvo);
+            this.gpManipulation.Controls.Add(this.tbPantronymic);
             this.gpManipulation.Controls.Add(this.btnDelete);
             this.gpManipulation.Controls.Add(this.btnUpdate);
             this.gpManipulation.Controls.Add(this.btnInsert);
-            this.gpManipulation.Controls.Add(this.lblOtchestvo);
+            this.gpManipulation.Controls.Add(this.lblPantronymic);
             this.gpManipulation.Controls.Add(this.tbName);
             this.gpManipulation.Controls.Add(this.lblName);
-            this.gpManipulation.Controls.Add(this.tbSecondName);
-            this.gpManipulation.Controls.Add(this.lblSecondName);
+            this.gpManipulation.Controls.Add(this.tbSurname);
+            this.gpManipulation.Controls.Add(this.lblSurname);
             this.gpManipulation.Dock = System.Windows.Forms.DockStyle.Left;
             this.gpManipulation.Location = new System.Drawing.Point(0, 0);
             this.gpManipulation.Name = "gpManipulation";
@@ -328,13 +332,13 @@
             this.lblDateBirth.TabIndex = 13;
             this.lblDateBirth.Text = "Дата рождения";
             // 
-            // tbOtchestvo
+            // tbPantronymic
             // 
-            this.tbOtchestvo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbOtchestvo.Location = new System.Drawing.Point(3, 95);
-            this.tbOtchestvo.Name = "tbOtchestvo";
-            this.tbOtchestvo.Size = new System.Drawing.Size(194, 20);
-            this.tbOtchestvo.TabIndex = 12;
+            this.tbPantronymic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbPantronymic.Location = new System.Drawing.Point(3, 95);
+            this.tbPantronymic.Name = "tbPantronymic";
+            this.tbPantronymic.Size = new System.Drawing.Size(194, 20);
+            this.tbPantronymic.TabIndex = 12;
             // 
             // pnCancel
             // 
@@ -343,7 +347,7 @@
             this.pnCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnCancel.Location = new System.Drawing.Point(0, 478);
             this.pnCancel.Name = "pnCancel";
-            this.pnCancel.Size = new System.Drawing.Size(801, 35);
+            this.pnCancel.Size = new System.Drawing.Size(1215, 35);
             this.pnCancel.TabIndex = 8;
             // 
             // gbSearchFiltration
@@ -353,7 +357,7 @@
             this.gbSearchFiltration.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbSearchFiltration.Location = new System.Drawing.Point(200, 0);
             this.gbSearchFiltration.Name = "gbSearchFiltration";
-            this.gbSearchFiltration.Size = new System.Drawing.Size(601, 43);
+            this.gbSearchFiltration.Size = new System.Drawing.Size(1015, 43);
             this.gbSearchFiltration.TabIndex = 11;
             this.gbSearchFiltration.TabStop = false;
             this.gbSearchFiltration.Text = "Поиск и фильтрация";
@@ -362,7 +366,7 @@
             // 
             this.chbFiltration.AutoSize = true;
             this.chbFiltration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chbFiltration.Location = new System.Drawing.Point(490, 16);
+            this.chbFiltration.Location = new System.Drawing.Point(904, 16);
             this.chbFiltration.Name = "chbFiltration";
             this.chbFiltration.Size = new System.Drawing.Size(108, 17);
             this.chbFiltration.TabIndex = 1;
@@ -374,7 +378,7 @@
             this.tbSearchFlitration.Dock = System.Windows.Forms.DockStyle.Left;
             this.tbSearchFlitration.Location = new System.Drawing.Point(3, 16);
             this.tbSearchFlitration.Name = "tbSearchFlitration";
-            this.tbSearchFlitration.Size = new System.Drawing.Size(487, 20);
+            this.tbSearchFlitration.Size = new System.Drawing.Size(901, 20);
             this.tbSearchFlitration.TabIndex = 0;
             this.tbSearchFlitration.Text = "Введите данные поезда...";
             this.tbSearchFlitration.WordWrap = false;
@@ -383,13 +387,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 513);
+            this.ClientSize = new System.Drawing.Size(1215, 513);
             this.Controls.Add(this.gbSearchFiltration);
             this.Controls.Add(this.dgvEmployees);
             this.Controls.Add(this.gpManipulation);
             this.Controls.Add(this.pnCancel);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Employees";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Справочник Сотрудники";
+            this.Load += new System.EventHandler(this.Employees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
             this.gpManipulation.ResumeLayout(false);
             this.gpManipulation.PerformLayout();
@@ -405,11 +413,11 @@
         private System.Windows.Forms.DataGridView dgvEmployees;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnErrors;
-        private System.Windows.Forms.Label lblOtchestvo;
+        private System.Windows.Forms.Label lblPantronymic;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox tbSecondName;
-        private System.Windows.Forms.Label lblSecondName;
+        private System.Windows.Forms.TextBox tbSurname;
+        private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.GroupBox gpManipulation;
         private System.Windows.Forms.Panel pnCancel;
         private System.Windows.Forms.ComboBox cbDolj;
@@ -426,7 +434,7 @@
         private System.Windows.Forms.Label lblNameUchilisha;
         private System.Windows.Forms.TextBox tbDateBirth;
         private System.Windows.Forms.Label lblDateBirth;
-        private System.Windows.Forms.TextBox tbOtchestvo;
+        private System.Windows.Forms.TextBox tbPantronymic;
         private System.Windows.Forms.GroupBox gbSearchFiltration;
         private System.Windows.Forms.CheckBox chbFiltration;
         private System.Windows.Forms.TextBox tbSearchFlitration;

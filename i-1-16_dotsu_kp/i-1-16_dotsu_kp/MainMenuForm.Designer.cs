@@ -47,7 +47,6 @@
             this.miRoute = new System.Windows.Forms.ToolStripMenuItem();
             this.miPlaceStatus = new System.Windows.Forms.ToolStripMenuItem();
             this.miTicketFill = new System.Windows.Forms.ToolStripMenuItem();
-            this.miDocs = new System.Windows.Forms.ToolStripMenuItem();
             this.ssInfo = new System.Windows.Forms.StatusStrip();
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
@@ -61,8 +60,7 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miSystem,
             this.miHandBook,
-            this.miTicketFill,
-            this.miDocs});
+            this.miTicketFill});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(800, 24);
@@ -140,58 +138,54 @@
             // miEmployee
             // 
             this.miEmployee.Name = "miEmployee";
-            this.miEmployee.Size = new System.Drawing.Size(145, 22);
+            this.miEmployee.Size = new System.Drawing.Size(180, 22);
             this.miEmployee.Text = "Сотрудники";
             this.miEmployee.Click += new System.EventHandler(this.miEmployee_Click);
             // 
             // miTrain
             // 
             this.miTrain.Name = "miTrain";
-            this.miTrain.Size = new System.Drawing.Size(145, 22);
+            this.miTrain.Size = new System.Drawing.Size(180, 22);
             this.miTrain.Text = "Поезда";
             this.miTrain.Click += new System.EventHandler(this.miTrain_Click);
             // 
             // miTrainDriver
             // 
             this.miTrainDriver.Name = "miTrainDriver";
-            this.miTrainDriver.Size = new System.Drawing.Size(145, 22);
+            this.miTrainDriver.Size = new System.Drawing.Size(180, 22);
             this.miTrainDriver.Text = "Машинисты";
             this.miTrainDriver.Click += new System.EventHandler(this.miTrainDriver_Click);
             // 
             // miTicket
             // 
             this.miTicket.Name = "miTicket";
-            this.miTicket.Size = new System.Drawing.Size(145, 22);
+            this.miTicket.Size = new System.Drawing.Size(180, 22);
             this.miTicket.Text = "Билеты";
             this.miTicket.Click += new System.EventHandler(this.miTicket_Click);
             // 
             // miDolj
             // 
             this.miDolj.Name = "miDolj";
-            this.miDolj.Size = new System.Drawing.Size(145, 22);
+            this.miDolj.Size = new System.Drawing.Size(180, 22);
             this.miDolj.Text = "Должности";
-            this.miDolj.Click += new System.EventHandler(this.miDolj_Click);
             // 
             // miPassenger
             // 
             this.miPassenger.Name = "miPassenger";
-            this.miPassenger.Size = new System.Drawing.Size(145, 22);
+            this.miPassenger.Size = new System.Drawing.Size(180, 22);
             this.miPassenger.Text = "Пассажиры";
-            this.miPassenger.Click += new System.EventHandler(this.miPassenger_Click);
             // 
             // miRoute
             // 
             this.miRoute.Name = "miRoute";
-            this.miRoute.Size = new System.Drawing.Size(145, 22);
+            this.miRoute.Size = new System.Drawing.Size(180, 22);
             this.miRoute.Text = "Маршруты";
-            this.miRoute.Click += new System.EventHandler(this.miRoute_Click);
             // 
             // miPlaceStatus
             // 
             this.miPlaceStatus.Name = "miPlaceStatus";
-            this.miPlaceStatus.Size = new System.Drawing.Size(145, 22);
+            this.miPlaceStatus.Size = new System.Drawing.Size(180, 22);
             this.miPlaceStatus.Text = "Статус места";
-            this.miPlaceStatus.Click += new System.EventHandler(this.miPlaceStatus_Click);
             // 
             // miTicketFill
             // 
@@ -199,13 +193,6 @@
             this.miTicketFill.Name = "miTicketFill";
             this.miTicketFill.Size = new System.Drawing.Size(134, 20);
             this.miTicketFill.Text = "Оформелние билета";
-            // 
-            // miDocs
-            // 
-            this.miDocs.Enabled = false;
-            this.miDocs.Name = "miDocs";
-            this.miDocs.Size = new System.Drawing.Size(172, 20);
-            this.miDocs.Text = "Формирование документов";
             // 
             // ssInfo
             // 
@@ -248,7 +235,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное меню";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MainMenu_Load);
+            this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ssInfo.ResumeLayout(false);
@@ -269,7 +256,6 @@
         private System.Windows.Forms.ToolStripMenuItem miExitFromSystem;
         private System.Windows.Forms.ToolStripMenuItem miHandBook;
         private System.Windows.Forms.ToolStripMenuItem miTicketFill;
-        private System.Windows.Forms.ToolStripMenuItem miDocs;
         private System.Windows.Forms.StatusStrip ssInfo;
         private System.Windows.Forms.ToolStripStatusLabel lbsstDateTime;
         private System.Windows.Forms.ToolStripStatusLabel lbsstConnection;
