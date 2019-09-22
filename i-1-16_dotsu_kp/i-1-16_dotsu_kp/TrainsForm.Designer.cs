@@ -139,6 +139,7 @@
             // 
             // dgvTrains
             // 
+            this.dgvTrains.BackgroundColor = System.Drawing.Color.White;
             this.dgvTrains.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dgvTrains, "dgvTrains");
             this.dgvTrains.Name = "dgvTrains";

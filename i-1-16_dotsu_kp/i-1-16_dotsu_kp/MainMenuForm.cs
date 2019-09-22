@@ -262,7 +262,7 @@ namespace i_1_16_dotsu_kp
                     break;
             }
 
-            this.Close();
+            Close();
             AuthorizationForm authorizationForm = new AuthorizationForm();
             authorizationForm.Show();
             AuthorizationForm.userRole = 0;

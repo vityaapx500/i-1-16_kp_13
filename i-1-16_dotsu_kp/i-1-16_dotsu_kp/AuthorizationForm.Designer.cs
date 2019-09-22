@@ -67,6 +67,7 @@
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(241, 26);
             this.tbLogin.TabIndex = 18;
+            this.tbLogin.Text = "vasilyev_evgeniy";
             // 
             // lblPassword
             // 
@@ -87,6 +88,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(241, 26);
             this.tbPassword.TabIndex = 23;
+            this.tbPassword.Text = "Genius1337";
             // 
             // btnRegistr
             // 

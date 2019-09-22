@@ -166,12 +166,15 @@
             // 
             // dgvTickets
             // 
+            this.dgvTickets.AllowUserToAddRows = false;
+            this.dgvTickets.AllowUserToDeleteRows = false;
             this.dgvTickets.BackgroundColor = System.Drawing.Color.White;
             this.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTickets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTickets.Location = new System.Drawing.Point(200, 0);
+            this.dgvTickets.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvTickets.Location = new System.Drawing.Point(200, 42);
             this.dgvTickets.Name = "dgvTickets";
-            this.dgvTickets.Size = new System.Drawing.Size(601, 478);
+            this.dgvTickets.ReadOnly = true;
+            this.dgvTickets.Size = new System.Drawing.Size(1086, 392);
             this.dgvTickets.TabIndex = 14;
             // 
             // gpManipulation
@@ -203,7 +206,7 @@
             this.gpManipulation.Dock = System.Windows.Forms.DockStyle.Left;
             this.gpManipulation.Location = new System.Drawing.Point(0, 0);
             this.gpManipulation.Name = "gpManipulation";
-            this.gpManipulation.Size = new System.Drawing.Size(200, 478);
+            this.gpManipulation.Size = new System.Drawing.Size(200, 434);
             this.gpManipulation.TabIndex = 13;
             this.gpManipulation.TabStop = false;
             this.gpManipulation.Text = "Манипулирование данными";
@@ -254,6 +257,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Удалить билет";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -263,6 +267,7 @@
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Изменить данные";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
@@ -272,6 +277,7 @@
             this.btnInsert.TabIndex = 9;
             this.btnInsert.Text = "Добавить билет";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // lblTimeDeparture
             // 
@@ -322,12 +328,13 @@
             // btnClose
             // 
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Location = new System.Drawing.Point(729, 0);
+            this.btnClose.Location = new System.Drawing.Point(1214, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(72, 35);
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "Закрыть";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnErrors
             // 
@@ -344,9 +351,9 @@
             this.pnCancel.Controls.Add(this.btnClose);
             this.pnCancel.Controls.Add(this.btnErrors);
             this.pnCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnCancel.Location = new System.Drawing.Point(0, 478);
+            this.pnCancel.Location = new System.Drawing.Point(0, 434);
             this.pnCancel.Name = "pnCancel";
-            this.pnCancel.Size = new System.Drawing.Size(801, 35);
+            this.pnCancel.Size = new System.Drawing.Size(1286, 35);
             this.pnCancel.TabIndex = 12;
             // 
             // gbSearchFiltration
@@ -356,7 +363,7 @@
             this.gbSearchFiltration.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbSearchFiltration.Location = new System.Drawing.Point(200, 0);
             this.gbSearchFiltration.Name = "gbSearchFiltration";
-            this.gbSearchFiltration.Size = new System.Drawing.Size(601, 43);
+            this.gbSearchFiltration.Size = new System.Drawing.Size(1086, 43);
             this.gbSearchFiltration.TabIndex = 15;
             this.gbSearchFiltration.TabStop = false;
             this.gbSearchFiltration.Text = "Поиск и фильтрация";
@@ -365,9 +372,9 @@
             // 
             this.chbFiltration.AutoSize = true;
             this.chbFiltration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chbFiltration.Location = new System.Drawing.Point(491, 16);
+            this.chbFiltration.Location = new System.Drawing.Point(977, 16);
             this.chbFiltration.Name = "chbFiltration";
-            this.chbFiltration.Size = new System.Drawing.Size(107, 17);
+            this.chbFiltration.Size = new System.Drawing.Size(106, 17);
             this.chbFiltration.TabIndex = 1;
             this.chbFiltration.Text = "Отфильтровать";
             this.chbFiltration.UseVisualStyleBackColor = true;
@@ -377,7 +384,7 @@
             this.tbSearchFlitration.Dock = System.Windows.Forms.DockStyle.Left;
             this.tbSearchFlitration.Location = new System.Drawing.Point(3, 16);
             this.tbSearchFlitration.Name = "tbSearchFlitration";
-            this.tbSearchFlitration.Size = new System.Drawing.Size(488, 20);
+            this.tbSearchFlitration.Size = new System.Drawing.Size(974, 20);
             this.tbSearchFlitration.TabIndex = 0;
             this.tbSearchFlitration.Text = "Введите данные поезда...";
             this.tbSearchFlitration.WordWrap = false;
@@ -386,13 +393,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 513);
+            this.ClientSize = new System.Drawing.Size(1286, 469);
             this.Controls.Add(this.gbSearchFiltration);
             this.Controls.Add(this.dgvTickets);
             this.Controls.Add(this.gpManipulation);
             this.Controls.Add(this.pnCancel);
             this.Name = "Tickets";
-            this.Text = "Tickets";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Справочник Билеты";
+            this.Load += new System.EventHandler(this.Tickets_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTickets)).EndInit();
             this.gpManipulation.ResumeLayout(false);
             this.gpManipulation.PerformLayout();

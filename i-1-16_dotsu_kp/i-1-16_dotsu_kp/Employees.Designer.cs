@@ -70,9 +70,9 @@
             this.dgvEmployees.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvEmployees.Location = new System.Drawing.Point(200, -2);
+            this.dgvEmployees.Location = new System.Drawing.Point(200, 42);
             this.dgvEmployees.Name = "dgvEmployees";
-            this.dgvEmployees.Size = new System.Drawing.Size(1015, 436);
+            this.dgvEmployees.Size = new System.Drawing.Size(1015, 392);
             this.dgvEmployees.TabIndex = 10;
             // 
             // btnClose
@@ -396,7 +396,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Employees";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Справочник Сотрудники";
             this.Load += new System.EventHandler(this.Employees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();

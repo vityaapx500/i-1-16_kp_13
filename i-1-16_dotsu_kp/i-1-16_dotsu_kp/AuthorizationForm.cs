@@ -54,12 +54,7 @@ namespace i_1_16_dotsu_kp
                     //EnabledComponent.EventHandler(userRole);
                     this.Hide();
                     MainMenuForm MMF = new MainMenuForm();
-                    //if (MMF.Created == true)
-                    //{
-                    //    MMF.Close();
-                    //}
-                    //else
-                        MMF.Show();
+                    MMF.Show();
                 }
             }
         }

@@ -42,18 +42,20 @@ namespace i_1_16_dotsu_kp
                     dbTables.dependency.OnChange += ChangeEmployees;
 
                     dgvEmployees.DataSource = dbTables.DTEmployee;
-                    dgvEmployees.Columns[0].HeaderText = "Фамилия сотрудника";
-                    dgvEmployees.Columns[1].HeaderText = "Имя  сотрудника";
-                    dgvEmployees.Columns[2].HeaderText = "Отчество сотрудника";
-                    dgvEmployees.Columns[3].HeaderText = "Дата рождения";
-                    dgvEmployees.Columns[4].HeaderText = "Номер аттестата";
-                    dgvEmployees.Columns[5].HeaderText = "Название учебного заведения";
-                    dgvEmployees.Columns[5].Width = 300;
-                    dgvEmployees.Columns[6].HeaderText = "Дата окончания уч. заведения";
-                    dgvEmployees.Columns[7].HeaderText = "Логин";
-                    dgvEmployees.Columns[8].Visible = false;
-                    dgvEmployees.Columns[8].HeaderText = "Пароль";
-                    dgvEmployees.Columns[9].HeaderText = "Должность";
+                    dgvEmployees.Columns[0].Visible = false;
+                    dgvEmployees.Columns[1].HeaderText = "Фамилия сотрудника";
+                    dgvEmployees.Columns[2].HeaderText = "Имя  сотрудника";
+                    dgvEmployees.Columns[3].HeaderText = "Отчество сотрудника";
+                    dgvEmployees.Columns[4].HeaderText = "Дата рождения";
+                    dgvEmployees.Columns[5].HeaderText = "Номер аттестата";
+                    dgvEmployees.Columns[6].HeaderText = "Название учебного заведения";
+                    dgvEmployees.Columns[6].Width = 300;
+                    dgvEmployees.Columns[7].HeaderText = "Дата окончания уч. заведения";
+                    dgvEmployees.Columns[8].HeaderText = "Логин";
+                    dgvEmployees.Columns[9].Visible = false;
+                    dgvEmployees.Columns[9].HeaderText = "Пароль";
+                    dgvEmployees.Columns[10].Visible = false;
+                    dgvEmployees.Columns[11].HeaderText = "Должность";
                     dgvEmployees.ClearSelection();
                 }
                 catch (Exception ex)
@@ -131,7 +133,7 @@ namespace i_1_16_dotsu_kp
                 storedProcedure.SPEmployeeUpdate(Convert.ToInt32(dgvEmployees.CurrentRow.Cells[0].Value.ToString()), tbSurname.Text, tbName.Text, tbPantronymic.Text, Convert.ToDateTime(tbDateBirth.Text),
             Convert.ToInt32(tbNumUdostov.Text), tbNameUchilisha.Text, Convert.ToDateTime(tbDateOkonch.Text), tbLogin.Text, tbPassword.Text, Convert.ToInt32(cbDolj.SelectedIndex));
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Ошибка при изменении данных");
             }

@@ -23,10 +23,11 @@ namespace i_1_16_dotsu_kp
         public string QRUsers = "select * from [dbo].[users] where [user_logical_delete] = 0";
         public string QRDolj = "select * from [dbo].[dolj] where [dolj_logical_delete] = 0";
         public string QRDoljForComboBox = "select D.[ID_dolj], D.[dolj_name] from [dbo].[dolj] D where D.[dolj_logical_delete] = 0";
-        public string QREmployee = "select E.[surname], E.[name], E.[pantronymic], [date_birth], " +
+        public string QREmployee = "select E.[ID_employee], E.[surname], E.[name], E.[pantronymic], [date_birth], " +
             "[num_udostov], [name_uchilisha], [date_okonch], [login], [password], [dolj_id], D.[dolj_name] from [dbo].[employee] E " +
             "inner join [dbo].[dolj] D on E.[dolj_id] = D.[ID_dolj] where D.[dolj_logical_delete] = 0";
         public string QRTrainDriver = "select ID_employee, surname +\" \"+ name +\" \"+ pantronymic from [dbo].[employee] where dolj_id = 6 and employee.employee_logical_delete = 0";
+        public string QRCashier = "select [ID_employee], [surname] +' '+ [name] +' '+ [pantronymic] from [dbo].[employee] where [employee_logical_delete] = 0 and [dolj_id] = 2";
         public string QRRoute = "select R.[ID_route], R.[num_route], R.[naznach_station], CONVERT([varchar] (5), R.[time_arrival]), CONVERT([varchar] (5), [R].[time_departure])," +
             "T.[ID_train], T.[num_train], T.[kol_vo_wagon], T.[train_driver_id]," +
             "E.[surname] +' '+ E.[name] +' '+ E.[pantronymic] as 'Train driver', R.[price] from[train] T" +
@@ -34,12 +35,13 @@ namespace i_1_16_dotsu_kp
             "inner join [employee] E on t.[train_driver_id] = E.[ID_employee]" +
             "where R.[route_logical_delete] = 0";
         public string QRRouteForComboBox = "select [ID_route], [naznach_station] from [dbo].[route] where [route].route_logical_delete = 0";
-        public string QRTicket = "select T.[ID_ticket], T.[num_ticket], T.[time_registry], T.[date_departure], T.[place], T.[place_status_id]," +
-            "PS.[name_status], T.[passenger_id], P.[surname] +' '+P.[name]+' '+P.[pantronymic] as \"passenger name\" from[dbo].[ticket] T" +
-            "inner join [dbo].[place_status] PS on T.[place_status_id] = PS.[ID_place_status]" +
-            "inner join [dbo].[passenger] P on T.[passenger_id] = P.[ID_passenger]" +
-            "inner join [dbo].[route] R on  T.[route_id] = R.[ID_route] where T.[ticket_logical_delete] = 0";
+        public string QRTicket = "select T.[ID_ticket], T.[num_ticket], T.[time_registry], T.[time_departure], T.[date_departure], T.[price], T.[place], T.[place_status_id], " +
+            "PS.[name_status], T.[passenger_id], P.[name] +' '+P.[surname]+' '+P.[pantronymic], T.[route_id], R.[num_route], T.[employee_id], E.[surname] +' '+ E.[name] +' '+ E.[pantronymic] from[dbo].[ticket] T " +
+            "inner join [dbo].[place_status] PS on T.[place_status_id] = PS.[ID_place_status] inner join [dbo].[passenger] P on T.[passenger_id] = P.[ID_passenger] " +
+            "inner join [dbo].[employee] E on T.[employee_id] = E.[ID_employee] inner join [dbo].[route] R on  T.[route_id] = R.[ID_route] " +
+            "where T.[ticket_logical_delete] = 0 and [employee_logical_delete] = 0 and [dolj_id] = 2";
         public string QRPassenger = "select * from [dbo].[passenger] where [passenger_logical_delete] = 0";
+        public string QRPassengerForComboBox = "select [ID_passenger], [name] +' '+ [surname] +' '+ [pantronymic] from [dbo].[passenger] where [passenger_logical_delete] = 0";
         public string QRTrain = "select T.[ID_train], T.[num_train], T.[kol_vo_wagon], T.[train_driver_id]," +
             "E.[surname] +' '+ E.[name] +' '+ E.[pantronymic] as 'Train driver' from[dbo].[train] T " +
             "inner join[dbo].[employee] E on T.[train_driver_id] = E.[ID_employee] where T.[train_logical_delete] = 0";
@@ -55,7 +57,6 @@ namespace i_1_16_dotsu_kp
                 dependency.AddCommandDependency(command);
                 SqlDependency.Start(DBConnection.sqlConnection.ConnectionString);
                 DBConnection.sqlConnection.Open();
-                //CommandOpenKey.ExecuteNonQuery();// Отрытие ключа шифрования
                 table.Load(command.ExecuteReader());
             }
             catch (Exception ex)
@@ -87,6 +88,10 @@ namespace i_1_16_dotsu_kp
         {
             DataTableFill(DTPassenger, QRPassenger);
         }
+        public void DTPassengerForComboBoxFill()
+        {
+            DataTableFill(DTPassenger, QRPassengerForComboBox);
+        }
         public void DTDoljFill()
         {
             DataTableFill(DTDolj, QRDolj);
@@ -102,6 +107,10 @@ namespace i_1_16_dotsu_kp
         public void DTTrainDriverFill()
         {
             DataTableFill(DTEmployee, QRTrainDriver);
+        }
+        public void DTCashierFill()
+        {
+            DataTableFill(DTEmployee, QRCashier);
         }
         public void DTRouteFill()
         {

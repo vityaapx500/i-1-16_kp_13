@@ -295,8 +295,8 @@ namespace i_1_16_dotsu_kp
         }
 
         //Процедуры для таблицы Билет
-        public void SPTicketInsert(Int32 numTicket, string timeRegisry, string timeDeparture, string dateDeparture, 
-            Int32 price, Int32 place, Int32 passengerID, Int32 employeeID, Int32 routeID) //Добавление билета
+        public void SPTicketInsert(Int32 numTicket, DateTime timeRegisry, DateTime timeDeparture, DateTime dateDeparture, 
+            Int32 price, Int32 place, Int32 placeStatusID,Int32 passengerID, Int32 employeeID, Int32 routeID) //Добавление билета
         {
             ConfigurationProcedure("ticket_insert");
 
@@ -306,6 +306,7 @@ namespace i_1_16_dotsu_kp
             storedProcedure.Parameters.AddWithValue("@date_departure", dateDeparture);
             storedProcedure.Parameters.AddWithValue("@price", price);
             storedProcedure.Parameters.AddWithValue("@place", place);
+            storedProcedure.Parameters.AddWithValue("@place_status_id", placeStatusID);
             storedProcedure.Parameters.AddWithValue("@passenger_id", passengerID);
             storedProcedure.Parameters.AddWithValue("@employee_id", employeeID);
             storedProcedure.Parameters.AddWithValue("@route_id", routeID);

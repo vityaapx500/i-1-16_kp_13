@@ -38,7 +38,7 @@ namespace i_1_16_dotsu_kp
                 {
                     dbTables.DTUsers.Clear();
                     dbTables.DTUsersFill();
-                    dbTables.dependency.OnChange += ChangeRole;
+                    dbTables.dependency.OnChange += ChangeUser;
 
                     dgvUsers.DataSource = dbTables.DTUsers;
                     dgvUsers.Columns[0].HeaderText = "Фамилия пользователя";

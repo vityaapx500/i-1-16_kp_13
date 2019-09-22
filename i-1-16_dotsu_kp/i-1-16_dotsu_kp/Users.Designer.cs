@@ -335,7 +335,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Users";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Пользователи";
             this.Load += new System.EventHandler(this.Users_Load);
             this.gbSearchFiltration.ResumeLayout(false);
