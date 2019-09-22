@@ -100,7 +100,6 @@
             this.tbUserServer.Location = new System.Drawing.Point(0, 87);
             this.tbUserServer.Margin = new System.Windows.Forms.Padding(2);
             this.tbUserServer.Name = "tbUserServer";
-            this.tbUserServer.PasswordChar = '*';
             this.tbUserServer.Size = new System.Drawing.Size(308, 20);
             this.tbUserServer.TabIndex = 22;
             // 

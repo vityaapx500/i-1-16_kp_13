@@ -34,7 +34,8 @@ namespace i_1_16_dotsu_kp
             }
             finally
             {
-                DBConnectionString.ConnectionString = "Data Source = " + DataSourceIP + "\\" + DataSourceServerName + "; Initial Catalog = " + InitialCatalog +
+                DBConnectionString.ConnectionString = "Data Source = " + DataSourceIP + "\\" +
+                    DataSourceServerName + "; Initial Catalog = " + InitialCatalog +
                     "; Persist Security Info = true; " + "User ID = " + UserID + "; Password = \"" + UserPassword + "\"";
             }
 
