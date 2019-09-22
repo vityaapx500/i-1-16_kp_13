@@ -29,9 +29,7 @@ namespace i_1_16_dotsu_kp
                 try     //нахождение пользователя таким логином и паролем
                 {
                     DBConnection.sqlConnection.Open();
-                    //dbTables.CommandOpenKey.ExecuteNonQuery();
                     checkUser = Convert.ToInt32(commandSearchUser.ExecuteScalar().ToString());
-                    //dbTables.CommandCloseKey.ExecuteNonQuery();
                 }
                 catch
                 {
@@ -56,9 +54,19 @@ namespace i_1_16_dotsu_kp
                     //EnabledComponent.EventHandler(userRole);
                     this.Hide();
                     MainMenuForm MMF = new MainMenuForm();
-                    MMF.Show();
+                    //if (MMF.Created == true)
+                    //{
+                    //    MMF.Close();
+                    //}
+                    //else
+                        MMF.Show();
                 }
             }
+        }
+
+        private void AuthorizationForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

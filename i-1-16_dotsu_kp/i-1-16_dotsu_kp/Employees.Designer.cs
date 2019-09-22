@@ -67,9 +67,10 @@
             // 
             // dgvEmployees
             // 
+            this.dgvEmployees.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvEmployees.Location = new System.Drawing.Point(200, 42);
+            this.dgvEmployees.Location = new System.Drawing.Point(200, -2);
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.Size = new System.Drawing.Size(1015, 436);
             this.dgvEmployees.TabIndex = 10;
@@ -200,7 +201,7 @@
             this.gpManipulation.Dock = System.Windows.Forms.DockStyle.Left;
             this.gpManipulation.Location = new System.Drawing.Point(0, 0);
             this.gpManipulation.Name = "gpManipulation";
-            this.gpManipulation.Size = new System.Drawing.Size(200, 478);
+            this.gpManipulation.Size = new System.Drawing.Size(200, 434);
             this.gpManipulation.TabIndex = 9;
             this.gpManipulation.TabStop = false;
             this.gpManipulation.Text = "Манипулирование данными";
@@ -345,7 +346,7 @@
             this.pnCancel.Controls.Add(this.btnClose);
             this.pnCancel.Controls.Add(this.btnErrors);
             this.pnCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnCancel.Location = new System.Drawing.Point(0, 478);
+            this.pnCancel.Location = new System.Drawing.Point(0, 434);
             this.pnCancel.Name = "pnCancel";
             this.pnCancel.Size = new System.Drawing.Size(1215, 35);
             this.pnCancel.TabIndex = 8;
@@ -387,7 +388,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 513);
+            this.ClientSize = new System.Drawing.Size(1215, 469);
             this.Controls.Add(this.gbSearchFiltration);
             this.Controls.Add(this.dgvEmployees);
             this.Controls.Add(this.gpManipulation);

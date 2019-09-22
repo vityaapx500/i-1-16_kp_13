@@ -25,7 +25,9 @@ namespace i_1_16_dotsu_kp
         private void Users_Load(object sender, EventArgs e)
         {
             Thread threadUsers = new Thread(UsersFill);
+            Thread threadRoles = new Thread(RoleFill);
             threadUsers.Start();
+            threadRoles.Start();
         }
         private void UsersFill()
         {
@@ -67,7 +69,7 @@ namespace i_1_16_dotsu_kp
                 try
                 {
                     dbTables.DTRoles.Clear();
-                    dbTables.DTRouteForComboBoxFill();
+                    dbTables.DTRolesForComboBoxFill();
                     dbTables.dependency.OnChange += ChangeRole;
 
                     cbRole.DataSource = dbTables.DTRoles;
@@ -120,3 +122,4 @@ namespace i_1_16_dotsu_kp
         }
     }
 }
+//Работаю над формой пользовали

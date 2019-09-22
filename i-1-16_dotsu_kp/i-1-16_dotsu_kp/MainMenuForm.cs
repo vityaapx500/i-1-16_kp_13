@@ -22,64 +22,71 @@ namespace i_1_16_dotsu_kp
             switch (userRole)
             {
                 case 1:
+                    miHandBook.Visible = true;
                     miHandBook.Enabled = true;
-                    miEmployee.Enabled = true;
-                    miTrain.Enabled = true;
-                    miTrainDriver.Enabled = true;
-                    miDolj.Enabled = true;
-                    miPassenger.Enabled = true;
-                    miPlaceStatus.Enabled = true;
-                    miRoute.Enabled = true;
-                    miTicket.Enabled = true;
+                    miEmployee.Visible = true;
+                    miTrain.Visible = true;
+                    miTrainDriver.Visible = true;
+                    miDolj.Visible = true;
+                    miPassenger.Visible = true;
+                    miPlaceStatus.Visible = true;
+                    miRoute.Visible = true;
+                    miTicket.Visible = true;
                     miAuthorization.Enabled = false;
+                    miAdmin.Visible = true;
                     break;
 
                 case 2:
+                    miHandBook.Visible = true;
                     miHandBook.Enabled = true;
-                    miRoute.Enabled = true;
-                    miPlaceStatus.Enabled = true;
-                    miExitProfile.Enabled = true;
+                    miRoute.Visible = true;
+                    miPlaceStatus.Visible = true;
+                    miExitProfile.Visible = true;
                     miAuthorization.Enabled = false;
                     break;
 
                 case 3:
+                    miHandBook.Visible = true;
                     miHandBook.Enabled = true;
-                    miEmployee.Enabled = true;
-                    miTrainDriver.Enabled = true;
-                    miExitProfile.Enabled = true;
-                    miSettings.Enabled = true;
-                    miAppSettings.Enabled = true;
+                    miEmployee.Visible = true;
+                    miTrainDriver.Visible = true;
+                    miExitProfile.Visible = true;
+                    miSettings.Visible = true;
+                    miAppSettings.Visible = true;
                     miAuthorization.Enabled = false;
                     break;
 
                 case 4:
+                    miHandBook.Visible = true;
                     miHandBook.Enabled = true;
-                    miPassenger.Enabled = true;
-                    miRoute.Enabled = true;
-                    miTicket.Enabled = true;
-                    miExitProfile.Enabled = true;
-                    miSettings.Enabled = true;
-                    miAppSettings.Enabled = true;
+                    miPassenger.Visible = true;
+                    miRoute.Visible = true;
+                    miTicket.Visible = true;
+                    miExitProfile.Visible = true;
+                    miSettings.Visible = true;
+                    miAppSettings.Visible = true;
                     miAuthorization.Enabled = false;
                     break;
 
                 case 5:
+                    miHandBook.Visible = true;
                     miHandBook.Enabled = true;
-                    miRoute.Enabled = true;
-                    miTrain.Enabled = true;
-                    miTrainDriver.Enabled = true;
-                    miEmployee.Enabled = true;
-                    miSettings.Enabled = true;
-                    miAppSettings.Enabled = true;
+                    miRoute.Visible = true;
+                    miTrain.Visible = true;
+                    miTrainDriver.Visible = true;
+                    miEmployee.Visible = true;
+                    miSettings.Visible = true;
+                    miAppSettings.Visible = true;
                     miAuthorization.Enabled = false;
                     break;
                 case 6:
-                    miPassenger.Enabled = true;
-                    miRoute.Enabled = true;
-                    miTrain.Enabled = true;
-                    miTicket.Enabled = true;
-                    miSettings.Enabled = true;
-                    miAppSettings.Enabled = true;
+                    miPassenger.Visible = true;
+                    miHandBook.Enabled = true;
+                    miRoute.Visible = true;
+                    miTrain.Visible = true;
+                    miTicket.Visible = true;
+                    miSettings.Visible = true;
+                    miAppSettings.Visible = true;
                     miAuthorization.Enabled = false;
                     break;
             }
@@ -102,6 +109,26 @@ namespace i_1_16_dotsu_kp
             }
             employees.Show(this);
         }
+
+        private void miUsers_Click(object sender, EventArgs e)
+        {
+            Users users = new Users();
+            switch (AuthorizationForm.userRole)
+            {
+                case 1:
+                    users.btnInsert.Enabled = true;
+                    users.btnUpdate.Enabled = true;
+                    users.btnDelete.Enabled = true;
+                    break;
+                case 3:
+                    users.btnInsert.Enabled = true;
+                    users.btnUpdate.Enabled = true;
+                    users.btnDelete.Enabled = true;
+                    break;
+            }
+            users.Show(this);
+        }
+
 
         private void miTrain_Click(object sender, EventArgs e)
         {
@@ -162,80 +189,82 @@ namespace i_1_16_dotsu_kp
             switch (AuthorizationForm.userRole)
             {
                 case 1:
-                    miHandBook.Enabled = false;
-                    miEmployee.Enabled = false;
-                    miTrain.Enabled = false;
-                    miTrainDriver.Enabled = false;
-                    miDolj.Enabled = false;
-                    miPassenger.Enabled = false;
-                    miPlaceStatus.Enabled = false;
-                    miRoute.Enabled = false;
-                    miTicket.Enabled = false;
+                    miHandBook.Visible = false;
+                    miEmployee.Visible = false;
+                    miTrain.Visible = false;
+                    miTrainDriver.Visible = false;
+                    miDolj.Visible = false;
+                    miPassenger.Visible = false;
+                    miPlaceStatus.Visible = false;
+                    miRoute.Visible = false;
+                    miTicket.Visible = false;
                     miAuthorization.Enabled = false;
                     break;
                 case 2:
-                    miHandBook.Enabled = false;
-                    miEmployee.Enabled = false;
-                    miTrain.Enabled = false;
-                    miTrainDriver.Enabled = false;
-                    miDolj.Enabled = false;
-                    miPassenger.Enabled = false;
-                    miPlaceStatus.Enabled = false;
-                    miRoute.Enabled = false;
-                    miTicket.Enabled = false;
+                    miHandBook.Visible = false;
+                    miEmployee.Visible = false;
+                    miTrain.Visible = false;
+                    miTrainDriver.Visible = false;
+                    miDolj.Visible = false;
+                    miPassenger.Visible = false;
+                    miPlaceStatus.Visible = false;
+                    miRoute.Visible = false;
+                    miTicket.Visible = false;
                     miAuthorization.Enabled = false;
                     break;
                 case 3:
-                    miHandBook.Enabled = false;
-                    miEmployee.Enabled = false;
-                    miTrain.Enabled = false;
-                    miTrainDriver.Enabled = false;
-                    miDolj.Enabled = false;
-                    miPassenger.Enabled = false;
-                    miPlaceStatus.Enabled = false;
-                    miRoute.Enabled = false;
-                    miTicket.Enabled = false;
+                    miHandBook.Visible = false;
+                    miEmployee.Visible = false;
+                    miTrain.Visible = false;
+                    miTrainDriver.Visible = false;
+                    miDolj.Visible = false;
+                    miPassenger.Visible = false;
+                    miPlaceStatus.Visible = false;
+                    miRoute.Visible = false;
+                    miTicket.Visible = false;
                     miAuthorization.Enabled = false;
                     break;
                 case 4:
-                    miHandBook.Enabled = false;
-                    miEmployee.Enabled = false;
-                    miTrain.Enabled = false;
-                    miTrainDriver.Enabled = false;
-                    miDolj.Enabled = false;
-                    miPassenger.Enabled = false;
-                    miPlaceStatus.Enabled = false;
-                    miRoute.Enabled = false;
-                    miTicket.Enabled = false;
+                    miHandBook.Visible = false;
+                    miEmployee.Visible = false;
+                    miTrain.Visible = false;
+                    miTrainDriver.Visible = false;
+                    miDolj.Visible = false;
+                    miPassenger.Visible = false;
+                    miPlaceStatus.Visible = false;
+                    miRoute.Visible = false;
+                    miTicket.Visible = false;
                     miAuthorization.Enabled = false;
                     break;
                 case 5:
-                    miHandBook.Enabled = false;
-                    miEmployee.Enabled = false;
-                    miTrain.Enabled = false;
-                    miTrainDriver.Enabled = false;
-                    miDolj.Enabled = false;
-                    miPassenger.Enabled = false;
-                    miPlaceStatus.Enabled = false;
-                    miRoute.Enabled = false;
-                    miTicket.Enabled = false;
+                    miHandBook.Visible = false;
+                    miEmployee.Visible = false;
+                    miTrain.Visible = false;
+                    miTrainDriver.Visible = false;
+                    miDolj.Visible = false;
+                    miPassenger.Visible = false;
+                    miPlaceStatus.Visible = false;
+                    miRoute.Visible = false;
+                    miTicket.Visible = false;
                     miAuthorization.Enabled = false;
                     break;
                 case 6:
-                    miHandBook.Enabled = false;
-                    miEmployee.Enabled = false;
-                    miTrain.Enabled = false;
-                    miTrainDriver.Enabled = false;
-                    miDolj.Enabled = false;
-                    miPassenger.Enabled = false;
-                    miPlaceStatus.Enabled = false;
-                    miRoute.Enabled = false;
-                    miTicket.Enabled = false;
+                    miHandBook.Visible = false;
+                    miEmployee.Visible = false;
+                    miTrain.Visible = false;
+                    miTrainDriver.Visible = false;
+                    miDolj.Visible = false;
+                    miPassenger.Visible = false;
+                    miPlaceStatus.Visible = false;
+                    miRoute.Visible = false;
+                    miTicket.Visible = false;
                     miAuthorization.Enabled = false;
                     break;
             }
+
+            this.Close();
             AuthorizationForm authorizationForm = new AuthorizationForm();
-            authorizationForm.Show(this);
+            authorizationForm.Show();
             AuthorizationForm.userRole = 0;
         }
         private void miAuthorization_Click(object sender, EventArgs e)  //открытие окна авторизации
@@ -245,7 +274,7 @@ namespace i_1_16_dotsu_kp
         }
         private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)    //закрытие формы
         {
-            Application.Exit();
+            //Application.Exit();
         }
     }
 }

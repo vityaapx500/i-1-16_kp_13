@@ -75,6 +75,10 @@ namespace i_1_16_dotsu_kp
         {
             DataTableFill(DTRoles, QRRoles);
         }
+        public void DTRolesForComboBoxFill()
+        {
+            DataTableFill(DTRoles, QRRolesForComboBox);
+        }
         public void DTUsersFill()
         {
             DataTableFill(DTUsers, QRUsers);

@@ -66,7 +66,7 @@
             this.gbSearchFiltration.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbSearchFiltration.Location = new System.Drawing.Point(200, 0);
             this.gbSearchFiltration.Name = "gbSearchFiltration";
-            this.gbSearchFiltration.Size = new System.Drawing.Size(600, 43);
+            this.gbSearchFiltration.Size = new System.Drawing.Size(731, 43);
             this.gbSearchFiltration.TabIndex = 15;
             this.gbSearchFiltration.TabStop = false;
             this.gbSearchFiltration.Text = "Поиск и фильтрация";
@@ -75,9 +75,9 @@
             // 
             this.chbFiltration.AutoSize = true;
             this.chbFiltration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chbFiltration.Location = new System.Drawing.Point(491, 16);
+            this.chbFiltration.Location = new System.Drawing.Point(619, 16);
             this.chbFiltration.Name = "chbFiltration";
-            this.chbFiltration.Size = new System.Drawing.Size(106, 17);
+            this.chbFiltration.Size = new System.Drawing.Size(109, 17);
             this.chbFiltration.TabIndex = 1;
             this.chbFiltration.Text = "Отфильтровать";
             this.chbFiltration.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             this.tbSearchFlitration.Dock = System.Windows.Forms.DockStyle.Left;
             this.tbSearchFlitration.Location = new System.Drawing.Point(3, 16);
             this.tbSearchFlitration.Name = "tbSearchFlitration";
-            this.tbSearchFlitration.Size = new System.Drawing.Size(488, 20);
+            this.tbSearchFlitration.Size = new System.Drawing.Size(616, 20);
             this.tbSearchFlitration.TabIndex = 0;
             this.tbSearchFlitration.Text = "Введите данные поезда...";
             this.tbSearchFlitration.WordWrap = false;
@@ -95,12 +95,13 @@
             // btnClose
             // 
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Location = new System.Drawing.Point(528, 0);
+            this.btnClose.Location = new System.Drawing.Point(659, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(72, 35);
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "Закрыть";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnErrors
             // 
@@ -117,18 +118,21 @@
             this.pnCancel.Controls.Add(this.btnClose);
             this.pnCancel.Controls.Add(this.btnErrors);
             this.pnCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnCancel.Location = new System.Drawing.Point(200, 289);
+            this.pnCancel.Location = new System.Drawing.Point(200, 298);
             this.pnCancel.Name = "pnCancel";
-            this.pnCancel.Size = new System.Drawing.Size(600, 35);
+            this.pnCancel.Size = new System.Drawing.Size(731, 35);
             this.pnCancel.TabIndex = 16;
             // 
             // dgvUsers
             // 
+            this.dgvUsers.AllowUserToAddRows = false;
+            this.dgvUsers.AllowUserToDeleteRows = false;
+            this.dgvUsers.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUsers.Location = new System.Drawing.Point(200, 0);
+            this.dgvUsers.Location = new System.Drawing.Point(200, 42);
             this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.Size = new System.Drawing.Size(600, 324);
+            this.dgvUsers.ReadOnly = true;
+            this.dgvUsers.Size = new System.Drawing.Size(725, 256);
             this.dgvUsers.TabIndex = 18;
             // 
             // gpManipulation
@@ -154,7 +158,7 @@
             this.gpManipulation.Dock = System.Windows.Forms.DockStyle.Left;
             this.gpManipulation.Location = new System.Drawing.Point(0, 0);
             this.gpManipulation.Name = "gpManipulation";
-            this.gpManipulation.Size = new System.Drawing.Size(200, 324);
+            this.gpManipulation.Size = new System.Drawing.Size(200, 333);
             this.gpManipulation.TabIndex = 17;
             this.gpManipulation.TabStop = false;
             this.gpManipulation.Text = "Манипулирование данными";
@@ -162,22 +166,24 @@
             // btnInsert
             // 
             this.btnInsert.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnInsert.Location = new System.Drawing.Point(3, 252);
+            this.btnInsert.Location = new System.Drawing.Point(3, 261);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(194, 23);
             this.btnInsert.TabIndex = 29;
             this.btnInsert.Text = "Добавить пользователя";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnUpdate.Location = new System.Drawing.Point(3, 275);
+            this.btnUpdate.Location = new System.Drawing.Point(3, 284);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(194, 23);
             this.btnUpdate.TabIndex = 28;
             this.btnUpdate.Text = "Изменить пользователя";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // cbRole
             // 
@@ -263,12 +269,13 @@
             // btnDelete
             // 
             this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDelete.Location = new System.Drawing.Point(3, 298);
+            this.btnDelete.Location = new System.Drawing.Point(3, 307);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(194, 23);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Удалить пользователя";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lblPantronymic
             // 
@@ -320,7 +327,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 324);
+            this.ClientSize = new System.Drawing.Size(931, 333);
             this.Controls.Add(this.gbSearchFiltration);
             this.Controls.Add(this.pnCancel);
             this.Controls.Add(this.dgvUsers);
@@ -330,6 +337,7 @@
             this.Name = "Users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Пользователи";
+            this.Load += new System.EventHandler(this.Users_Load);
             this.gbSearchFiltration.ResumeLayout(false);
             this.gbSearchFiltration.PerformLayout();
             this.pnCancel.ResumeLayout(false);
@@ -359,13 +367,13 @@
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.TextBox tbPantronymic;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblPantronymic;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox tbSurname;
         private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnInsert;
+        public System.Windows.Forms.Button btnUpdate;
     }
 }

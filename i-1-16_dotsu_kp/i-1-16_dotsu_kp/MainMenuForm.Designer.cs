@@ -51,6 +51,9 @@
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.miAdmin = new System.Windows.Forms.ToolStripMenuItem();
+            this.miRoles = new System.Windows.Forms.ToolStripMenuItem();
+            this.miUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.ssInfo.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +63,8 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miSystem,
             this.miHandBook,
-            this.miTicketFill});
+            this.miTicketFill,
+            this.miAdmin});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(800, 24);
@@ -140,6 +144,7 @@
             this.miEmployee.Name = "miEmployee";
             this.miEmployee.Size = new System.Drawing.Size(180, 22);
             this.miEmployee.Text = "Сотрудники";
+            this.miEmployee.Visible = false;
             this.miEmployee.Click += new System.EventHandler(this.miEmployee_Click);
             // 
             // miTrain
@@ -147,6 +152,7 @@
             this.miTrain.Name = "miTrain";
             this.miTrain.Size = new System.Drawing.Size(180, 22);
             this.miTrain.Text = "Поезда";
+            this.miTrain.Visible = false;
             this.miTrain.Click += new System.EventHandler(this.miTrain_Click);
             // 
             // miTrainDriver
@@ -154,6 +160,7 @@
             this.miTrainDriver.Name = "miTrainDriver";
             this.miTrainDriver.Size = new System.Drawing.Size(180, 22);
             this.miTrainDriver.Text = "Машинисты";
+            this.miTrainDriver.Visible = false;
             this.miTrainDriver.Click += new System.EventHandler(this.miTrainDriver_Click);
             // 
             // miTicket
@@ -161,6 +168,7 @@
             this.miTicket.Name = "miTicket";
             this.miTicket.Size = new System.Drawing.Size(180, 22);
             this.miTicket.Text = "Билеты";
+            this.miTicket.Visible = false;
             this.miTicket.Click += new System.EventHandler(this.miTicket_Click);
             // 
             // miDolj
@@ -168,31 +176,35 @@
             this.miDolj.Name = "miDolj";
             this.miDolj.Size = new System.Drawing.Size(180, 22);
             this.miDolj.Text = "Должности";
+            this.miDolj.Visible = false;
             // 
             // miPassenger
             // 
             this.miPassenger.Name = "miPassenger";
             this.miPassenger.Size = new System.Drawing.Size(180, 22);
             this.miPassenger.Text = "Пассажиры";
+            this.miPassenger.Visible = false;
             // 
             // miRoute
             // 
             this.miRoute.Name = "miRoute";
             this.miRoute.Size = new System.Drawing.Size(180, 22);
             this.miRoute.Text = "Маршруты";
+            this.miRoute.Visible = false;
             // 
             // miPlaceStatus
             // 
             this.miPlaceStatus.Name = "miPlaceStatus";
             this.miPlaceStatus.Size = new System.Drawing.Size(180, 22);
             this.miPlaceStatus.Text = "Статус места";
+            this.miPlaceStatus.Visible = false;
             // 
             // miTicketFill
             // 
             this.miTicketFill.Enabled = false;
             this.miTicketFill.Name = "miTicketFill";
             this.miTicketFill.Size = new System.Drawing.Size(134, 20);
-            this.miTicketFill.Text = "Оформелние билета";
+            this.miTicketFill.Text = "Оформление билета";
             // 
             // ssInfo
             // 
@@ -222,6 +234,29 @@
             // 
             this.timer.Enabled = true;
             // 
+            // miAdmin
+            // 
+            this.miAdmin.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miRoles,
+            this.miUsers});
+            this.miAdmin.Name = "miAdmin";
+            this.miAdmin.Size = new System.Drawing.Size(134, 20);
+            this.miAdmin.Text = "Администрирование";
+            this.miAdmin.Visible = false;
+            // 
+            // miRoles
+            // 
+            this.miRoles.Name = "miRoles";
+            this.miRoles.Size = new System.Drawing.Size(180, 22);
+            this.miRoles.Text = "Роли";
+            // 
+            // miUsers
+            // 
+            this.miUsers.Name = "miUsers";
+            this.miUsers.Size = new System.Drawing.Size(180, 22);
+            this.miUsers.Text = "Пользователи";
+            this.miUsers.Click += new System.EventHandler(this.miUsers_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,12 +264,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ssInfo);
             this.Controls.Add(this.menuStrip);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное меню";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenuForm_FormClosing);
             this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -269,5 +305,8 @@
         private System.Windows.Forms.ToolStripMenuItem miPlaceStatus;
         private System.Windows.Forms.ToolStripMenuItem miAppSettings;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ToolStripMenuItem miAdmin;
+        private System.Windows.Forms.ToolStripMenuItem miRoles;
+        private System.Windows.Forms.ToolStripMenuItem miUsers;
     }
 }

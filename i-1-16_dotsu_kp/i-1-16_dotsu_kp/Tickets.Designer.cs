@@ -166,6 +166,7 @@
             // 
             // dgvTickets
             // 
+            this.dgvTickets.BackgroundColor = System.Drawing.Color.White;
             this.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTickets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTickets.Location = new System.Drawing.Point(200, 0);
