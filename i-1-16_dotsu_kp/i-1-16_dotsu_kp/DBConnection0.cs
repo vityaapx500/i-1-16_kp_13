@@ -3,11 +3,9 @@ using System.Data.SqlClient;
 
 namespace i_1_16_dotsu_kp
 {
-    class DBConnection
+    class DBConnection0
     {
         private static string dataSource = @"ВИКТОР-ПК\VICTOR_SQL";
-        //private static string dataSource = @"ВИКТОР-ПК\MSSQL_DOTSU";  //Комп
-        //private static string dataSource = @"ПОЛЬЗОВАТЕЛЬ-ПК\VICTOR_SQL";
         private static string initialCatalog = "vokzal_v1";
         private static string userID = "sa";
         private static string password = "123";

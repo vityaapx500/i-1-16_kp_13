@@ -14,6 +14,7 @@ namespace i_1_16_dotsu_kp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new AuthorizationForm());
+            //Application.Run(new Route());
         }
     }
 }

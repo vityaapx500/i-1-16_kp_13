@@ -66,8 +66,9 @@
             this.tbLogin.Location = new System.Drawing.Point(0, 74);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(241, 26);
-            this.tbLogin.TabIndex = 18;
+            this.tbLogin.TabIndex = 1;
             this.tbLogin.Text = "vasilyev_evgeniy";
+            this.tbLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
             // 
             // lblPassword
             // 
@@ -87,8 +88,9 @@
             this.tbPassword.Location = new System.Drawing.Point(0, 120);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(241, 26);
-            this.tbPassword.TabIndex = 23;
+            this.tbPassword.TabIndex = 2;
             this.tbPassword.Text = "Genius1337";
+            this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
             // 
             // btnRegistr
             // 
@@ -96,7 +98,7 @@
             this.btnRegistr.Location = new System.Drawing.Point(0, 190);
             this.btnRegistr.Name = "btnRegistr";
             this.btnRegistr.Size = new System.Drawing.Size(241, 23);
-            this.btnRegistr.TabIndex = 26;
+            this.btnRegistr.TabIndex = 4;
             this.btnRegistr.Text = "Зарегистрироваться";
             this.btnRegistr.UseVisualStyleBackColor = true;
             // 
@@ -106,7 +108,7 @@
             this.btnEnter.Location = new System.Drawing.Point(0, 167);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(241, 23);
-            this.btnEnter.TabIndex = 27;
+            this.btnEnter.TabIndex = 3;
             this.btnEnter.Text = "Войти";
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);

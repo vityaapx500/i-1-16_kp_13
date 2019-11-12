@@ -72,7 +72,7 @@
             this.cbPassenger.Location = new System.Drawing.Point(3, 260);
             this.cbPassenger.Name = "cbPassenger";
             this.cbPassenger.Size = new System.Drawing.Size(194, 21);
-            this.cbPassenger.TabIndex = 26;
+            this.cbPassenger.TabIndex = 9;
             // 
             // lblPassenger
             // 
@@ -90,7 +90,7 @@
             this.tbPlaceStatus.Location = new System.Drawing.Point(3, 227);
             this.tbPlaceStatus.Name = "tbPlaceStatus";
             this.tbPlaceStatus.Size = new System.Drawing.Size(194, 20);
-            this.tbPlaceStatus.TabIndex = 20;
+            this.tbPlaceStatus.TabIndex = 8;
             // 
             // lblPlaceStatus
             // 
@@ -108,7 +108,7 @@
             this.tbPlace.Location = new System.Drawing.Point(3, 194);
             this.tbPlace.Name = "tbPlace";
             this.tbPlace.Size = new System.Drawing.Size(194, 20);
-            this.tbPlace.TabIndex = 18;
+            this.tbPlace.TabIndex = 7;
             // 
             // lblPlace
             // 
@@ -126,7 +126,7 @@
             this.tbPrice.Location = new System.Drawing.Point(3, 161);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(194, 20);
-            this.tbPrice.TabIndex = 16;
+            this.tbPrice.TabIndex = 6;
             // 
             // lblPrice
             // 
@@ -144,7 +144,7 @@
             this.tbDateDeparture.Location = new System.Drawing.Point(3, 128);
             this.tbDateDeparture.Name = "tbDateDeparture";
             this.tbDateDeparture.Size = new System.Drawing.Size(194, 20);
-            this.tbDateDeparture.TabIndex = 14;
+            this.tbDateDeparture.TabIndex = 5;
             // 
             // lblDateDeparture
             // 
@@ -162,7 +162,7 @@
             this.tbTimeDeparture.Location = new System.Drawing.Point(3, 95);
             this.tbTimeDeparture.Name = "tbTimeDeparture";
             this.tbTimeDeparture.Size = new System.Drawing.Size(194, 20);
-            this.tbTimeDeparture.TabIndex = 12;
+            this.tbTimeDeparture.TabIndex = 4;
             // 
             // dgvTickets
             // 
@@ -174,7 +174,7 @@
             this.dgvTickets.Location = new System.Drawing.Point(200, 42);
             this.dgvTickets.Name = "dgvTickets";
             this.dgvTickets.ReadOnly = true;
-            this.dgvTickets.Size = new System.Drawing.Size(1086, 392);
+            this.dgvTickets.Size = new System.Drawing.Size(1084, 392);
             this.dgvTickets.TabIndex = 14;
             // 
             // gpManipulation
@@ -218,7 +218,7 @@
             this.cbEmployee.Location = new System.Drawing.Point(3, 328);
             this.cbEmployee.Name = "cbEmployee";
             this.cbEmployee.Size = new System.Drawing.Size(194, 21);
-            this.cbEmployee.TabIndex = 30;
+            this.cbEmployee.TabIndex = 11;
             // 
             // lblEmployee
             // 
@@ -237,7 +237,7 @@
             this.cbRoute.Location = new System.Drawing.Point(3, 294);
             this.cbRoute.Name = "cbRoute";
             this.cbRoute.Size = new System.Drawing.Size(194, 21);
-            this.cbRoute.TabIndex = 28;
+            this.cbRoute.TabIndex = 10;
             // 
             // lblRoute
             // 
@@ -254,7 +254,7 @@
             this.btnDelete.Location = new System.Drawing.Point(0, 409);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(194, 23);
-            this.btnDelete.TabIndex = 11;
+            this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Удалить билет";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -264,7 +264,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(0, 386);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(194, 23);
-            this.btnUpdate.TabIndex = 10;
+            this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Изменить данные";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -274,7 +274,7 @@
             this.btnInsert.Location = new System.Drawing.Point(0, 363);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(194, 23);
-            this.btnInsert.TabIndex = 9;
+            this.btnInsert.TabIndex = 12;
             this.btnInsert.Text = "Добавить билет";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -295,7 +295,7 @@
             this.tbTimeRegistry.Location = new System.Drawing.Point(3, 62);
             this.tbTimeRegistry.Name = "tbTimeRegistry";
             this.tbTimeRegistry.Size = new System.Drawing.Size(194, 20);
-            this.tbTimeRegistry.TabIndex = 4;
+            this.tbTimeRegistry.TabIndex = 3;
             // 
             // lblTimeRegistry
             // 
@@ -328,10 +328,10 @@
             // btnClose
             // 
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Location = new System.Drawing.Point(1214, 0);
+            this.btnClose.Location = new System.Drawing.Point(1212, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(72, 35);
-            this.btnClose.TabIndex = 13;
+            this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Закрыть";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -342,7 +342,7 @@
             this.btnErrors.Location = new System.Drawing.Point(0, 0);
             this.btnErrors.Name = "btnErrors";
             this.btnErrors.Size = new System.Drawing.Size(72, 35);
-            this.btnErrors.TabIndex = 12;
+            this.btnErrors.TabIndex = 16;
             this.btnErrors.Text = "Ошибки";
             this.btnErrors.UseVisualStyleBackColor = true;
             // 
@@ -353,7 +353,7 @@
             this.pnCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnCancel.Location = new System.Drawing.Point(0, 434);
             this.pnCancel.Name = "pnCancel";
-            this.pnCancel.Size = new System.Drawing.Size(1286, 35);
+            this.pnCancel.Size = new System.Drawing.Size(1284, 35);
             this.pnCancel.TabIndex = 12;
             // 
             // gbSearchFiltration
@@ -363,7 +363,7 @@
             this.gbSearchFiltration.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbSearchFiltration.Location = new System.Drawing.Point(200, 0);
             this.gbSearchFiltration.Name = "gbSearchFiltration";
-            this.gbSearchFiltration.Size = new System.Drawing.Size(1086, 43);
+            this.gbSearchFiltration.Size = new System.Drawing.Size(1084, 43);
             this.gbSearchFiltration.TabIndex = 15;
             this.gbSearchFiltration.TabStop = false;
             this.gbSearchFiltration.Text = "Поиск и фильтрация";
@@ -372,9 +372,9 @@
             // 
             this.chbFiltration.AutoSize = true;
             this.chbFiltration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chbFiltration.Location = new System.Drawing.Point(977, 16);
+            this.chbFiltration.Location = new System.Drawing.Point(971, 16);
             this.chbFiltration.Name = "chbFiltration";
-            this.chbFiltration.Size = new System.Drawing.Size(106, 17);
+            this.chbFiltration.Size = new System.Drawing.Size(110, 17);
             this.chbFiltration.TabIndex = 1;
             this.chbFiltration.Text = "Отфильтровать";
             this.chbFiltration.UseVisualStyleBackColor = true;
@@ -384,8 +384,8 @@
             this.tbSearchFlitration.Dock = System.Windows.Forms.DockStyle.Left;
             this.tbSearchFlitration.Location = new System.Drawing.Point(3, 16);
             this.tbSearchFlitration.Name = "tbSearchFlitration";
-            this.tbSearchFlitration.Size = new System.Drawing.Size(974, 20);
-            this.tbSearchFlitration.TabIndex = 0;
+            this.tbSearchFlitration.Size = new System.Drawing.Size(968, 20);
+            this.tbSearchFlitration.TabIndex = 1;
             this.tbSearchFlitration.Text = "Введите данные поезда...";
             this.tbSearchFlitration.WordWrap = false;
             // 
@@ -393,7 +393,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 469);
+            this.ClientSize = new System.Drawing.Size(1284, 469);
             this.Controls.Add(this.gbSearchFiltration);
             this.Controls.Add(this.dgvTickets);
             this.Controls.Add(this.gpManipulation);

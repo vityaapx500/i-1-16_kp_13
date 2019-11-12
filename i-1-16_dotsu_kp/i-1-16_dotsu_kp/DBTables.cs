@@ -34,6 +34,9 @@ namespace i_1_16_dotsu_kp
             "inner join[route] R on R.[ID_route] = R.[ID_route]" +
             "inner join [employee] E on t.[train_driver_id] = E.[ID_employee]" +
             "where R.[route_logical_delete] = 0";
+        public string QRRouteR = "select R.[ID_route], R.[num_route], R.[naznach_station], CONVERT([varchar] (5), R.[time_arrival]), " +
+            "CONVERT([varchar] (5), [R].[time_departure]) T.[ID_train], T.[num_train], R.[price] from [train] T " +
+            "inner join[route] R on R.[ID_route] = R.[ID_route] inner join [employee] E on t.[train_driver_id] = E.[ID_employee] where R.[route_logical_delete] = 0";
         public string QRRouteForComboBox = "select [ID_route], [naznach_station] from [dbo].[route] where [route].route_logical_delete = 0";
         public string QRTicket = "select T.[ID_ticket], T.[num_ticket], T.[time_registry], T.[time_departure], T.[date_departure], T.[price], T.[place], T.[place_status_id], " +
             "PS.[name_status], T.[passenger_id], P.[name] +' '+P.[surname]+' '+P.[pantronymic], T.[route_id], R.[num_route], T.[employee_id], E.[surname] +' '+ E.[name] +' '+ E.[pantronymic] from[dbo].[ticket] T " +
@@ -43,8 +46,9 @@ namespace i_1_16_dotsu_kp
         public string QRPassenger = "select * from [dbo].[passenger] where [passenger_logical_delete] = 0";
         public string QRPassengerForComboBox = "select [ID_passenger], [name] +' '+ [surname] +' '+ [pantronymic] from [dbo].[passenger] where [passenger_logical_delete] = 0";
         public string QRTrain = "select T.[ID_train], T.[num_train], T.[kol_vo_wagon], T.[train_driver_id]," +
-            "E.[surname] +' '+ E.[name] +' '+ E.[pantronymic] as 'Train driver' from[dbo].[train] T " +
+            "E.[surname] +' '+ E.[name] +' '+ E.[pantronymic] as 'Train driver' from [dbo].[train] T " +
             "inner join[dbo].[employee] E on T.[train_driver_id] = E.[ID_employee] where T.[train_logical_delete] = 0";
+        public string QRTrainForCombioBox = "select ID_train, num_train from dbo.train where train_logical_delete = 0";
         public SqlDependency dependency = new SqlDependency();
 
         private void DataTableFill(DataTable table, string query)
@@ -114,7 +118,7 @@ namespace i_1_16_dotsu_kp
         }
         public void DTRouteFill()
         {
-            DataTableFill(DTRoute, QREmployee);
+            DataTableFill(DTRoute, QRRouteR);
         }
         public void DTRouteForComboBoxFill()
         {
@@ -127,6 +131,10 @@ namespace i_1_16_dotsu_kp
         public void DTTrainFill()
         {
             DataTableFill(DTTrain, QRTrain);
+        }
+        public void DTTrainForComboBoxFill()
+        {
+            DataTableFill(DTTrain, QRTrainForCombioBox);
         }
     }
 }

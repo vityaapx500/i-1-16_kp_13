@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Threading.Tasks;
+using System.Data;
 using System.Windows.Forms;
 
 namespace i_1_16_dotsu_kp
@@ -7,6 +7,9 @@ namespace i_1_16_dotsu_kp
     public partial class MainMenuForm : Form
     {
         private DBConnection dbConnection = new DBConnection();
+        private int selectedCellCount = 0;
+        private DataTable dtSelectedRows = new DataTable();
+        private DataTable dtSelectedExceptionRows = new DataTable();
 
         public MainMenuForm()
         {
@@ -24,6 +27,7 @@ namespace i_1_16_dotsu_kp
                 case 1:
                     miHandBook.Visible = true;
                     miHandBook.Enabled = true;
+                    miTicketFill.Enabled = true;
                     miEmployee.Visible = true;
                     miTrain.Visible = true;
                     miTrainDriver.Visible = true;
@@ -275,6 +279,43 @@ namespace i_1_16_dotsu_kp
         private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)    //закрытие формы
         {
             //Application.Exit();
+        }
+        private void CreateTableSelectedRows()
+        {
+
+        }
+        private void miEmployeeInfo_Click(object sender, EventArgs e)
+        {
+            //Создать форму со списком маршрутов и на ней сделать кнопки формирования документов Word and PDF
+        }
+
+        private void miRoute_Click(object sender, EventArgs e)
+        {
+            Route route = new Route();
+            switch (AuthorizationForm.userRole)
+            {
+                case 1:
+                    route.btnInsert.Enabled = true;
+                    route.btnUpdate.Enabled = true;
+                    route.btnDelete.Enabled = true;
+                    break;
+                case 2:
+                    route.btnInsert.Enabled = false;
+                    route.btnUpdate.Enabled = false;
+                    route.btnDelete.Enabled = false;
+                    break;
+                case 4:
+                    route.btnInsert.Enabled = false;
+                    route.btnUpdate.Enabled = false;
+                    route.btnDelete.Enabled = false;
+                    break;
+                case 5:
+                    route.btnInsert.Enabled = true;
+                    route.btnUpdate.Enabled = true;
+                    route.btnDelete.Enabled = true;
+                    break;
+            }
+            route.Show(this);
         }
     }
 }

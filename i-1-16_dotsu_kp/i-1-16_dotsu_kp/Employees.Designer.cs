@@ -101,7 +101,7 @@
             this.btnDelete.Location = new System.Drawing.Point(0, 409);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(194, 23);
-            this.btnDelete.TabIndex = 11;
+            this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Удалить сотрудника";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -111,7 +111,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(0, 386);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(194, 23);
-            this.btnUpdate.TabIndex = 10;
+            this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Изменить данные";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -121,7 +121,7 @@
             this.btnInsert.Location = new System.Drawing.Point(0, 363);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(194, 23);
-            this.btnInsert.TabIndex = 9;
+            this.btnInsert.TabIndex = 11;
             this.btnInsert.Text = "Добавить сотрудника";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -142,7 +142,7 @@
             this.tbName.Location = new System.Drawing.Point(3, 62);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(194, 20);
-            this.tbName.TabIndex = 4;
+            this.tbName.TabIndex = 2;
             // 
             // lblName
             // 
@@ -160,7 +160,7 @@
             this.tbSurname.Location = new System.Drawing.Point(3, 29);
             this.tbSurname.Name = "tbSurname";
             this.tbSurname.Size = new System.Drawing.Size(194, 20);
-            this.tbSurname.TabIndex = 2;
+            this.tbSurname.TabIndex = 1;
             // 
             // lblSurname
             // 
@@ -213,7 +213,7 @@
             this.cbDolj.Location = new System.Drawing.Point(3, 326);
             this.cbDolj.Name = "cbDolj";
             this.cbDolj.Size = new System.Drawing.Size(194, 21);
-            this.cbDolj.TabIndex = 26;
+            this.cbDolj.TabIndex = 10;
             // 
             // lblDolj
             // 
@@ -231,7 +231,7 @@
             this.tbPassword.Location = new System.Drawing.Point(3, 293);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(194, 20);
-            this.tbPassword.TabIndex = 24;
+            this.tbPassword.TabIndex = 9;
             // 
             // lblPassword
             // 
@@ -249,7 +249,7 @@
             this.tbLogin.Location = new System.Drawing.Point(3, 260);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(194, 20);
-            this.tbLogin.TabIndex = 22;
+            this.tbLogin.TabIndex = 8;
             // 
             // lblLogin
             // 
@@ -267,7 +267,7 @@
             this.tbDateOkonch.Location = new System.Drawing.Point(3, 227);
             this.tbDateOkonch.Name = "tbDateOkonch";
             this.tbDateOkonch.Size = new System.Drawing.Size(194, 20);
-            this.tbDateOkonch.TabIndex = 20;
+            this.tbDateOkonch.TabIndex = 7;
             // 
             // lblDateOkonch
             // 
@@ -285,7 +285,7 @@
             this.tbNumUdostov.Location = new System.Drawing.Point(3, 194);
             this.tbNumUdostov.Name = "tbNumUdostov";
             this.tbNumUdostov.Size = new System.Drawing.Size(194, 20);
-            this.tbNumUdostov.TabIndex = 18;
+            this.tbNumUdostov.TabIndex = 6;
             // 
             // lblNumUdostov
             // 
@@ -303,7 +303,7 @@
             this.tbNameUchilisha.Location = new System.Drawing.Point(3, 161);
             this.tbNameUchilisha.Name = "tbNameUchilisha";
             this.tbNameUchilisha.Size = new System.Drawing.Size(194, 20);
-            this.tbNameUchilisha.TabIndex = 16;
+            this.tbNameUchilisha.TabIndex = 5;
             // 
             // lblNameUchilisha
             // 
@@ -321,7 +321,7 @@
             this.tbDateBirth.Location = new System.Drawing.Point(3, 128);
             this.tbDateBirth.Name = "tbDateBirth";
             this.tbDateBirth.Size = new System.Drawing.Size(194, 20);
-            this.tbDateBirth.TabIndex = 14;
+            this.tbDateBirth.TabIndex = 4;
             // 
             // lblDateBirth
             // 
@@ -339,7 +339,7 @@
             this.tbPantronymic.Location = new System.Drawing.Point(3, 95);
             this.tbPantronymic.Name = "tbPantronymic";
             this.tbPantronymic.Size = new System.Drawing.Size(194, 20);
-            this.tbPantronymic.TabIndex = 12;
+            this.tbPantronymic.TabIndex = 3;
             // 
             // pnCancel
             // 

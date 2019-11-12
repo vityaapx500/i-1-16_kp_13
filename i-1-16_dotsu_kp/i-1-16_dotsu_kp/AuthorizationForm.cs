@@ -44,14 +44,10 @@ namespace i_1_16_dotsu_kp
                     MessageBox.Show("Пользователя с данным логином и паролем не обнаружено! Проверьте правильность ввода данных или зарегистрируйтесь.", "Вокзал", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else     //установление роли данного пользователя
                 {
-
                     DBConnection.sqlConnection.Open();
-                    //dbTables.CommandOpenKey.ExecuteNonQuery();
                     userRole = Convert.ToInt32(commandRoleUser.ExecuteScalar().ToString());
-                    //dbTables.CommandCloseKey.ExecuteNonQuery();
                     DBConnection.sqlConnection.Close();
                     MessageBox.Show("Вы авторизовались в информационной системе.", "Вокзал", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //EnabledComponent.EventHandler(userRole);
                     this.Hide();
                     MainMenuForm MMF = new MainMenuForm();
                     MMF.Show();
@@ -62,6 +58,12 @@ namespace i_1_16_dotsu_kp
         private void AuthorizationForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                btnEnter_Click(sender, e);
         }
     }
 }

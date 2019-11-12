@@ -88,7 +88,7 @@
             this.tbSearchFlitration.Location = new System.Drawing.Point(3, 16);
             this.tbSearchFlitration.Name = "tbSearchFlitration";
             this.tbSearchFlitration.Size = new System.Drawing.Size(616, 20);
-            this.tbSearchFlitration.TabIndex = 0;
+            this.tbSearchFlitration.TabIndex = 1;
             this.tbSearchFlitration.Text = "Введите данные поезда...";
             this.tbSearchFlitration.WordWrap = false;
             // 
@@ -169,7 +169,7 @@
             this.btnInsert.Location = new System.Drawing.Point(3, 261);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(194, 23);
-            this.btnInsert.TabIndex = 29;
+            this.btnInsert.TabIndex = 9;
             this.btnInsert.Text = "Добавить пользователя";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -180,7 +180,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(3, 284);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(194, 23);
-            this.btnUpdate.TabIndex = 28;
+            this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Изменить пользователя";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -192,7 +192,7 @@
             this.cbRole.Location = new System.Drawing.Point(3, 227);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(194, 21);
-            this.cbRole.TabIndex = 26;
+            this.cbRole.TabIndex = 8;
             // 
             // lblRole
             // 
@@ -210,7 +210,7 @@
             this.tbConfirmPassword.Location = new System.Drawing.Point(3, 194);
             this.tbConfirmPassword.Name = "tbConfirmPassword";
             this.tbConfirmPassword.Size = new System.Drawing.Size(194, 20);
-            this.tbConfirmPassword.TabIndex = 18;
+            this.tbConfirmPassword.TabIndex = 7;
             // 
             // lblConfirmPassword
             // 
@@ -228,7 +228,7 @@
             this.tbPassword.Location = new System.Drawing.Point(3, 161);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(194, 20);
-            this.tbPassword.TabIndex = 16;
+            this.tbPassword.TabIndex = 6;
             // 
             // lblPassword
             // 
@@ -246,7 +246,7 @@
             this.tbLogin.Location = new System.Drawing.Point(3, 128);
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(194, 20);
-            this.tbLogin.TabIndex = 14;
+            this.tbLogin.TabIndex = 5;
             // 
             // lblLogin
             // 
@@ -264,7 +264,7 @@
             this.tbPantronymic.Location = new System.Drawing.Point(3, 95);
             this.tbPantronymic.Name = "tbPantronymic";
             this.tbPantronymic.Size = new System.Drawing.Size(194, 20);
-            this.tbPantronymic.TabIndex = 12;
+            this.tbPantronymic.TabIndex = 4;
             // 
             // btnDelete
             // 
@@ -293,7 +293,7 @@
             this.tbName.Location = new System.Drawing.Point(3, 62);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(194, 20);
-            this.tbName.TabIndex = 4;
+            this.tbName.TabIndex = 3;
             // 
             // lblName
             // 
