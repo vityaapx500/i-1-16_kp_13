@@ -26,8 +26,10 @@ namespace i_1_16_dotsu_kp
         {
             Thread threadRoute = new Thread(RouteFill);
             Thread threadTrain = new Thread(TrainFill);
+            Thread threadTrainDriver = new Thread(EmployeeFill);
             threadRoute.Start();
             threadTrain.Start();
+            threadTrainDriver.Start();
         }
         private void RouteFill()
         {
@@ -40,7 +42,7 @@ namespace i_1_16_dotsu_kp
                     dBTables.DTRouteFill();
                     dBTables.dependency.OnChange += ChangeRoute;
 
-                    dgvRoute.DataSource = dBTables.DTTrain;
+                    dgvRoute.DataSource = dBTables.DTRoute;
                     dgvRoute.Columns[0].Visible = false;
                     dgvRoute.Columns[1].HeaderText = "Номер маршрута";
                     dgvRoute.Columns[2].HeaderText = "Станция назначения";
@@ -48,8 +50,11 @@ namespace i_1_16_dotsu_kp
                     dgvRoute.Columns[4].HeaderText = "Время отправления";
                     dgvRoute.Columns[5].Visible = false;
                     dgvRoute.Columns[6].HeaderText = "Поезд";
-                    dgvRoute.Columns[7].HeaderText = "Цена";
-                    
+                    dgvRoute.Columns[7].Visible = false;
+                    dgvRoute.Columns[8].Visible = false;
+                    dgvRoute.Columns[9].Width = 200;
+                    dgvRoute.Columns[9].HeaderText = "Машинист";
+                    dgvRoute.Columns[10].HeaderText = "Цена";
                     dgvRoute.ClearSelection();
                 }
                 catch (Exception ex)
@@ -81,6 +86,34 @@ namespace i_1_16_dotsu_kp
                 }
             };
             Invoke(action);
+        }
+        private void EmployeeFill()
+        {
+            DBTables dbTables = new DBTables();
+            Action action = () =>
+            {
+                try
+                {
+                    dbTables.DTEmployee.Clear();
+                    dbTables.DTTrainDriverFill();
+                    dbTables.dependency.OnChange += ChangeEmployee;
+
+                    cbTrainDriver.DataSource = dbTables.DTEmployee;
+                    cbTrainDriver.ValueMember = "ID_employee";
+                    cbTrainDriver.DisplayMember = "surname";
+                    cbTrainDriver.SelectedValue = -1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            };
+            Invoke(action);
+        }
+        private void ChangeEmployee(object sender, SqlNotificationEventArgs e)
+        {
+            if (e.Info != SqlNotificationInfo.Invalid)
+                EmployeeFill();
         }
         private void ChangeRoute(object sender, SqlNotificationEventArgs e)
         {

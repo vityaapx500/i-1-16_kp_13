@@ -34,11 +34,7 @@
             this.pnCancel = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnErrors = new System.Windows.Forms.Button();
-            this.cbTrain = new System.Windows.Forms.ComboBox();
-            this.lblTrain = new System.Windows.Forms.Label();
             this.gpManipulation = new System.Windows.Forms.GroupBox();
-            this.tbPrice = new System.Windows.Forms.TextBox();
-            this.lblPrice = new System.Windows.Forms.Label();
             this.tbTimeDeparture = new System.Windows.Forms.TextBox();
             this.lblTimeDeparture = new System.Windows.Forms.Label();
             this.tbTimeArrival = new System.Windows.Forms.TextBox();
@@ -51,6 +47,12 @@
             this.tbNumRoute = new System.Windows.Forms.TextBox();
             this.lblNumRoute = new System.Windows.Forms.Label();
             this.dgvRoute = new System.Windows.Forms.DataGridView();
+            this.cbTrain = new System.Windows.Forms.ComboBox();
+            this.lblTrain = new System.Windows.Forms.Label();
+            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.cbTrainDriver = new System.Windows.Forms.ComboBox();
+            this.lblTrainDriver = new System.Windows.Forms.Label();
             this.gbSearchFiltration.SuspendLayout();
             this.pnCancel.SuspendLayout();
             this.gpManipulation.SuspendLayout();
@@ -62,7 +64,7 @@
             this.tbSearchFlitration.Dock = System.Windows.Forms.DockStyle.Left;
             this.tbSearchFlitration.Location = new System.Drawing.Point(3, 16);
             this.tbSearchFlitration.Name = "tbSearchFlitration";
-            this.tbSearchFlitration.Size = new System.Drawing.Size(901, 20);
+            this.tbSearchFlitration.Size = new System.Drawing.Size(488, 20);
             this.tbSearchFlitration.TabIndex = 0;
             this.tbSearchFlitration.Text = "Введите данные маршрута...";
             this.tbSearchFlitration.WordWrap = false;
@@ -83,9 +85,9 @@
             // 
             this.chbFiltration.AutoSize = true;
             this.chbFiltration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.chbFiltration.Location = new System.Drawing.Point(904, 16);
+            this.chbFiltration.Location = new System.Drawing.Point(491, 16);
             this.chbFiltration.Name = "chbFiltration";
-            this.chbFiltration.Size = new System.Drawing.Size(0, 17);
+            this.chbFiltration.Size = new System.Drawing.Size(106, 17);
             this.chbFiltration.TabIndex = 1;
             this.chbFiltration.Text = "Отфильтровать";
             this.chbFiltration.UseVisualStyleBackColor = true;
@@ -95,7 +97,7 @@
             this.pnCancel.Controls.Add(this.btnClose);
             this.pnCancel.Controls.Add(this.btnErrors);
             this.pnCancel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnCancel.Location = new System.Drawing.Point(200, 254);
+            this.pnCancel.Location = new System.Drawing.Point(200, 319);
             this.pnCancel.Name = "pnCancel";
             this.pnCancel.Size = new System.Drawing.Size(600, 35);
             this.pnCancel.TabIndex = 12;
@@ -121,32 +123,15 @@
             this.btnErrors.Text = "Ошибки";
             this.btnErrors.UseVisualStyleBackColor = true;
             // 
-            // cbTrain
-            // 
-            this.cbTrain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbTrain.FormattingEnabled = true;
-            this.cbTrain.Location = new System.Drawing.Point(3, 194);
-            this.cbTrain.Name = "cbTrain";
-            this.cbTrain.Size = new System.Drawing.Size(194, 21);
-            this.cbTrain.TabIndex = 10;
-            // 
-            // lblTrain
-            // 
-            this.lblTrain.AutoSize = true;
-            this.lblTrain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTrain.Location = new System.Drawing.Point(3, 181);
-            this.lblTrain.Name = "lblTrain";
-            this.lblTrain.Size = new System.Drawing.Size(39, 13);
-            this.lblTrain.TabIndex = 25;
-            this.lblTrain.Text = "Поезд";
-            // 
             // gpManipulation
             // 
             this.gpManipulation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.gpManipulation.Controls.Add(this.cbTrain);
-            this.gpManipulation.Controls.Add(this.lblTrain);
             this.gpManipulation.Controls.Add(this.tbPrice);
             this.gpManipulation.Controls.Add(this.lblPrice);
+            this.gpManipulation.Controls.Add(this.cbTrainDriver);
+            this.gpManipulation.Controls.Add(this.lblTrainDriver);
+            this.gpManipulation.Controls.Add(this.cbTrain);
+            this.gpManipulation.Controls.Add(this.lblTrain);
             this.gpManipulation.Controls.Add(this.tbTimeDeparture);
             this.gpManipulation.Controls.Add(this.lblTimeDeparture);
             this.gpManipulation.Controls.Add(this.tbTimeArrival);
@@ -161,28 +146,10 @@
             this.gpManipulation.Dock = System.Windows.Forms.DockStyle.Left;
             this.gpManipulation.Location = new System.Drawing.Point(0, 0);
             this.gpManipulation.Name = "gpManipulation";
-            this.gpManipulation.Size = new System.Drawing.Size(200, 289);
+            this.gpManipulation.Size = new System.Drawing.Size(200, 354);
             this.gpManipulation.TabIndex = 13;
             this.gpManipulation.TabStop = false;
             this.gpManipulation.Text = "Манипулирование данными";
-            // 
-            // tbPrice
-            // 
-            this.tbPrice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbPrice.Location = new System.Drawing.Point(3, 161);
-            this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(194, 20);
-            this.tbPrice.TabIndex = 5;
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblPrice.Location = new System.Drawing.Point(3, 148);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(33, 13);
-            this.lblPrice.TabIndex = 15;
-            this.lblPrice.Text = "Цена";
             // 
             // tbTimeDeparture
             // 
@@ -212,27 +179,27 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(0, 262);
+            this.btnDelete.Location = new System.Drawing.Point(0, 317);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(194, 23);
+            this.btnDelete.Size = new System.Drawing.Size(200, 23);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Удалить маршрута";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(0, 241);
+            this.btnUpdate.Location = new System.Drawing.Point(0, 296);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(194, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(200, 23);
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Изменить данные";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(0, 221);
+            this.btnInsert.Location = new System.Drawing.Point(0, 276);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(194, 23);
+            this.btnInsert.Size = new System.Drawing.Size(200, 23);
             this.btnInsert.TabIndex = 11;
             this.btnInsert.Text = "Добавить маршрут";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -287,17 +254,73 @@
             // 
             this.dgvRoute.BackgroundColor = System.Drawing.Color.White;
             this.dgvRoute.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoute.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvRoute.Location = new System.Drawing.Point(200, -119);
+            this.dgvRoute.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRoute.Location = new System.Drawing.Point(200, 43);
             this.dgvRoute.Name = "dgvRoute";
-            this.dgvRoute.Size = new System.Drawing.Size(600, 373);
-            this.dgvRoute.TabIndex = 16;
+            this.dgvRoute.Size = new System.Drawing.Size(600, 276);
+            this.dgvRoute.TabIndex = 18;
+            // 
+            // cbTrain
+            // 
+            this.cbTrain.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbTrain.FormattingEnabled = true;
+            this.cbTrain.Location = new System.Drawing.Point(3, 161);
+            this.cbTrain.Name = "cbTrain";
+            this.cbTrain.Size = new System.Drawing.Size(194, 21);
+            this.cbTrain.TabIndex = 33;
+            // 
+            // lblTrain
+            // 
+            this.lblTrain.AutoSize = true;
+            this.lblTrain.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTrain.Location = new System.Drawing.Point(3, 148);
+            this.lblTrain.Name = "lblTrain";
+            this.lblTrain.Size = new System.Drawing.Size(39, 13);
+            this.lblTrain.TabIndex = 35;
+            this.lblTrain.Text = "Поезд";
+            // 
+            // tbPrice
+            // 
+            this.tbPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbPrice.Location = new System.Drawing.Point(3, 229);
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(194, 20);
+            this.tbPrice.TabIndex = 38;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPrice.Location = new System.Drawing.Point(3, 216);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(33, 13);
+            this.lblPrice.TabIndex = 39;
+            this.lblPrice.Text = "Цена";
+            // 
+            // cbTrainDriver
+            // 
+            this.cbTrainDriver.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbTrainDriver.FormattingEnabled = true;
+            this.cbTrainDriver.Location = new System.Drawing.Point(3, 195);
+            this.cbTrainDriver.Name = "cbTrainDriver";
+            this.cbTrainDriver.Size = new System.Drawing.Size(194, 21);
+            this.cbTrainDriver.TabIndex = 36;
+            // 
+            // lblTrainDriver
+            // 
+            this.lblTrainDriver.AutoSize = true;
+            this.lblTrainDriver.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTrainDriver.Location = new System.Drawing.Point(3, 182);
+            this.lblTrainDriver.Name = "lblTrainDriver";
+            this.lblTrainDriver.Size = new System.Drawing.Size(59, 13);
+            this.lblTrainDriver.TabIndex = 37;
+            this.lblTrainDriver.Text = "Машинист";
             // 
             // Route
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 289);
+            this.ClientSize = new System.Drawing.Size(800, 354);
             this.Controls.Add(this.dgvRoute);
             this.Controls.Add(this.gbSearchFiltration);
             this.Controls.Add(this.pnCancel);
@@ -323,11 +346,7 @@
         private System.Windows.Forms.Panel pnCancel;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnErrors;
-        private System.Windows.Forms.ComboBox cbTrain;
-        private System.Windows.Forms.Label lblTrain;
         private System.Windows.Forms.GroupBox gpManipulation;
-        private System.Windows.Forms.TextBox tbPrice;
-        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox tbTimeDeparture;
         private System.Windows.Forms.Label lblTimeDeparture;
         private System.Windows.Forms.TextBox tbTimeArrival;
@@ -340,5 +359,11 @@
         private System.Windows.Forms.TextBox tbNumRoute;
         private System.Windows.Forms.Label lblNumRoute;
         private System.Windows.Forms.DataGridView dgvRoute;
+        private System.Windows.Forms.TextBox tbPrice;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.ComboBox cbTrainDriver;
+        private System.Windows.Forms.Label lblTrainDriver;
+        private System.Windows.Forms.ComboBox cbTrain;
+        private System.Windows.Forms.Label lblTrain;
     }
 }

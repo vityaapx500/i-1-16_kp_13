@@ -26,17 +26,19 @@ namespace i_1_16_dotsu_kp
         public string QREmployee = "select E.[ID_employee], E.[surname], E.[name], E.[pantronymic], [date_birth], " +
             "[num_udostov], [name_uchilisha], [date_okonch], [login], [password], [dolj_id], D.[dolj_name] from [dbo].[employee] E " +
             "inner join [dbo].[dolj] D on E.[dolj_id] = D.[ID_dolj] where D.[dolj_logical_delete] = 0";
-        public string QRTrainDriver = "select ID_employee, surname +\" \"+ name +\" \"+ pantronymic from [dbo].[employee] where dolj_id = 6 and employee.employee_logical_delete = 0";
+        //Машинист для Маршрутов
+        public string QRTrainDriver = "select ID_employee, surname +\' \'+ name +\' \'+ pantronymic from [dbo].[employee] where dolj_id = 6 and employee.employee_logical_delete = 0";
         public string QRCashier = "select [ID_employee], [surname] +' '+ [name] +' '+ [pantronymic] from [dbo].[employee] where [employee_logical_delete] = 0 and [dolj_id] = 2";
         public string QRRoute = "select R.[ID_route], R.[num_route], R.[naznach_station], CONVERT([varchar] (5), R.[time_arrival]), CONVERT([varchar] (5), [R].[time_departure])," +
-            "T.[ID_train], T.[num_train], T.[kol_vo_wagon], T.[train_driver_id]," +
+            "T.[ID_train], T.[num_train], T.[train_driver_id]," +
             "E.[surname] +' '+ E.[name] +' '+ E.[pantronymic] as 'Train driver', R.[price] from[train] T" +
             "inner join[route] R on R.[ID_route] = R.[ID_route]" +
             "inner join [employee] E on t.[train_driver_id] = E.[ID_employee]" +
             "where R.[route_logical_delete] = 0";
-        public string QRRouteR = "select R.[ID_route], R.[num_route], R.[naznach_station], CONVERT([varchar] (5), R.[time_arrival]), " +
-            "CONVERT([varchar] (5), [R].[time_departure]) T.[ID_train], T.[num_train], R.[price] from [train] T " +
-            "inner join[route] R on R.[ID_route] = R.[ID_route] inner join [employee] E on t.[train_driver_id] = E.[ID_employee] where R.[route_logical_delete] = 0";
+        public string QRRouteR = "select R.[ID_route], R.[num_route], R.[naznach_station], CONVERT([varchar] (5), R.[time_arrival]), CONVERT([varchar] (5), [R].[time_departure])," +
+            " T.[ID_train], T.[num_train], T.[kol_vo_wagon], T.[train_driver_id], E.[surname] +' '+ E.[name] +' '+ E.[pantronymic] as 'Train driver', " +
+            "R.[price] from[train] T inner join[route] R on R.[ID_route] = R.[ID_route] inner join [employee] E on t.[train_driver_id] = E.[ID_employee] " +
+            "where R.[route_logical_delete] = 0";
         public string QRRouteForComboBox = "select [ID_route], [naznach_station] from [dbo].[route] where [route].route_logical_delete = 0";
         public string QRTicket = "select T.[ID_ticket], T.[num_ticket], T.[time_registry], T.[time_departure], T.[date_departure], T.[price], T.[place], T.[place_status_id], " +
             "PS.[name_status], T.[passenger_id], P.[name] +' '+P.[surname]+' '+P.[pantronymic], T.[route_id], R.[num_route], T.[employee_id], E.[surname] +' '+ E.[name] +' '+ E.[pantronymic] from[dbo].[ticket] T " +
