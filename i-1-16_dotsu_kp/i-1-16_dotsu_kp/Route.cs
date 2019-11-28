@@ -100,7 +100,7 @@ namespace i_1_16_dotsu_kp
 
                     cbTrainDriver.DataSource = dbTables.DTEmployee;
                     cbTrainDriver.ValueMember = "ID_employee";
-                    cbTrainDriver.DisplayMember = "surname";
+                    cbTrainDriver.DisplayMember = "Name_Driver";
                     cbTrainDriver.SelectedValue = -1;
                 }
                 catch (Exception ex)

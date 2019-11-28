@@ -57,7 +57,6 @@
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.какоетоИзменениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.ssInfo.SuspendLayout();
             this.SuspendLayout();
@@ -147,7 +146,7 @@
             // miEmployee
             // 
             this.miEmployee.Name = "miEmployee";
-            this.miEmployee.Size = new System.Drawing.Size(145, 22);
+            this.miEmployee.Size = new System.Drawing.Size(180, 22);
             this.miEmployee.Text = "Сотрудники";
             this.miEmployee.Visible = false;
             this.miEmployee.Click += new System.EventHandler(this.miEmployee_Click);
@@ -155,7 +154,7 @@
             // miTrain
             // 
             this.miTrain.Name = "miTrain";
-            this.miTrain.Size = new System.Drawing.Size(145, 22);
+            this.miTrain.Size = new System.Drawing.Size(180, 22);
             this.miTrain.Text = "Поезда";
             this.miTrain.Visible = false;
             this.miTrain.Click += new System.EventHandler(this.miTrain_Click);
@@ -163,7 +162,7 @@
             // miTrainDriver
             // 
             this.miTrainDriver.Name = "miTrainDriver";
-            this.miTrainDriver.Size = new System.Drawing.Size(145, 22);
+            this.miTrainDriver.Size = new System.Drawing.Size(180, 22);
             this.miTrainDriver.Text = "Машинисты";
             this.miTrainDriver.Visible = false;
             this.miTrainDriver.Click += new System.EventHandler(this.miTrainDriver_Click);
@@ -171,7 +170,7 @@
             // miTicket
             // 
             this.miTicket.Name = "miTicket";
-            this.miTicket.Size = new System.Drawing.Size(145, 22);
+            this.miTicket.Size = new System.Drawing.Size(180, 22);
             this.miTicket.Text = "Билеты";
             this.miTicket.Visible = false;
             this.miTicket.Click += new System.EventHandler(this.miTicket_Click);
@@ -179,21 +178,21 @@
             // miDolj
             // 
             this.miDolj.Name = "miDolj";
-            this.miDolj.Size = new System.Drawing.Size(145, 22);
+            this.miDolj.Size = new System.Drawing.Size(180, 22);
             this.miDolj.Text = "Должности";
             this.miDolj.Visible = false;
             // 
             // miPassenger
             // 
             this.miPassenger.Name = "miPassenger";
-            this.miPassenger.Size = new System.Drawing.Size(145, 22);
+            this.miPassenger.Size = new System.Drawing.Size(180, 22);
             this.miPassenger.Text = "Пассажиры";
             this.miPassenger.Visible = false;
             // 
             // miRoute
             // 
             this.miRoute.Name = "miRoute";
-            this.miRoute.Size = new System.Drawing.Size(145, 22);
+            this.miRoute.Size = new System.Drawing.Size(180, 22);
             this.miRoute.Text = "Маршруты";
             this.miRoute.Visible = false;
             this.miRoute.Click += new System.EventHandler(this.miRoute_Click);
@@ -201,14 +200,12 @@
             // miPlaceStatus
             // 
             this.miPlaceStatus.Name = "miPlaceStatus";
-            this.miPlaceStatus.Size = new System.Drawing.Size(145, 22);
+            this.miPlaceStatus.Size = new System.Drawing.Size(180, 22);
             this.miPlaceStatus.Text = "Статус места";
             this.miPlaceStatus.Visible = false;
             // 
             // miTicketFill
             // 
-            this.miTicketFill.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.какоетоИзменениеToolStripMenuItem});
             this.miTicketFill.Enabled = false;
             this.miTicketFill.Name = "miTicketFill";
             this.miTicketFill.Size = new System.Drawing.Size(134, 20);
@@ -287,12 +284,6 @@
             // 
             this.timer.Enabled = true;
             // 
-            // какоетоИзменениеToolStripMenuItem
-            // 
-            this.какоетоИзменениеToolStripMenuItem.Name = "какоетоИзменениеToolStripMenuItem";
-            this.какоетоИзменениеToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.какоетоИзменениеToolStripMenuItem.Text = "Какое-то изменение";
-            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,6 +338,5 @@
         private System.Windows.Forms.ToolStripMenuItem miDocs;
         private System.Windows.Forms.ToolStripMenuItem miEmployeeInfo;
         private System.Windows.Forms.ToolStripMenuItem miRoutesList;
-        private System.Windows.Forms.ToolStripMenuItem какоетоИзменениеToolStripMenuItem;
     }
 }

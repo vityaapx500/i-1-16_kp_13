@@ -161,24 +161,24 @@ namespace i_1_16_dotsu_kp
         private void miTicket_Click(object sender, EventArgs e)
         {
             Tickets tickets = new Tickets();
-            switch (AuthorizationForm.userRole)
-            {
-                case 1:
-                    tickets.btnInsert.Enabled = true;
-                    tickets.btnUpdate.Enabled = true;
-                    tickets.btnDelete.Enabled = true;
-                    break;
-                case 4:
-                    tickets.btnInsert.Enabled = true;
-                    tickets.btnUpdate.Enabled = true;
-                    tickets.btnDelete.Enabled = true;
-                    break;
-                case 6:
-                    tickets.btnInsert.Enabled = true;
-                    tickets.btnUpdate.Enabled = true;
-                    tickets.btnDelete.Enabled = true;
-                    break;
-            }
+            //switch (AuthorizationForm.userRole)
+            //{
+            //    case 1:
+            //        tickets.btnInsert.Enabled = true;
+            //        tickets.btnUpdate.Enabled = true;
+            //        tickets.btnDelete.Enabled = true;
+            //        break;
+            //    case 4:
+            //        tickets.btnInsert.Enabled = true;
+            //        tickets.btnUpdate.Enabled = true;
+            //        tickets.btnDelete.Enabled = true;
+            //        break;
+            //    case 6:
+            //        tickets.btnInsert.Enabled = true;
+            //        tickets.btnUpdate.Enabled = true;
+            //        tickets.btnDelete.Enabled = true;
+            //        break;
+            //}
             tickets.Show(this);
         }
 
