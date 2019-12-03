@@ -317,5 +317,24 @@ namespace i_1_16_dotsu_kp
             }
             route.Show(this);
         }
+
+        private void miTicketFill_Click(object sender, EventArgs e)
+        {
+            CreateTicket createTicket = new CreateTicket();
+            switch (AuthorizationForm.userRole)
+            {
+                case 1:
+                    createTicket.btnInsert.Enabled = true;
+                    createTicket.btnUpdate.Enabled = true;
+                    createTicket.btnDelete.Enabled = true;
+                    break;
+                case 6:
+                    createTicket.btnInsert.Enabled = true;
+                    createTicket.btnUpdate.Enabled = true;
+                    createTicket.btnDelete.Enabled = true;
+                    break;
+            }
+            createTicket.Show(this);
+        }
     }
 }

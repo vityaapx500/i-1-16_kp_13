@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using Microsoft.Win32;
 using System.Windows.Forms;
 
 namespace i_1_16_dotsu_kp
@@ -64,6 +65,31 @@ namespace i_1_16_dotsu_kp
         {
             if (e.KeyChar == 13)
                 btnEnter_Click(sender, e);
+        }
+        private void AuthorizationForm_Load(object sender, EventArgs e) //Проверка имени операционной системы
+        {
+            string key = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion";
+            using (RegistryKey regKey = Registry.LocalMachine.OpenSubKey(key))
+            {
+                if (regKey != null)
+                {
+                    try
+                    {
+                        string name = regKey.GetValue("ProductName").ToString();
+                        if (name.Contains("XP") || name.Contains("Vista"))
+                        {
+                            MessageBox.Show("Версия вашей операционной сисетмы не поддерживается. \nПожалуйства обновитесь до версии не ниже Windows 7 Home 32bit!", "Вокзал", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Application.Exit();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                    MessageBox.Show("Не удалось получить имя ОС в реестре");
+            }
         }
     }
 }

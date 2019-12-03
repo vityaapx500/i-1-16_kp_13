@@ -57,8 +57,11 @@
             this.lbsstDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbsstConnection = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.ssInfo.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -90,7 +93,7 @@
             // miAuthorization
             // 
             this.miAuthorization.Name = "miAuthorization";
-            this.miAuthorization.Size = new System.Drawing.Size(212, 22);
+            this.miAuthorization.Size = new System.Drawing.Size(213, 22);
             this.miAuthorization.Text = "Авторизация";
             this.miAuthorization.Click += new System.EventHandler(this.miAuthorization_Click);
             // 
@@ -99,7 +102,7 @@
             this.miSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miAppSettings});
             this.miSettings.Name = "miSettings";
-            this.miSettings.Size = new System.Drawing.Size(212, 22);
+            this.miSettings.Size = new System.Drawing.Size(213, 22);
             this.miSettings.Text = "Настройки";
             // 
             // miAppSettings
@@ -111,19 +114,19 @@
             // miExitProfile
             // 
             this.miExitProfile.Name = "miExitProfile";
-            this.miExitProfile.Size = new System.Drawing.Size(212, 22);
+            this.miExitProfile.Size = new System.Drawing.Size(213, 22);
             this.miExitProfile.Text = "Выход из учётной записи";
             this.miExitProfile.Click += new System.EventHandler(this.miExitProfile_Click);
             // 
             // завершениеРаботыToolStripMenuItem
             // 
             this.завершениеРаботыToolStripMenuItem.Name = "завершениеРаботыToolStripMenuItem";
-            this.завершениеРаботыToolStripMenuItem.Size = new System.Drawing.Size(209, 6);
+            this.завершениеРаботыToolStripMenuItem.Size = new System.Drawing.Size(210, 6);
             // 
             // miExitFromSystem
             // 
             this.miExitFromSystem.Name = "miExitFromSystem";
-            this.miExitFromSystem.Size = new System.Drawing.Size(212, 22);
+            this.miExitFromSystem.Size = new System.Drawing.Size(213, 22);
             this.miExitFromSystem.Text = "Завершение работы";
             this.miExitFromSystem.Click += new System.EventHandler(this.miExitSystem_Click);
             // 
@@ -210,6 +213,7 @@
             this.miTicketFill.Name = "miTicketFill";
             this.miTicketFill.Size = new System.Drawing.Size(134, 20);
             this.miTicketFill.Text = "Оформление билета";
+            this.miTicketFill.Click += new System.EventHandler(this.miTicketFill_Click);
             // 
             // miDocs
             // 
@@ -284,11 +288,26 @@
             // 
             this.timer.Enabled = true;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmiExit});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(188, 26);
+            // 
+            // cmiExit
+            // 
+            this.cmiExit.Name = "cmiExit";
+            this.cmiExit.Size = new System.Drawing.Size(187, 22);
+            this.cmiExit.Text = "Завершение работы";
+            this.cmiExit.Click += new System.EventHandler(this.miExitSystem_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.ssInfo);
             this.Controls.Add(this.menuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -303,6 +322,7 @@
             this.menuStrip.PerformLayout();
             this.ssInfo.ResumeLayout(false);
             this.ssInfo.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +358,7 @@
         private System.Windows.Forms.ToolStripMenuItem miDocs;
         private System.Windows.Forms.ToolStripMenuItem miEmployeeInfo;
         private System.Windows.Forms.ToolStripMenuItem miRoutesList;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cmiExit;
     }
 }

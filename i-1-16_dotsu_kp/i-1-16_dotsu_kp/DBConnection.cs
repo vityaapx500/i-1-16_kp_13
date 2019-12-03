@@ -5,7 +5,7 @@ namespace i_1_16_dotsu_kp
 {
     class DBConnection
     {
-        private static string dataSource = @"ВИКТОР-ПК\VICTOR_SQL";
+        private static string dataSource = @"VICTOR-PC\DOTSUSQL";
         //private static string dataSource = @"ВИКТОР-ПК\MSSQL_DOTSU";  //Комп
         //private static string dataSource = @"ПОЛЬЗОВАТЕЛЬ-ПК\VICTOR_SQL";
         private static string initialCatalog = "vokzal_v1";
