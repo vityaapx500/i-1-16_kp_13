@@ -28,3 +28,7 @@ namespace i_1_16_dotsu_kp
         }
     }
 }
+
+почта Mail
+vityaapx500@mail.ru
+finiasiferb

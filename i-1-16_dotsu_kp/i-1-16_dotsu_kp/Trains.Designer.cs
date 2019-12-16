@@ -1,6 +1,6 @@
 ﻿namespace i_1_16_dotsu_kp
 {
-    partial class TrainsForm
+    partial class Trains
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainsForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trains));
             this.pnCancel = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnErrors = new System.Windows.Forms.Button();

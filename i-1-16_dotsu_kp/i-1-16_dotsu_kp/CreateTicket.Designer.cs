@@ -44,8 +44,6 @@
             this.tbDateDeparture = new System.Windows.Forms.TextBox();
             this.lblDateDeparture = new System.Windows.Forms.Label();
             this.tbTimeDeparture = new System.Windows.Forms.TextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.lblTimeDeparture = new System.Windows.Forms.Label();
             this.tbTimeRegistry = new System.Windows.Forms.TextBox();
@@ -73,8 +71,6 @@
             this.gpManipulation.Controls.Add(this.tbDateDeparture);
             this.gpManipulation.Controls.Add(this.lblDateDeparture);
             this.gpManipulation.Controls.Add(this.tbTimeDeparture);
-            this.gpManipulation.Controls.Add(this.btnDelete);
-            this.gpManipulation.Controls.Add(this.btnUpdate);
             this.gpManipulation.Controls.Add(this.btnInsert);
             this.gpManipulation.Controls.Add(this.lblTimeDeparture);
             this.gpManipulation.Controls.Add(this.tbTimeRegistry);
@@ -84,7 +80,7 @@
             this.gpManipulation.Dock = System.Windows.Forms.DockStyle.Left;
             this.gpManipulation.Location = new System.Drawing.Point(0, 0);
             this.gpManipulation.Name = "gpManipulation";
-            this.gpManipulation.Size = new System.Drawing.Size(265, 431);
+            this.gpManipulation.Size = new System.Drawing.Size(265, 373);
             this.gpManipulation.TabIndex = 14;
             this.gpManipulation.TabStop = false;
             this.gpManipulation.Text = "Манипулирование данными";
@@ -226,31 +222,13 @@
             this.tbTimeDeparture.Size = new System.Drawing.Size(259, 20);
             this.tbTimeDeparture.TabIndex = 4;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(0, 409);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(265, 23);
-            this.btnDelete.TabIndex = 14;
-            this.btnDelete.Text = "Удалить билет";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(0, 386);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(265, 23);
-            this.btnUpdate.TabIndex = 13;
-            this.btnUpdate.Text = "Изменить данные";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(0, 363);
+            this.btnInsert.Location = new System.Drawing.Point(0, 351);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(265, 23);
             this.btnInsert.TabIndex = 12;
-            this.btnInsert.Text = "Добавить билет";
+            this.btnInsert.Text = "Оформить билет";
             this.btnInsert.UseVisualStyleBackColor = true;
             // 
             // lblTimeDeparture
@@ -303,7 +281,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(267, 431);
+            this.ClientSize = new System.Drawing.Size(267, 373);
             this.Controls.Add(this.gpManipulation);
             this.Name = "CreateTicket";
             this.Text = "Оформление билета";
@@ -331,8 +309,6 @@
         private System.Windows.Forms.TextBox tbDateDeparture;
         private System.Windows.Forms.Label lblDateDeparture;
         private System.Windows.Forms.TextBox tbTimeDeparture;
-        public System.Windows.Forms.Button btnDelete;
-        public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Label lblTimeDeparture;
         private System.Windows.Forms.TextBox tbTimeRegistry;

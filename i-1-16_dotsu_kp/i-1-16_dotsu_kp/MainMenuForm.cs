@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace i_1_16_dotsu_kp
@@ -10,15 +11,53 @@ namespace i_1_16_dotsu_kp
         private int selectedCellCount = 0;
         private DataTable dtSelectedRows = new DataTable();
         private DataTable dtSelectedExceptionRows = new DataTable();
+        private Thread threadConnection;
 
         public MainMenuForm()
         {
             InitializeComponent();
             EnabledComponent.EventHandler = new EnabledComponent.MyEvent(MainMenuConstraint);
         }
-        private void MainMenuForm_Load(object sender, EventArgs e)
+        public void MainMenuForm_Load(object sender, EventArgs e)
         {
-            MainMenuConstraint(AuthorizationForm.userRole);
+            dbConnection.ConnectionState += InformationConnection;
+            threadConnection = new Thread(dbConnection.CheckConnection);
+            threadConnection.Start();
+            //MainMenuConstraint(AuthorizationForm.userRole);
+        }
+        private void InformationConnection(bool value)  //проверка подключения к базе данных
+        {
+            try
+            {
+                Action action = () =>
+                {
+                    switch (value)
+                    {
+                        case (true):
+                            lbsstConnection.Text = Registry_Class.DataSource + "\\" + Registry_Class.DSServerName + " - " + Registry_Class.InitialCatalog;
+                            AuthorizationForm authorizationForm = new AuthorizationForm();
+                            authorizationForm.Show();
+                            break;
+                        case (false):
+                            lbsstConnection.Text = MessageUser.NoConnection;
+
+                            foreach (Form f in Application.OpenForms)
+                            {
+                                if (f.Name == "ConnectionForm")
+                                    return;
+                            }
+
+                            ConnectionForm connectionForm = new ConnectionForm();
+                            connectionForm.Show(this);
+                            break;
+                    }
+                };
+                Invoke(action);
+            }
+            catch
+            {
+                threadConnection.Abort();
+            }
         }
         public void MainMenuConstraint(int userRole)   //загрузка формы с разрешениями для пользователей
         {
@@ -136,7 +175,7 @@ namespace i_1_16_dotsu_kp
 
         private void miTrain_Click(object sender, EventArgs e)
         {
-            TrainsForm trains = new TrainsForm();
+            Trains trains = new Trains();
             switch (AuthorizationForm.userRole)
             {
                 case 1:
@@ -266,7 +305,7 @@ namespace i_1_16_dotsu_kp
                     break;
             }
 
-            Close();
+            //Close();
             AuthorizationForm authorizationForm = new AuthorizationForm();
             authorizationForm.Show();
             AuthorizationForm.userRole = 0;
@@ -274,11 +313,11 @@ namespace i_1_16_dotsu_kp
         private void miAuthorization_Click(object sender, EventArgs e)  //открытие окна авторизации
         {
             AuthorizationForm authorizationForm = new AuthorizationForm();
-            authorizationForm.Show(this);
+            authorizationForm.Show();
         }
         private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)    //закрытие формы
         {
-            //Application.Exit();
+            Application.Exit();
         }
         private void CreateTableSelectedRows()
         {
@@ -316,6 +355,18 @@ namespace i_1_16_dotsu_kp
                     break;
             }
             route.Show(this);
+        }
+
+        private void settingConnectionForm_Click(object sender, EventArgs e)
+        {
+            ConnectionForm connectionFormOpen = new ConnectionForm();
+            connectionFormOpen.Show(this);
+        }
+
+        private void miFeedBack_Click(object sender, EventArgs e)
+        {
+            FormReceive formReceive = new FormReceive();
+            formReceive.Show();
         }
     }
 }

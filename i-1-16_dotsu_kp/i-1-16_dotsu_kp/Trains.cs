@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace i_1_16_dotsu_kp
 {
-    public partial class TrainsForm : Form
+    public partial class Trains : Form
     {
         DBStoredProcedure storedProcedure = new DBStoredProcedure();
-        private SqlCommand commandEmployee = new SqlCommand("", DBConnection.sqlConnection);
+        private SqlCommand commandEmployee = new SqlCommand("", Registry_Class.sqlConnection);
         private string filterEmployee = "";
-        public TrainsForm()
+        public Trains()
         {
             InitializeComponent();
         }
@@ -39,9 +39,12 @@ namespace i_1_16_dotsu_kp
                     dbTables.dependency.OnChange += ChangeTrain;
 
                     dgvTrains.DataSource = dbTables.DTTrain;
-                    dgvTrains.Columns[0].HeaderText = "Номер поезда";
-                    dgvTrains.Columns[1].HeaderText = "Количество вагонов в составе";
-                    dgvTrains.Columns[2].HeaderText = "Машинист";
+                    dgvTrains.Columns[0].Visible = false;
+                    dgvTrains.Columns[1].HeaderText = "Номер поезда";
+                    dgvTrains.Columns[2].HeaderText = "Количество вагонов в составе";
+                    dgvTrains.Columns[3].Visible = false;
+                    dgvTrains.Columns[4].HeaderText = "Машинист";
+                    dgvTrains.Columns[4].Width = 230;
                     dgvTrains.ClearSelection();
                 }
                 catch (Exception ex)

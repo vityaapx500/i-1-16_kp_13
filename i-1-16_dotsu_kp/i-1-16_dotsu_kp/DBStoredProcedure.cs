@@ -6,7 +6,7 @@ namespace i_1_16_dotsu_kp
 {
     class DBStoredProcedure
     {
-        private SqlCommand storedProcedure = new SqlCommand("", DBConnection.sqlConnection);
+        private SqlCommand storedProcedure = new SqlCommand("", Registry_Class.sqlConnection);
 
         private void ConfigurationProcedure(string nameProcedure)
         {
@@ -355,8 +355,8 @@ namespace i_1_16_dotsu_kp
         {
             try
             {
-                DBConnection.sqlConnection.Open();
-                DBConnection.sqlConnection.InfoMessage += MessageInformation;
+                Registry_Class.sqlConnection.Open();
+                Registry_Class.sqlConnection.InfoMessage += MessageInformation;
                 storedProcedure.ExecuteNonQuery();
                 storedProcedure.Parameters.Clear();
             }
@@ -366,7 +366,7 @@ namespace i_1_16_dotsu_kp
             }
             finally
             {
-                DBConnection.sqlConnection.Close();
+                Registry_Class.sqlConnection.Close();
             }
         }
 

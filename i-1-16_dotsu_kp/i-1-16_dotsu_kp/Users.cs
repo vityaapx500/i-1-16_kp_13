@@ -8,7 +8,7 @@ namespace i_1_16_dotsu_kp
     public partial class Users : Form
     {
         DBStoredProcedure storedProcedure = new DBStoredProcedure();
-        private SqlCommand commandEmployee = new SqlCommand("", DBConnection.sqlConnection);
+        private SqlCommand commandEmployee = new SqlCommand("", Registry_Class.sqlConnection);
         private string filterEmployee = "";
         public Users()
         {

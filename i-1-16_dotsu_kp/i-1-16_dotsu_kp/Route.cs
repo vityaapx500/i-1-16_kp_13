@@ -9,8 +9,8 @@ namespace i_1_16_dotsu_kp
     public partial class Route : Form
     {
         DBStoredProcedure storedProcedure = new DBStoredProcedure();
-        private SqlCommand commandEmployee = new SqlCommand("", DBConnection.sqlConnection);
-        private string filterEmployee = "";
+        private SqlCommand commandEmployee = new SqlCommand("", Registry_Class.sqlConnection);
+        //private string filterEmployee = ""; настроить фильтр для таблиц
         public Route()
         {
             InitializeComponent();
@@ -129,6 +129,28 @@ namespace i_1_16_dotsu_kp
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnRouteList_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet;
+            //Книга.
+            ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
+            //Таблица.
+            ExcelWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+            ExcelApp.Columns.ColumnWidth = 20;
+            for (int i = 0; i < dgvRoute.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvRoute.ColumnCount; j++)
+                {
+                    ExcelApp.Cells[i + 1, j + 1] = dgvRoute.Rows[i].Cells[j].Value;
+                }
+            }
+            //Вызываем нашу созданную эксельку.
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
         }
     }
 }

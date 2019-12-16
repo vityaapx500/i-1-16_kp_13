@@ -14,8 +14,6 @@ namespace i_1_16_dotsu_kp
         public void UpdateEnable(bool valueUpdateEnable)
         {
             btnInsert.Enabled = valueUpdateEnable;
-            btnUpdate.Enabled = valueUpdateEnable;
-            btnDelete.Enabled = valueUpdateEnable;
         }
         
         private void btnInsert_Click(object sender, EventArgs e)

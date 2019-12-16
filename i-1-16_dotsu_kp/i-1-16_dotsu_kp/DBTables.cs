@@ -7,7 +7,7 @@ namespace i_1_16_dotsu_kp
 {
     class DBTables
     {
-        public SqlCommand command = new SqlCommand("", DBConnection.sqlConnection);
+        public SqlCommand command = new SqlCommand("", Registry_Class.sqlConnection);
         public DataTable DTPassenger = new DataTable("passenger");
         public DataTable DTRoles = new DataTable("roles");
         public DataTable DTUsers = new DataTable("users");
@@ -60,8 +60,8 @@ namespace i_1_16_dotsu_kp
                 command.Notification = null;
                 command.CommandText = query;
                 dependency.AddCommandDependency(command);
-                SqlDependency.Start(DBConnection.sqlConnection.ConnectionString);
-                DBConnection.sqlConnection.Open();
+                SqlDependency.Start(Registry_Class.sqlConnection.ConnectionString);
+                Registry_Class.sqlConnection.Open();
                 table.Load(command.ExecuteReader());
             }
             catch (Exception ex)
@@ -70,7 +70,7 @@ namespace i_1_16_dotsu_kp
             }
             finally
             {
-                DBConnection.sqlConnection.Close();
+                Registry_Class.sqlConnection.Close();
             }
         }
         public void DTPlaceStatusFill()

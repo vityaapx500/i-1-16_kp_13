@@ -7,7 +7,7 @@ namespace i_1_16_dotsu_kp
     public partial class AuthorizationForm : Form
     {
         DBTables dbTables = new DBTables();
-        private static DBConnection dBConnection = new DBConnection();
+        //private static DBConnection dBConnection = new DBConnection();
         private int checkUser = 0;
         public static int userRole = 0;        
         public AuthorizationForm()
@@ -21,14 +21,14 @@ namespace i_1_16_dotsu_kp
                 MessageBox.Show("Все поля должны быть заполнены", "Вокзал", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                SqlCommand commandSearchUser = new SqlCommand("", DBConnection.sqlConnection);
-                SqlCommand commandRoleUser = new SqlCommand("", DBConnection.sqlConnection);
-                commandSearchUser.CommandText = "select count(*) from[dbo].[users] where [login_user] = '" + tbLogin.Text + "' and [password_user] = '" + tbPassword.Text + "'";
+                SqlCommand commandSearchUser = new SqlCommand("", Registry_Class.sqlConnection);
+                SqlCommand commandRoleUser = new SqlCommand("", Registry_Class.sqlConnection);
+                commandSearchUser.CommandText = "select count(*) from [dbo].[users] where [login_user] = '" + tbLogin.Text + "' and [password_user] = '" + tbPassword.Text + "'";
                 commandRoleUser.CommandText = "select [user_role_id] from [dbo].[users] where [login_user] = '" + tbLogin.Text + "' and [password_user] ='" + tbPassword.Text + "'";
 
                 try     //нахождение пользователя таким логином и паролем
                 {
-                    DBConnection.sqlConnection.Open();
+                    Registry_Class.sqlConnection.Open();
                     checkUser = Convert.ToInt32(commandSearchUser.ExecuteScalar().ToString());
                 }
                 catch
@@ -37,27 +37,27 @@ namespace i_1_16_dotsu_kp
                 }
                 finally
                 {
-                    DBConnection.sqlConnection.Close();
+                    Registry_Class.sqlConnection.Close();
                 }
 
                 if (checkUser == 0)
                     MessageBox.Show("Пользователя с данным логином и паролем не обнаружено! Проверьте правильность ввода данных или зарегистрируйтесь.", "Вокзал", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else     //установление роли данного пользователя
                 {
-                    DBConnection.sqlConnection.Open();
+                    Registry_Class.sqlConnection.Open();
                     userRole = Convert.ToInt32(commandRoleUser.ExecuteScalar().ToString());
-                    DBConnection.sqlConnection.Close();
+                    Registry_Class.sqlConnection.Close();
                     MessageBox.Show("Вы авторизовались в информационной системе.", "Вокзал", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
                     MainMenuForm MMF = new MainMenuForm();
-                    MMF.Show();
+                    MMF.MainMenuConstraint(userRole);
+                    Hide();
                 }
             }
         }
 
         private void AuthorizationForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            //Close();
         }
 
         private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)

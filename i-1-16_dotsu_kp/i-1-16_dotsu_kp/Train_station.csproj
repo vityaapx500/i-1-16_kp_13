@@ -61,10 +61,12 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Excel, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Excel.1.0.0\lib\dotnet\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>.\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -96,6 +98,12 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionForm.Designer.cs">
+      <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateTicket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +121,12 @@
       <DependentUpon>Employees.cs</DependentUpon>
     </Compile>
     <Compile Include="EnabledComponent.cs" />
+    <Compile Include="FormReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReceive.Designer.cs">
+      <DependentUpon>FormReceive.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,23 +141,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registry_Class.cs" />
+    <Compile Include="MessageUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageUser.resx</DependentUpon>
+    </Compile>
     <Compile Include="Route.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Route.Designer.cs">
       <DependentUpon>Route.cs</DependentUpon>
     </Compile>
+    <Compile Include="SendMail.cs" />
     <Compile Include="Tickets.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tickets.Designer.cs">
       <DependentUpon>Tickets.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrainsForm.cs">
+    <Compile Include="Trains.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrainsForm.Designer.cs">
-      <DependentUpon>TrainsForm.cs</DependentUpon>
+    <Compile Include="Trains.Designer.cs">
+      <DependentUpon>Trains.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
       <SubType>Form</SubType>
@@ -154,11 +175,17 @@
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionForm.resx">
+      <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateTicket.resx">
       <DependentUpon>CreateTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReceive.resx">
+      <DependentUpon>FormReceive.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
@@ -175,17 +202,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MessageUser.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageUser.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Route.resx">
       <DependentUpon>Route.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tickets.resx">
       <DependentUpon>Tickets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrainsForm.az.resx">
-      <DependentUpon>TrainsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Trains.az.resx">
+      <DependentUpon>Trains.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrainsForm.resx">
-      <DependentUpon>TrainsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Trains.resx">
+      <DependentUpon>Trains.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>

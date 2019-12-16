@@ -410,8 +410,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvEmployees;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnErrors;
         private System.Windows.Forms.Label lblPantronymic;
@@ -442,5 +440,6 @@
         public System.Windows.Forms.Button btnDelete;
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnInsert;
+        public System.Windows.Forms.DataGridView dgvEmployees;
     }
 }
