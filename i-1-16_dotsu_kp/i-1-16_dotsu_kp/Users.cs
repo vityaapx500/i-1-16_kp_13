@@ -42,7 +42,7 @@ namespace i_1_16_dotsu_kp
 
                     dgvUsers.DataSource = dbTables.DTUsers;
                     dgvUsers.Columns[0].HeaderText = "Фамилия пользователя";
-                    dgvUsers.Columns[1].HeaderText = "Имя  пользователя";
+                    dgvUsers.Columns[1].HeaderText = "Имя пользователя";
                     dgvUsers.Columns[2].HeaderText = "Отчество пользователя";
                     dgvUsers.Columns[3].HeaderText = "Логин";
                     dgvUsers.Columns[4].HeaderText = "Пароль";

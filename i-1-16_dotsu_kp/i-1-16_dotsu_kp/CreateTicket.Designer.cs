@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.gpManipulation = new System.Windows.Forms.GroupBox();
-            this.cbEmployee = new System.Windows.Forms.ComboBox();
-            this.lblEmployee = new System.Windows.Forms.Label();
-            this.cbRoute = new System.Windows.Forms.ComboBox();
-            this.lblRoute = new System.Windows.Forms.Label();
-            this.cbPassenger = new System.Windows.Forms.ComboBox();
-            this.lblPassenger = new System.Windows.Forms.Label();
-            this.tbPlaceStatus = new System.Windows.Forms.TextBox();
             this.lblPlaceStatus = new System.Windows.Forms.Label();
             this.tbPlace = new System.Windows.Forms.TextBox();
             this.lblPlace = new System.Windows.Forms.Label();
@@ -50,6 +43,13 @@
             this.lblTimeRegistry = new System.Windows.Forms.Label();
             this.tbNumTicket = new System.Windows.Forms.TextBox();
             this.lblNumTicket = new System.Windows.Forms.Label();
+            this.cbPlaceStatus = new System.Windows.Forms.ComboBox();
+            this.cbEmployee = new System.Windows.Forms.ComboBox();
+            this.lblEmployee = new System.Windows.Forms.Label();
+            this.cbRoute = new System.Windows.Forms.ComboBox();
+            this.lblRoute = new System.Windows.Forms.Label();
+            this.cbPassenger = new System.Windows.Forms.ComboBox();
+            this.lblPassenger = new System.Windows.Forms.Label();
             this.gpManipulation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             this.gpManipulation.Controls.Add(this.lblRoute);
             this.gpManipulation.Controls.Add(this.cbPassenger);
             this.gpManipulation.Controls.Add(this.lblPassenger);
-            this.gpManipulation.Controls.Add(this.tbPlaceStatus);
+            this.gpManipulation.Controls.Add(this.cbPlaceStatus);
             this.gpManipulation.Controls.Add(this.lblPlaceStatus);
             this.gpManipulation.Controls.Add(this.tbPlace);
             this.gpManipulation.Controls.Add(this.lblPlace);
@@ -84,71 +84,6 @@
             this.gpManipulation.TabIndex = 14;
             this.gpManipulation.TabStop = false;
             this.gpManipulation.Text = "Манипулирование данными";
-            // 
-            // cbEmployee
-            // 
-            this.cbEmployee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbEmployee.FormattingEnabled = true;
-            this.cbEmployee.Location = new System.Drawing.Point(3, 328);
-            this.cbEmployee.Name = "cbEmployee";
-            this.cbEmployee.Size = new System.Drawing.Size(259, 21);
-            this.cbEmployee.TabIndex = 11;
-            // 
-            // lblEmployee
-            // 
-            this.lblEmployee.AutoSize = true;
-            this.lblEmployee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEmployee.Location = new System.Drawing.Point(3, 315);
-            this.lblEmployee.Name = "lblEmployee";
-            this.lblEmployee.Size = new System.Drawing.Size(44, 13);
-            this.lblEmployee.TabIndex = 29;
-            this.lblEmployee.Text = "Кассир";
-            // 
-            // cbRoute
-            // 
-            this.cbRoute.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbRoute.FormattingEnabled = true;
-            this.cbRoute.Location = new System.Drawing.Point(3, 294);
-            this.cbRoute.Name = "cbRoute";
-            this.cbRoute.Size = new System.Drawing.Size(259, 21);
-            this.cbRoute.TabIndex = 10;
-            // 
-            // lblRoute
-            // 
-            this.lblRoute.AutoSize = true;
-            this.lblRoute.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblRoute.Location = new System.Drawing.Point(3, 281);
-            this.lblRoute.Name = "lblRoute";
-            this.lblRoute.Size = new System.Drawing.Size(52, 13);
-            this.lblRoute.TabIndex = 27;
-            this.lblRoute.Text = "Маршрут";
-            // 
-            // cbPassenger
-            // 
-            this.cbPassenger.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbPassenger.FormattingEnabled = true;
-            this.cbPassenger.Location = new System.Drawing.Point(3, 260);
-            this.cbPassenger.Name = "cbPassenger";
-            this.cbPassenger.Size = new System.Drawing.Size(259, 21);
-            this.cbPassenger.TabIndex = 9;
-            // 
-            // lblPassenger
-            // 
-            this.lblPassenger.AutoSize = true;
-            this.lblPassenger.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblPassenger.Location = new System.Drawing.Point(3, 247);
-            this.lblPassenger.Name = "lblPassenger";
-            this.lblPassenger.Size = new System.Drawing.Size(59, 13);
-            this.lblPassenger.TabIndex = 25;
-            this.lblPassenger.Text = "Пассажир";
-            // 
-            // tbPlaceStatus
-            // 
-            this.tbPlaceStatus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbPlaceStatus.Location = new System.Drawing.Point(3, 227);
-            this.tbPlaceStatus.Name = "tbPlaceStatus";
-            this.tbPlaceStatus.Size = new System.Drawing.Size(259, 20);
-            this.tbPlaceStatus.TabIndex = 8;
             // 
             // lblPlaceStatus
             // 
@@ -230,6 +165,7 @@
             this.btnInsert.TabIndex = 12;
             this.btnInsert.Text = "Оформить билет";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // lblTimeDeparture
             // 
@@ -262,6 +198,7 @@
             // tbNumTicket
             // 
             this.tbNumTicket.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbNumTicket.Enabled = false;
             this.tbNumTicket.Location = new System.Drawing.Point(3, 29);
             this.tbNumTicket.Name = "tbNumTicket";
             this.tbNumTicket.Size = new System.Drawing.Size(259, 20);
@@ -277,6 +214,72 @@
             this.lblNumTicket.TabIndex = 1;
             this.lblNumTicket.Text = "Номер билета";
             // 
+            // cbPlaceStatus
+            // 
+            this.cbPlaceStatus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbPlaceStatus.FormattingEnabled = true;
+            this.cbPlaceStatus.Location = new System.Drawing.Point(3, 227);
+            this.cbPlaceStatus.Name = "cbPlaceStatus";
+            this.cbPlaceStatus.Size = new System.Drawing.Size(259, 21);
+            this.cbPlaceStatus.TabIndex = 20;
+            // 
+            // cbEmployee
+            // 
+            this.cbEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbEmployee.FormattingEnabled = true;
+            this.cbEmployee.Location = new System.Drawing.Point(3, 329);
+            this.cbEmployee.Name = "cbEmployee";
+            this.cbEmployee.Size = new System.Drawing.Size(259, 21);
+            this.cbEmployee.TabIndex = 32;
+            // 
+            // lblEmployee
+            // 
+            this.lblEmployee.AutoSize = true;
+            this.lblEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblEmployee.Location = new System.Drawing.Point(3, 316);
+            this.lblEmployee.Name = "lblEmployee";
+            this.lblEmployee.Size = new System.Drawing.Size(44, 13);
+            this.lblEmployee.TabIndex = 35;
+            this.lblEmployee.Text = "Кассир";
+            // 
+            // cbRoute
+            // 
+            this.cbRoute.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbRoute.FormattingEnabled = true;
+            this.cbRoute.Location = new System.Drawing.Point(3, 295);
+            this.cbRoute.Name = "cbRoute";
+            this.cbRoute.Size = new System.Drawing.Size(259, 21);
+            this.cbRoute.TabIndex = 31;
+            // 
+            // lblRoute
+            // 
+            this.lblRoute.AutoSize = true;
+            this.lblRoute.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblRoute.Location = new System.Drawing.Point(3, 282);
+            this.lblRoute.Name = "lblRoute";
+            this.lblRoute.Size = new System.Drawing.Size(52, 13);
+            this.lblRoute.TabIndex = 34;
+            this.lblRoute.Text = "Маршрут";
+            // 
+            // cbPassenger
+            // 
+            this.cbPassenger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbPassenger.FormattingEnabled = true;
+            this.cbPassenger.Location = new System.Drawing.Point(3, 261);
+            this.cbPassenger.Name = "cbPassenger";
+            this.cbPassenger.Size = new System.Drawing.Size(259, 21);
+            this.cbPassenger.TabIndex = 30;
+            // 
+            // lblPassenger
+            // 
+            this.lblPassenger.AutoSize = true;
+            this.lblPassenger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPassenger.Location = new System.Drawing.Point(3, 248);
+            this.lblPassenger.Name = "lblPassenger";
+            this.lblPassenger.Size = new System.Drawing.Size(59, 13);
+            this.lblPassenger.TabIndex = 33;
+            this.lblPassenger.Text = "Пассажир";
+            // 
             // CreateTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +288,7 @@
             this.Controls.Add(this.gpManipulation);
             this.Name = "CreateTicket";
             this.Text = "Оформление билета";
+            this.Load += new System.EventHandler(this.CreateTicket_Load);
             this.gpManipulation.ResumeLayout(false);
             this.gpManipulation.PerformLayout();
             this.ResumeLayout(false);
@@ -294,13 +298,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gpManipulation;
-        private System.Windows.Forms.ComboBox cbEmployee;
-        private System.Windows.Forms.Label lblEmployee;
-        private System.Windows.Forms.ComboBox cbRoute;
-        private System.Windows.Forms.Label lblRoute;
-        private System.Windows.Forms.ComboBox cbPassenger;
-        private System.Windows.Forms.Label lblPassenger;
-        private System.Windows.Forms.TextBox tbPlaceStatus;
         private System.Windows.Forms.Label lblPlaceStatus;
         private System.Windows.Forms.TextBox tbPlace;
         private System.Windows.Forms.Label lblPlace;
@@ -315,5 +312,12 @@
         private System.Windows.Forms.Label lblTimeRegistry;
         private System.Windows.Forms.TextBox tbNumTicket;
         private System.Windows.Forms.Label lblNumTicket;
+        private System.Windows.Forms.ComboBox cbEmployee;
+        private System.Windows.Forms.Label lblEmployee;
+        private System.Windows.Forms.ComboBox cbRoute;
+        private System.Windows.Forms.Label lblRoute;
+        private System.Windows.Forms.ComboBox cbPassenger;
+        private System.Windows.Forms.Label lblPassenger;
+        private System.Windows.Forms.ComboBox cbPlaceStatus;
     }
 }

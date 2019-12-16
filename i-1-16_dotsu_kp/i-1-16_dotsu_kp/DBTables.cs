@@ -18,6 +18,7 @@ namespace i_1_16_dotsu_kp
         public DataTable DTPlaceStatus = new DataTable("place_status");
         public DataTable DTTicket = new DataTable("ticket");
         public string QRPlaceStatus = "select * from [dbo].[place_status]";
+        public string QRPlaceStatusFormCB = "select [ID_place_status], [name_status] from [dbo].[place_status]";
         public string QRRoles = "select * from [dbo].[roles] where [role_logical_delete] = 0";
         public string QRRolesForComboBox = "select R.[ID_role], [role_name] from [dbo].[roles] R where [role_logical_delete] = 0";
         public string QRUsers = "select * from [dbo].[users] where [user_logical_delete] = 0";
@@ -76,6 +77,10 @@ namespace i_1_16_dotsu_kp
         public void DTPlaceStatusFill()
         {
             DataTableFill(DTPlaceStatus, QRPlaceStatus);
+        }
+        public void DTPlaceStatusForCB()
+        {
+            DataTableFill(DTPlaceStatus, QRPlaceStatusFormCB);
         }
         public void DTRolesFill()
         {
