@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Net;
 using System.Net.Mail;
-using System.Net.Mime;
 using System.Windows.Forms;
 
 namespace i_1_16_dotsu_kp

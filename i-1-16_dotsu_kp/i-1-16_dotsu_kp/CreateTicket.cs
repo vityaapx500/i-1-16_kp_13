@@ -22,11 +22,11 @@ namespace i_1_16_dotsu_kp
 
             threadPlaceStatus.Start();
             int numNextticket;
-            SqlCommand nextTicket = new SqlCommand("", DBConnection.sqlConnection);
+            SqlCommand nextTicket = new SqlCommand("", Registry_Class.sqlConnection);
             nextTicket.CommandText = "select count(*) as 'Count_Ticket' from dbo.ticket where ticket_logical_delete = 0";
             try
             {
-                DBConnection.sqlConnection.Open();
+                Registry_Class.sqlConnection.Open();
                 numNextticket = Convert.ToInt32(nextTicket.ExecuteScalar().ToString()) + 1;
                 tbNumTicket.Text = numNextticket.ToString();
             }
@@ -36,7 +36,7 @@ namespace i_1_16_dotsu_kp
             }
             finally
             {
-                DBConnection.sqlConnection.Close();
+                Registry_Class.sqlConnection.Close();
             }
         }
         private void btnInsert_Click(object sender, EventArgs e)

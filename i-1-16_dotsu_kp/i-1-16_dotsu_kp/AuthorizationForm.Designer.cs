@@ -87,6 +87,7 @@
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbPassword.Location = new System.Drawing.Point(0, 120);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(241, 26);
             this.tbPassword.TabIndex = 2;
             this.tbPassword.Text = "Genius1337";

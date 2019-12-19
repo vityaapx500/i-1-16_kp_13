@@ -93,7 +93,7 @@
             // miAuthorization
             // 
             this.miAuthorization.Name = "miAuthorization";
-            this.miAuthorization.Size = new System.Drawing.Size(212, 22);
+            this.miAuthorization.Size = new System.Drawing.Size(213, 22);
             this.miAuthorization.Text = "Авторизация";
             this.miAuthorization.Click += new System.EventHandler(this.miAuthorization_Click);
             // 
@@ -103,7 +103,7 @@
             this.miAppSettings,
             this.settingConnectionForm});
             this.miSettings.Name = "miSettings";
-            this.miSettings.Size = new System.Drawing.Size(212, 22);
+            this.miSettings.Size = new System.Drawing.Size(213, 22);
             this.miSettings.Text = "Настройки";
             // 
             // miAppSettings
@@ -122,19 +122,19 @@
             // miExitProfile
             // 
             this.miExitProfile.Name = "miExitProfile";
-            this.miExitProfile.Size = new System.Drawing.Size(212, 22);
+            this.miExitProfile.Size = new System.Drawing.Size(213, 22);
             this.miExitProfile.Text = "Выход из учётной записи";
             this.miExitProfile.Click += new System.EventHandler(this.miExitProfile_Click);
             // 
             // завершениеРаботыToolStripMenuItem
             // 
             this.завершениеРаботыToolStripMenuItem.Name = "завершениеРаботыToolStripMenuItem";
-            this.завершениеРаботыToolStripMenuItem.Size = new System.Drawing.Size(209, 6);
+            this.завершениеРаботыToolStripMenuItem.Size = new System.Drawing.Size(210, 6);
             // 
             // miExitFromSystem
             // 
             this.miExitFromSystem.Name = "miExitFromSystem";
-            this.miExitFromSystem.Size = new System.Drawing.Size(212, 22);
+            this.miExitFromSystem.Size = new System.Drawing.Size(213, 22);
             this.miExitFromSystem.Text = "Завершение работы";
             this.miExitFromSystem.Click += new System.EventHandler(this.miExitSystem_Click);
             // 
@@ -221,6 +221,7 @@
             this.miTicketFill.Name = "miTicketFill";
             this.miTicketFill.Size = new System.Drawing.Size(134, 20);
             this.miTicketFill.Text = "Оформление билета";
+            this.miTicketFill.Click += new System.EventHandler(this.miTicketFill_Click);
             // 
             // miDocs
             // 
@@ -327,8 +328,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem miSystem;
         private System.Windows.Forms.ToolStripMenuItem miAuthorization;
         private System.Windows.Forms.ToolStripMenuItem miSettings;
@@ -358,5 +357,6 @@
         private System.Windows.Forms.ToolStripMenuItem miRoutesList;
         private System.Windows.Forms.ToolStripMenuItem settingConnectionForm;
         private System.Windows.Forms.ToolStripMenuItem miFeedBack;
+        public System.Windows.Forms.MenuStrip menuStrip;
     }
 }

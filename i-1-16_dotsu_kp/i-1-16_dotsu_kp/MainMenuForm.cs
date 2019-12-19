@@ -23,7 +23,7 @@ namespace i_1_16_dotsu_kp
             dbConnection.ConnectionState += InformationConnection;
             threadConnection = new Thread(dbConnection.CheckConnection);
             threadConnection.Start();
-            //MainMenuConstraint(AuthorizationForm.userRole);
+            EnabledComponent.EventHandler = new EnabledComponent.MyEvent(MainMenuConstraint);
         }
         private void InformationConnection(bool value)  //проверка подключения к базе данных
         {
@@ -367,6 +367,12 @@ namespace i_1_16_dotsu_kp
         {
             FormReceive formReceive = new FormReceive();
             formReceive.Show();
+        }
+
+        private void miTicketFill_Click(object sender, EventArgs e)
+        {
+            CreateTicket createTicket = new CreateTicket();
+            createTicket.Show();
         }
     }
 }

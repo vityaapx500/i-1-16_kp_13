@@ -8,7 +8,6 @@ namespace i_1_16_dotsu_kp
     public partial class AuthorizationForm : Form
     {
         DBTables dbTables = new DBTables();
-        //private static DBConnection dBConnection = new DBConnection();
         private int checkUser = 0;
         public static int userRole = 0;        
         public AuthorizationForm()
@@ -49,8 +48,9 @@ namespace i_1_16_dotsu_kp
                     userRole = Convert.ToInt32(commandRoleUser.ExecuteScalar().ToString());
                     Registry_Class.sqlConnection.Close();
                     MessageBox.Show("Вы авторизовались в информационной системе.", "Вокзал", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MainMenuForm MMF = new MainMenuForm();
-                    MMF.MainMenuConstraint(userRole);
+                    //MainMenuForm MMF = new MainMenuForm();
+                    //MMF.MainMenuConstraint(userRole);
+                    EnabledComponent.EventHandler(userRole);
                     Hide();
                 }
             }
